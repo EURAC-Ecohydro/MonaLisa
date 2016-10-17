@@ -1,0 +1,2 @@
+ID,xcoord,ycoord,landcover,name
+1,688359.5,5135797,1,Dopas2000

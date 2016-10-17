@@ -1,0 +1,3 @@
+ID,xcoord,ycoord,landcover,name
+1,688074,5141091,1,Domes1500
+
