@@ -19,11 +19,10 @@
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ###############################################################################
-
-
+#### export MONALISA_TEMPDIR=/home/ecor/temp/monalisa
 
 rm(list=ls())
-option(warn=1)
+options(warn=1)
 
 library(zoo)
 library(geotopOptim2)
@@ -37,13 +36,13 @@ USE_RMPI <- FALSE
 
 if (USE_RMPI==TRUE) {
 	library("parallel")
-
+	
 	library(Rmpi)
 	require(snow)
-
+	
 	if (mpi.comm.rank(0) > 0) {
-	    sink(file="/dev/null")
-	#runMPIslave()
+		sink(file="/dev/null")
+		#runMPIslave()
 		slaveLoop(makeMPImaster())
 		mpi.quit()
 		
@@ -51,7 +50,7 @@ if (USE_RMPI==TRUE) {
 	}
 	
 	parallel <- "parallel"
-    npart <- 16
+	npart <- 16
 	control <- list(maxit=5,npart=npart,parallel=parallel)
 	
 } else {
@@ -79,13 +78,43 @@ if (USE_SE27XX==TRUE) {
 }  
 
 
+## MonaLisa sites
+
+project_path <- '/home/ecor/local-projects/MonaLisa' 
+geotopsims <- c("DOMEF_1500_Optim_001",
+"Kaltern_Optim_001",
+"Matsch_P2_DVE_Optim_001",
+"DOMES_1500_Optim_001",
+"Matsch_B2_DVM_Optim_001",
+"Matsch_P2_Optim_001",
+"DOPAS_2000_Optim_001","Matsch_B2_Optim_001")
+
+wpath_geotopsims <- paste(project_path,"geotop",geotopsims,sep="/")
+
+names(wpath_geotopsims) <-  geotopsims
+
+
+
+## Choose the MonaLisa Site 
+
+itsim <- sims[1]
+wpath <- wpath_geotopsims[itsim]
+
+
+
+
+
+
+
+
+
 ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
 
 tz <- "Etc/GMT-1"
 
 ## Set the full path for GEOtop simulation template
 
-wpath <- system.file('geotop-simulation/B2site',package="geotopOptim2")
+wpath <- wpath
 
 
 ## Set a temporary path where to run GEOtop simulations
