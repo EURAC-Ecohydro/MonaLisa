@@ -93,21 +93,26 @@ wpath_geotopsims <- paste(project_path,"geotop",geotopsims,sep="/")
 
 names(wpath_geotopsims) <-  geotopsims
 
+paramfiles_o <- paste(project_path,"param","param_pso_cland002.csv",sep="/")
 paramfiles <- sprintf("param_%s.csv",geotopsims)
-paramfiles <- paste(project_path,"param",paramfiles,sep="/")
-names(paramfiles) <- geotopsims
-runpath0 <- paste(project_path,"run",sep="/")
+
+paramfiles_c <- paste(project_path,"param",paramfiles,sep="/")
+names(paramfiles_c) <- geotopsims
+
+for (it in names(paramfiles_c)) {
+	
+	file.copy(from=paramfiles_o,to=paramfiles_c[it])
+	
+}
 
 
 
+stop("MI FERMO QUI")
 ## Choose the MonaLisa Site 
-## 1 not working
-## 2 not working
-## 3 not working
-## 4
-itsim <- geotopsims[1]
+
+itsim <- sims[1]
 wpath <- wpath_geotopsims[itsim]
-geotop.param.file <- paramfiles[itsim]
+
 
 
 
@@ -128,28 +133,28 @@ wpath <- wpath
 ## Set a temporary path where to run GEOtop simulations
 
 runpath <- Sys.getenv("GEOTOPOTIM2_TEMP_DIR")
-if (runpath=="") runpath <- runpath0
+
 ## Set/get  parameter calibartion values (upper and lower values and names)
 ## Here parameters are read from a CSV ascii files and then imported as a data frame
 
-geotop.param.file <-  geotop.param.file ###system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
-geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
+geotop.soil.param.file <-  system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
+geotop.soil.param <- read.table(geotop.soil.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
 
 
 ## Parametrer value are saved as separate vactors: one for upper values , one for lower values, another for suggested value (only PSO not lhoat)
 ## Each vector elements must be named with parameter name in accordance with geotopOptim2 documention (see vignette)
-lower <- geotop.param$lower
-upper <- geotop.param$upper
-x <- geotop.param$suggested
-names(lower) <- geotop.param$name
-names(upper) <- geotop.param$name
-if (!is.null(x)) names(x) <- geotop.param$name
+lower <- geotop.soil.param$lower
+upper <- geotop.soil.param$upper
+x <- geotop.soil.param$suggested
+names(lower) <- geotop.soil.param$name
+names(upper) <- geotop.soil.param$name
+if (!is.null(x)) names(x) <- geotop.soil.param$name
 
 
 ### Set Target Observed Variables (here are used the same names of observation file!)
 ### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
 var <- c('soil_moisture_content_50','soil_moisture_content_200') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
-uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
+uscale <- 1 ### c(0.03,0.03,25,25)/0.03
 
 names(var)  <- var
 names(uscale) <- var
@@ -157,14 +162,12 @@ names(uscale) <- var
 
 ### Here 'lhoat' is triggered!
 
-
 pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
-		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
-
+		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control)
 
 ### You can save the output in an RDA file!!! (if the following lines are uncommented) 
-file_lhoat <-  '~/local/geotopOptim2/inst/examples-script/outrda/lhoat_n.rda' 
+#file_lhoat <-  '~/local/geotopOptim2/inst/examples-script/outrda/lhoat_n.rda' 
 
 
 #save(lhoat,file=file_lhoat)
