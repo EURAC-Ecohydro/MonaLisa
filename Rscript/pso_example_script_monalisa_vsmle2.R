@@ -51,13 +51,13 @@ if (USE_RMPI==TRUE) {
 	
 	parallel <- "parallel"
 	npart <- 16
-	control <- list(maxit=5,npart=npart,parallel=parallel)
+	control <- list(maxit=2,npart=npart,parallel=parallel)
 	
 } else {
 	
 	parallel <- "none"
 	npart <- 4
-	control <- list(maxit=5,npart=npart)
+	control <- list(maxit=2,npart=npart)
 	
 }
 
@@ -97,15 +97,18 @@ paramfiles <- sprintf("param_%s.csv",geotopsims)
 paramfiles <- paste(project_path,"param",paramfiles,sep="/")
 names(paramfiles) <- geotopsims
 runpath0 <- paste(project_path,"run",sep="/")
-
+savepath0 <- paste(project_path,"save",sep="/")
 
 
 ## Choose the MonaLisa Site 
-## 1 not working
-## 2 not working
-## 3 not working
-## 4
-itsim <- geotopsims[1]
+
+
+itsim <- 1
+if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
+
+
+for (itsim in geotopsims[-c(1,2,3,6,7)]) {
+	
 wpath <- wpath_geotopsims[itsim]
 geotop.param.file <- paramfiles[itsim]
 
@@ -129,6 +132,8 @@ wpath <- wpath
 
 runpath <- Sys.getenv("GEOTOPOTIM2_TEMP_DIR")
 if (runpath=="") runpath <- runpath0
+savepath <- Sys.getenv("GEOTOPOTIM2_SAVE_DIR")
+if (savepath=="") savepath <- savepath0
 ## Set/get  parameter calibartion values (upper and lower values and names)
 ## Here parameters are read from a CSV ascii files and then imported as a data frame
 
@@ -163,11 +168,12 @@ pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
 
 
-### You can save the output in an RDA file!!! (if the following lines are uncommented) 
-file_lhoat <-  '~/local/geotopOptim2/inst/examples-script/outrda/lhoat_n.rda' 
 
 
-#save(lhoat,file=file_lhoat)
+file.rename(from=runpath,to=paste(savepath,itsim,sep="/"))
+file.rename(from="PSO.out",to=paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/"))
+save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
 
+}
 
 if (USE_RMPI==TRUE) mpi.finalize()
