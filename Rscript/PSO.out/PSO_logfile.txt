@@ -1,0 +1,35 @@
+================================================================================
+hydroPSO version  :  0.3-4-6  
+hydroPSO Built    :  R 3.2.3; ; 2016-11-07 14:56:14 UTC; unix  
+R version         :  R version 3.2.3 (2015-12-10)  
+Platform          :  x86_64-pc-linux-gnu  
+================================================================================
+Starting Time     : Mon Nov  7 16:01:59 2016 
+================================================================================
+Objective Function: fn 
+MinMax            : min 
+Dimension         : 32 
+Nmbr of Particles : 16 
+Max Iterations    : 10 
+Method            : spso2011 
+Topology          : random 
+K                 : 3 
+iter.ini          : 0 
+Boundary wall     : absorbing2011 
+normalise         : FALSE 
+Xini.type         : random 
+Vini.type         : random2011 
+Best update method: sync 
+Random update     : TRUE 
+c1                : 1.19314718055995 
+c2                : 1.19314718055995 
+use.IW            : TRUE 
+IW.w              : 0.721347520444482 
+lambda            : 1 
+use.RG            : FALSE 
+maxfn             : Inf 
+abstol            : -Inf 
+reltol            : 1.49011611938477e-08 
+parallel          : parallel 
+par.nnodes        : 16 
+par.pkgs          : 

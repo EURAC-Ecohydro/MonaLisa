@@ -63,7 +63,7 @@ if (USE_RMPI==TRUE) {
 
 ## This 'if' loop was introduced to set the GEOtop binary file which be used in GEOtop 
 
-USE_SE27XX <- TRUE
+USE_SE27XX <- FALSE
 
 if (USE_SE27XX==TRUE) {
 	

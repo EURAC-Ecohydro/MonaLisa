@@ -1,4 +1,4 @@
-#$ -N geotopoptim2
+#$ -N geotopoptim2_MonaLisa
 #$ -V
 #$ -pe mpich 32
 #$ -l h_rt=01:00:00
@@ -7,8 +7,9 @@
 ##$ -q long.q
 ##$ -q devel.q
 
-export GEOTOPOTIM2_TEMP_DIR=/tmp/geotopOtim2_tempdir
-export GEOTOPOTIM2_SAVE_DIR=/home/ecordano/Simulations/MonaLisaSims
+export GEOTOPOPTIM2_TEMP_DIR=/tmp/geotopOtim2_tempdir
+export GEOTOPOPTIM2_SAVE_DIR=/home/lv70864/ecordano/Simulations/MonaLisaSims
+export GEOTOPOPTIM2_PROJECT_DIR=/home/lv70864/ecordano/Simulations/MonaLisa
 
 mkdir -p $GEOTOPOTIM2_TEMP_DIR
 mkdir -p $GEOTOPOTIM2_SAVE_DIR
