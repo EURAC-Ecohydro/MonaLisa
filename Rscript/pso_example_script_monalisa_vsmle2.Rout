@@ -111,66 +111,30 @@ The following objects are masked from ‘package:parallel’:
     stopCluster
 
 Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-07 16:02:07
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-07 18:02:22
 GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx54ad5ddb4e0b/DOMEF_1500_Optim_001 at 2016-11-07 16:02:10
-sh: /home/ecor/local/geotop/GEOtop/bin/geotop-2.0.0: No such file or directory
-Warning in file(con, "r") :
-  cannot open file 'Error in system(command.line, intern = intern) : error in running command
-/geotop.inpts': No such file or directory[[30:r16n13] unexpected disconnect completion event from [0:r16n14]
-Assertion failed in file ../../dapl_conn_rc.c at line 1179: 0
-internal ABORT - process 30
-
-+ "Matsch_P2_Optim_001",
-+ "DOPAS_2000_Optim_001","Matsch_B2_Optim_001")
-> 
-> wpath_geotopsims <- paste(project_path,"geotop",geotopsims,sep="/")
-> 
-> names(wpath_geotopsims) <-  geotopsims
-> 
-> paramfiles <- sprintf("param_%s.csv",geotopsims)
-> paramfiles <- paste(project_path,"param",paramfiles,sep="/")
-> names(paramfiles) <- geotopsims
-> runpath0 <- paste(project_path,"run",sep="/")
-> savepath0 <- paste(project_path,"save",sep="/")
-> 
-> 
-> ## Choose the MonaLisa Site 
-> 
-> 
-> itsim <- 1
-> if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
-> 
-> 
-> for (itsim in geotopsims[-c(2,3,6,7)]) {
-+ 	
-+ wpath <- wpath_geotopsims[itsim]
-+ geotop.param.file <- paramfiles[itsim]
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-+ ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
-+ 
-+ tz <- "Etc/GMT-1"
-+ 
-+ ## Set the full path for GEOtop simulation template
-+ 
-+ wpath <- wpath
-+ 
-+ 
-+ ## Set a temporary path where to run GEOtop simulations
-+ 
-+ runpath <- Sys.getenv("GEOTOPOPTIM2_TEMP_DIR")
-+ if (runpath=="") runpath <- runpath0
-+ savepath <- Sys.getenv("GEOTOPOPTIM2_SAVE_DIR")
-+ if (savepath=="") savepath <- savepath0
-+ ## Set/get  parameter calibartion values (upper and lower values and names)
-+ ## Here parameters are read from a CSV ascii files and then imported as a data frame
-+ 
-+ geotop.param.file <-  geotop.param.file ###system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
+rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30da799c6a49/DOMEF_1500_Optim_001 at 2016-11-07 18:02:2FI
+Error::Run time error
+Error::Error 1 in tridiag
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_Finish GOF 0.425205832509386 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30d475eae3b9/DOMEF_1500_Optim_001 at 2016-11-07 18:05:56
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30d475eae3b9/DOMEF_1500_OPrepaPrepPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-07 GEOtoGEOtGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30d97f59fb1e/DOMEF_1500_Optim_001 at 2016-11-07 18:06FINIFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx5b6846aaee6e/DOMEF_1500_Optim_001 at 2016-11-07 18:08:19
+End GEOtop Running!
+sh GOF 0.374833296279826 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30cf1d57eca7/DOMEF_1500_Optim_001 at 2016-11-07 18:08:14
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30cf1d57eca7/DOMEF_1500_Optim_001
+001
+xx30da6348055e/DOMEF_1500_Optim_001 at 2016-11-07 18:07:32
+End GEOtop Running!
+Finish GOF 0.29 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30da6348055e/DOMEF_1500_Optim_001 at 2016-11-07 18:08:08
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30da6348055e/DOMEF_1500_Optim_001
+MEF_1500_Optim_001/xx5b6457c746c3/DOMEF_1500_Optim_001 at 2016-11-07 18:06:16
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx5b6457c746c3/DOMEF_1500_Optim_001 at 2016-11-07 18:06:16
+Warning in FUN(if (length(d.call) < 2L) newX[, 1] else array(newX[, 1L],  :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx5b6457c746c3/DOMEF_1500_Optim_001 !
+ript/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
 + geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
 + 
 + 
@@ -241,7 +205,3 @@ Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = F
 [                                 Running  PSO ...                             ]
 ================================================================================
                                                                                 
-Error in checkForRemoteErrors(val) : 
-  31 nodes produced errors; first error: cannot open the connection
-Calls: geotopPSO ... clusterApply -> staticClusterApply -> checkForRemoteErrors
-Execution halted

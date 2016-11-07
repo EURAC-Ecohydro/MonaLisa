@@ -69,7 +69,7 @@ if (USE_SE27XX==TRUE) {
 	
 	##bin <- ' geotop-2.0.0'
 	bin <- 'geotop_se27xx'
-	bin<- '/home/ecor/local/geotop/GEOtop/bin/geotop-2.0.0'
+##bin<- '/home/ecor/local/geotop/GEOtop/bin/geotop-2.0.0'
 	
 } else {
 	
