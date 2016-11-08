@@ -171,8 +171,8 @@ pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 
 
 
-file.rename(from=runpath,to=paste(savepath,itsim,sep="/"))
-file.rename(from="PSO.out",to=paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/"))
+file.copy(from=runpath,to=paste(savepath,itsim,sep="/"),recursive=TRUE)
+file.copy(from="PSO.out",to=paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/"),recursive=TRUE)
 save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
 
 }
