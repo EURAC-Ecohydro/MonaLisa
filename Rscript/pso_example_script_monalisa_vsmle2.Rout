@@ -89,14 +89,14 @@ Warning: replacing previous import by ‘zoo::index<-’ when loading ‘geotopO
 + 	}
 + 	
 + 	parallel <- "parallel"
-+ 	npart <- 16
-+ 	control <- list(maxit=10,npart=npart,parallel=parallel)
++ 	npart <- 4
++ 	control <- list(maxit=4,npart=npart,parallel=parallel)
 + 	
 + } else {
 + 	
 + 	parallel <- "none"
 + 	npart <- 4
-+ 	control <- list(maxit=10,npart=npart)
++ 	control <- list(maxit=4,npart=npart)
 + 	
 + }
 Loading required package: snow
@@ -111,103 +111,151 @@ The following objects are masked from ‘package:parallel’:
     stopCluster
 
 Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 10:09:13
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 12:53:01
 GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx310c498c43c6/DOMEF_1500_Optim_001 at 2016-11-08 10:09:16F
-Error::Run time error
-Error::Error 1 in tridiag
-........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_Finish GOF 0.425205832509386 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx31051515a78b/DOMEF_1500_Optim_001 at 2016-11-08 10:12:47
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx31051515a78b/DOMEF_1500_Optim_PrepPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 10:12GEOtGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3109303a399e/DOMEF_1500_Optim_001 at 2016-11-08 10:12FINFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx310529b3aa6/DOMEF_1500_Optim_001 at 2016-11-08 10:20:34
-End GEOtop RunningFinish GOF 0.308058436014987 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx31036fecac91/DOMEF_1500_Optim_001 at 2016-11-08 10:21:08
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx31036fecac91/DOMEF_1500_Optim_001PPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 10:21:16GGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3105231fb0bd/DOMEF_1500_Optim_001 at 2016-11-08 10:21:19FFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3105231fb0bd/DOMEF_1500_Optim_001 at 2016-11-08 10:27:45
-End GEOtop Running!
-Finish GOF 0.180277563773199 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3105231fb0bd/DOMEF_1500_Optim_001 at 2016-11-08 10:28:17
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3105231fb0bd/DOMEF_1500_Optim_001PPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 10:28:24GGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3105d7a8980/DOMEF_1500_Optim_001 at 2016-11-08 10:28:27
-F
-Error::Run time error
-Error::Error 1 in tridiag
-........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_1500Finish GOF 0.460434577328854 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx637c5fa5fb9f/DOMEF_1500_Optim_001 at 2016-11-08 10:35:10
-Deleting /tmp/geotopOtim2FINISH rundir:/tmp/geotopOtim2_teFINISH rundir:/tmp/geotopPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 10:37:12
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx310534a5a875/DOMEF_1500_Optim_001 at 2016-11-08 10:37:16
-FINIFINFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx6388f6c9f4c/DOMEF_1500_Optim_001 at 2016-11-08 10:42:46
-End GEOtop Running!
-Finish GOF 0.178044938147649 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx6388f6c9f4c/DOMEF_1500_Optim_001 at 2016-11-08 10:43:17
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx6388f6c9f4c/DOMEF_1500_Optim_Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 10:43:24
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3105abfb2d3/DOMEF_1500_Optim_001 at 2016-11-08 10:43:27
-FINISFINFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx637bb4b7f7e/DOMEF_1500_Optim_001 at 2016-11-08 10:47:43
-End GEOtop Running!
-Finish GOF 0.183575597506858 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx637bb4b7f7e/DOMEF_1500_Optim_001 at 2016-11-08 10:48:14
-Deleting /tmp/geotopOtim2_tFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_OptimPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 10:51:42
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3105c2e15dd/DOMEF_1500_Optim_001 at 2016-11-08 10:51:45
-FINISH ruFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx63887d9a5d59/DOMEF_1500_Optim_001 at 2016-11-08 11:00:41
-End GEOtop Running!
-Finish GOF 0.206155281280883 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx63887d9a5d59/DOMEF_1500_Optim_001 at 2016-11-08 11:01:12
-Deleting /tmp/geotopOtimFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_OptimPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 11:05:11
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx310519d0504f/DOMEF_1500_Optim_001 at 2016-11-08 11:05:14
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx310519d0504f/DOMEF_1500_Optim_001 at 2016-11-08 11:10:08
-End GEOtop Running!
-Finish GOF 0.211896201004171 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx310519d0504f/DOMEF_1500_Optim_001 at 2016-11-08 11:10:39
-Deleting /tmp/geotopOtim2_tempdirFIFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_OptimPPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-08 11:13:34
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx31053185ab9a/DOMEF_1500_Optim_001 at 2016-11-08 11:13:37FFINISH rundir:/tFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx637e71c403cb/DOMEF_1500_Optim_001 at 2016-11-08 11:18:09
-End GEOtop Running!
-Finish GOF 0.158113883008419 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx637e71c403cb/DOMEF_1500_Optim_001 at 2016-11-08 11:18:40
-Deleting /tmp/geotopOtim2_tempdFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3104509a45c2/DOMEF_1500_Optim_001 at 2016-11-08 11:20:01
-End GEOtop Running!
-Finish GOF 0.202484567313166 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3104509a45c2/DOMEF_1500_Optim_001 at 2016-11-08 11:20:32
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3104509a45c2/DOMEF_1500_Optim_001
-empdir/DOMEF_1500_Optim_001/xx31091d9f8143/DOMEF_1500_Optim_001 at 2016-11-08 11:14:57
-End GEOtop Running!
-Finish GOF 0.311448230047949Finish GOF 0.313847096529504 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx637d4acef165/DOMEF_1500_Optim_001 at 2016-11-08 11:15:28
-DFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx63844e4eb695/DOMEF_1500_Optim_001 at 2016-11-08 11:17:42
-End GEOtop Running!
-Finish GOF 0.219317121994613 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx63844e4eb695/DOMEF_1500_Optim_001 at 2016-11-08 11:18:13
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx63844e4eb695/DOMEF_1500_Optim_001
--11-08 11:18:02
-End GEOtop Running!
-Finish GOF 0.192353840616713 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx310c491d7a2d/DOMEF_1500_Optim_001 at 2016-11-08 11:18:33
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx310c491d7a2d/DOMEF_1500_Optim_001
-ewX[, 1] else array(newX[, 1L],  :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30fe664ea441/DOMEF_15Preparing a GEOPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-GEOtop is runniGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30fe3356d11/DOMEF_1500_Optim_001 at 2016-
-Error::Run time error
-Error::Fatal Error! Geotop is closed. See failing report.
-........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3100f696bca/DOMEF_1500_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3100f696bca/DOMEF_1500_Optim_001 at 2016-11-08 11:05:34
-End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3100f696bca/DOMEF_1500_Optim_001 at 2016-11-08 11:05:34
-Warning in FUN(if (length(d.call) < 2L) newX[, 1] else array(newX[, 1L],  :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx3100f696bca/DOMEF_1500_Optim_001 !
-Preparing a GEOPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-GEOtop is runniGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30fe32aff740/DOMEF_1500_Optim_001 at 2016-
-Error::Run tim
-Error::Run time error
-Error::Fatal Error! Geotop is closed. See failing report.
-........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30fe32aff740/DOMEF_1500_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30fe32aff740/DOMEF_1500_Optim_001 at 2016-11-08 11:13:51
-End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30fe32aff740/DOMEF_1500_Optim_001 at 2016-11-08 11:13:51
-Warning in FUN(if (length(d.call) < 2L) newX[, 1] else array(newX[, 1L],  :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30fe32aff740/DOMEF_1500_Optim_001 !
-01 !
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx4efef1119a2/DOMES_1500_Optim_001 at 2016-11-09 12:53:04
+
+ 	
++ } else {
++ 	
++ 	bin  <-  'geotop_dev'
++ 	
++ }  
+> 
+> 
+> ## MonaLisa sites
+> 
+> project_path0 <- '/home/ecor/local-projects/MonaLisa' 
+> project_path <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR")
+> if (project_path=="") project_path <- project_path0
+> 
+> geotopsims <- c("DOMEF_1500_Optim_001",
++ "Kaltern_Optim_001",
++ "Matsch_P2_DVE_Optim_001",
++ "DOMES_1500_Optim_001",
++ "Matsch_B2_DVM_Optim_001",
++ "Matsch_P2_Optim_001",
++ "DOPAS_2000_Optim_001","Matsch_B2_Optim_001")
+> 
+> wpath_geotopsims <- paste(project_path,"geotop",geotopsims,sep="/")
+> 
+> names(wpath_geotopsims) <-  geotopsims
+> 
+> paramfiles <- sprintf("param_%s.csv",geotopsims)
+> paramfiles <- paste(project_path,"param",paramfiles,sep="/")
+> names(paramfiles) <- geotopsims
+> runpath0 <- paste(project_path,"run",sep="/")
+> savepath0 <- paste(project_path,"save",sep="/")
+> 
+> 
+> ## Choose the MonaLisa Site 
+> 
+> 
+> #itsim <- 1
+> #if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
+> 
+> 
+> for (itsim in geotopsims[-c(1,2,3,6,7)]) {
++ 	
++ wpath <- wpath_geotopsims[itsim]
++ geotop.param.file <- paramfiles[itsim]
++ 
++ 
++ 
++ 
++ 
++ 
++ ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
++ 
++ tz <- "Etc/GMT-1"
++ 
++ ## Set the full path for GEOtop simulation template
++ 
++ wpath <- wpath
++ 
++ 
++ ## Set a temporary path where to run GEOtop simulations
++ 
++ runpath <- Sys.getenv("GEOTOPOPTIM2_TEMP_DIR")
++ if (runpath=="") runpath <- runpath0
++ savepath <- Sys.getenv("GEOTOPOPTIM2_SAVE_DIR")
++ if (savepath=="") savepath <- savepath0
++ ## Set/get  parameter calibartion values (upper and lower values and names)
++ ## Here parameters are read from a CSV ascii files and then imported as a data frame
++ 
++ geotop.param.file <-  geotop.param.file ###system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
++ geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
++ 
++ 
++ ## Parametrer value are saved as separate vactors: one for upper values , one for lower values, another for suggested value (only PSO not lhoat)
++ ## Each vector elements must be named with parameter name in accordance with geotopOptim2 documention (see vignette)
++ lower <- geotop.param$lower
++ upper <- geotop.param$upper
++ x <- geotop.param$suggested
++ names(lower) <- geotop.param$name
++ names(upper) <- geotop.param$name
++ if (!is.null(x)) names(x) <- geotop.param$name
++ 
++ 
++ ### Set Target Observed Variables (here are used the same names of observation file!)
++ ### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
++ var <- c('soil_moisture_content_50','soil_moisture_content_200') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
++ uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
++ 
++ names(var)  <- var
++ names(uscale) <- var
++ 
++ 
++ ### Here 'lhoat' is triggered!
++ 
++ 
++ pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
++ 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
++ 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
++ 
++ 
++ 
++ dirsim <- paste(savepath,itsim,sep="/")
++ dir.create(dirsim)
++ dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
++ dir.create(dirPSO)
++ 
++ 
++ file.copy(from=runpath,to=dirsim,recursive=TRUE)
++ file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
++ save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
++ 
++ }
+Warning in file(con, "r") :
+  cannot open file '/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001/soiltype.asc': No such file or directory
+Warning (get.geotop.inpts.keyword.value): keyword PointFile without value:
+Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointX without value:
+Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointY without value:
+Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
+  [ 'REPORT' is greater than 'maxit' => 'REPORT=maxit' ]
+                                                                                
+================================================================================
+[                                Initialising  ...                             ]
+================================================================================
+                                                                                
+[npart=4 ; maxit=4 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
+         
+[ user-definitions in control: maxit=4 ; npart=4 ; parallel=parallel ]
+         
+                               
+[ Parallel initialization ... ]
+[ MPI environment detected ]
+[ Number of cores/nodes detected: 32 ]
+Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
+  [ 'par.nnodes' > npart (32>4) =>  par.nnodes=4 ] !
+[ Number of cores/nodes used    : 4 ]
+[ spinning up MPI cluster ]
+                                                                                
+================================================================================
+[ Writing the 'PSO_logfile.txt' file ...                                       ]
+================================================================================
+                                                                                
+================================================================================
+[                                 Running  PSO ...                             ]
+================================================================================
+                                                                                

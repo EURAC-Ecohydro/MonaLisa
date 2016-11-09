@@ -4,13 +4,13 @@ hydroPSO Built    :  R 3.2.3; ; 2016-11-07 14:56:14 UTC; unix
 R version         :  R version 3.2.3 (2015-12-10)  
 Platform          :  x86_64-pc-linux-gnu  
 ================================================================================
-Starting Time     : Tue Nov  8 10:09:05 2016 
+Starting Time     : Wed Nov  9 12:52:53 2016 
 ================================================================================
 Objective Function: fn 
 MinMax            : min 
 Dimension         : 32 
-Nmbr of Particles : 16 
-Max Iterations    : 10 
+Nmbr of Particles : 4 
+Max Iterations    : 4 
 Method            : spso2011 
 Topology          : random 
 K                 : 3 
@@ -31,5 +31,5 @@ maxfn             : Inf
 abstol            : -Inf 
 reltol            : 1.49011611938477e-08 
 parallel          : parallel 
-par.nnodes        : 16 
+par.nnodes        : 4 
 par.pkgs          : 

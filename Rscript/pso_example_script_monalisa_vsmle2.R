@@ -50,14 +50,14 @@ if (USE_RMPI==TRUE) {
 	}
 	
 	parallel <- "parallel"
-	npart <- 16
-	control <- list(maxit=10,npart=npart,parallel=parallel)
+	npart <- 4
+	control <- list(maxit=4,npart=npart,parallel=parallel)
 	
 } else {
 	
 	parallel <- "none"
 	npart <- 4
-	control <- list(maxit=10,npart=npart)
+	control <- list(maxit=4,npart=npart)
 	
 }
 
@@ -106,11 +106,11 @@ savepath0 <- paste(project_path,"save",sep="/")
 ## Choose the MonaLisa Site 
 
 
-itsim <- 1
-if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
+#itsim <- 1
+#if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
 
 
-for (itsim in geotopsims[-c(2,3,6,7)]) {
+for (itsim in geotopsims[-c(1,2,3,6,7)]) {
 	
 wpath <- wpath_geotopsims[itsim]
 geotop.param.file <- paramfiles[itsim]
@@ -170,9 +170,14 @@ pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 
 
 
+dirsim <- paste(savepath,itsim,sep="/")
+dir.create(dirsim)
+dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+dir.create(dirPSO)
 
-file.copy(from=runpath,to=paste(savepath,itsim,sep="/"),recursive=TRUE)
-file.copy(from="PSO.out",to=paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/"),recursive=TRUE)
+
+file.copy(from=runpath,to=dirsim,recursive=TRUE)
+file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
 save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
 
 }

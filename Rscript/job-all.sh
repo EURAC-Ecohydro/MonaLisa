@@ -1,7 +1,7 @@
 #$ -N geotopoptim2_MonaLisa
 #$ -V
 #$ -pe mpich 32
-#$ -l h_rt=06:00:00
+#$ -l h_rt=24:00:00
 #$ -M emanuele.cordano@gmail.com
 #$ -m beas  # all job events sent via email
 ##$ -q long.q
