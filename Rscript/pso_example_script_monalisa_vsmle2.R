@@ -107,7 +107,7 @@ itsim <- 1
 if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
 
 
-for (itsim in geotopsims[-c(1,2,3,6,7)]) {
+for (itsim in geotopsims[-c(2,3,6,7)]) {
 	
 wpath <- wpath_geotopsims[itsim]
 geotop.param.file <- paramfiles[itsim]
