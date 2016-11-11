@@ -1,6 +1,6 @@
 #$ -N geotopoptim2_MonaLisa
 #$ -V
-#$ -pe mpich 32
+#$ -pe mpich 16
 #$ -l h_rt=24:00:00
 #$ -M emanuele.cordano@gmail.com
 #$ -m beas  # all job events sent via email
@@ -18,7 +18,9 @@ export I_MPI_PIN_PROCESSOR_LIST=1,14,9,6,5,10,13,2,3,12,11,4,7,8,15,0
 
 
  
-mpirun -machinefile $TMPDIR/machines -np $NSLOTS R CMD BATCH pso_example_script_monalisa_vsmle2.R
+#mpirun -machinefile $TMPDIR/machines -np $NSLOTS R CMD BATCH pso_example_script_monalisa_vsmle2.R
+R CMD BATCH pso_example_script_monalisa_vsmle2.R
+
 
 mkdir $GEOTOPOTIM2_SAVE_DIR/saved
 mv $GEOTOPOTIM2_SAVE_DIR $GEOTOPOTIM2_SAVE_DIR/saved

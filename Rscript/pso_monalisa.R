@@ -82,6 +82,8 @@ if (USE_SE27XX==TRUE) {
 
 project_path0 <- '/home/ecor/local-projects/MonaLisa' 
 project_path <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR")
+itsim <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR")
+
 if (project_path=="") project_path <- project_path0
 
 geotopsims <- c("DOMEF_1500_Optim_001",
