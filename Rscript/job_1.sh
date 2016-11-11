@@ -4,9 +4,12 @@
 #$ -M emanuele.cordano@gmail.com
 #$ -m beas  # all job events sent via email
 #$ -l h_rt=24:00:00
-#$ -t 1-4
-export GEOTOP_FOLDERS=folders
-export GEOTOP_FOLDER=$(awk "NR==$SGE_TASK_ID" $GEOTOP_FOLDERS)
+#####$ -t 1-4
+####export GEOTOP_FOLDERS=folder_1
+export GEOTOP_FOLDER=DOMEF_1500_Optim_001 
+
+
+########   $(awk "NR==$SGE_TASK_ID" $GEOTOP_FOLDERS)
 
 export GEOTOPOPTIM2_TEMP_DIR=/tmp/geotopOtim2_tempdir
 export GEOTOPOPTIM2_SAVE_DIR=/home/lv70864/ecordano/Simulations/MonaLisaSims
