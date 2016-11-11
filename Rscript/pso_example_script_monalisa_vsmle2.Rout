@@ -1,0 +1,796 @@
+
+R version 3.2.3 (2015-12-10) -- "Wooden Christmas-Tree"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> #!/usr/bin/env Rscript
+> # file psol_example_script_vsmle.R
+> #
+> # This script is an examples of a GEOtop PSO Calibration via geotopOptim2
+> #
+> # author: Emanuele Cordano on 16-10-2016
+> 
+> #This program is free software: you can redistribute it and/or modify
+> #it under the terms of the GNU General Public License as published by
+> #the Free Software Foundation, either version 3 of the License, or
+> #(at your option) any later version.
+> #
+> #This program is distributed in the hope that it will be useful,
+> #but WITHOUT ANY WARRANTY; without even the implied warranty of
+> #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> #GNU General Public License for more details.
+> #
+> #You should have received a copy of the GNU General Public License
+> #along with this program.  If not, see <http://www.gnu.org/licenses/>.
+> 
+> ###############################################################################
+> #### export MONALISA_TEMPDIR=/home/ecor/temp/monalisa
+> 
+> rm(list=ls())
+> options(warn=1)
+> 
+> library(zoo)
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+> library(geotopOptim2)
+Loading required package: geotopbricks
+Loading required package: raster
+Loading required package: sp
+Loading required package: stringr
+Warning: replacing previous import by ‘stringr::str_split’ when loading ‘geotopbricks’
+Warning: replacing previous import by ‘stringr::str_trim’ when loading ‘geotopbricks’
+Loading required package: hydroPSO
+(C) 2011-2013 M. Zambrano-Bigiarini and R. Rojas (GPL >=2 license)
+Type 'citation('hydroPSO')' to see how to cite this package
+Loading required package: hydroGOF
+Note: the specification for S3 class “zoo” in package ‘spacetime’ seems equivalent to one from package ‘geotopbricks’: not turning on duplicate class definitions for this class.
+Loading required package: soilwater
+Warning: replacing previous import by ‘zoo::index<-’ when loading ‘geotopOptim2’
+> 
+> ## Set a seed for the random generation
+> set.seed(7999)
+> ## This 'if' loop was introduced if hydroPSO has been worked on a MPI/parallel way 
+> ## to optimize VSC performances.
+> ## In these lines 'control' argument for 'lhoat' or 'hydroPSO' ('geotoplhoat' or 'geotopPSO') is set. See documentation: help(lhoat) or help(hydropso)  
+> USE_RMPI <- TRUE
+> 
+> if (USE_RMPI==FALSE) {
++ 	library("parallel")
++ 	
++ 	library(Rmpi)
++ 	require(snow)
++ 	
++ 	if (mpi.comm.rank(0) > 0) {
++ 		sink(file="/dev/null")
++ 		#runMPIslave()
++ 		slaveLoop(makeMPImaster())
++ 		mpi.quit()
++ 		
++ 		
++ 	}
++ 	
++ 	parallel <- "parallel"
++ 	npart <- 4
++ 	control <- list(maxit=4,npart=npart,parallel=parallel)
++ 	
++ } else {
++ 	
++ 	parallel <- "none"
++ 	npart <- 4
++ 	control <- list(maxit=4,npart=npart)
++ 	
++ }
+> 
+> ## This 'if' loop was introduced to set the GEOtop binary file which be used in GEOtop 
+> 
+> USE_SE27XX <- TRUE
+> 
+> if (USE_SE27XX==TRUE) {
++ 	
++ 	##bin <- ' geotop-2.0.0'
++ 	bin <- 'geotop_se27xx'
++ ##bin<- '/home/ecor/local/geotop/GEOtop/bin/geotop-2.0.0'
++ 	
++ } else {
++ 	
++ 	bin  <-  'geotop_dev'
++ 	
++ }  
+> 
+> 
+> ## MonaLisa sites
+> 
+> project_path0 <- '/home/ecor/local-projects/MonaLisa' 
+> project_path <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR")
+> if (project_path=="") project_path <- project_path0
+> 
+> geotopsims <- c("DOMEF_1500_Optim_001",
++ "Kaltern_Optim_001",
++ "Matsch_P2_DVE_Optim_001",
++ "DOMES_1500_Optim_001",
++ "Matsch_B2_DVM_Optim_001",
++ "Matsch_P2_Optim_001",
++ "DOPAS_2000_Optim_001","Matsch_B2_Optim_001")
+> 
+> wpath_geotopsims <- paste(project_path,"geotop",geotopsims,sep="/")
+> 
+> names(wpath_geotopsims) <-  geotopsims
+> 
+> paramfiles <- sprintf("param_%s.csv",geotopsims)
+> paramfiles <- paste(project_path,"param",paramfiles,sep="/")
+> names(paramfiles) <- geotopsims
+> runpath0 <- paste(project_path,"run",sep="/")
+> savepath0 <- paste(project_path,"save",sep="/")
+> 
+> 
+> ## Choose the MonaLisa Site 
+> 
+> 
+> #itsim <- 1
+> #if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
+> 
+> 
+> for (itsim in geotopsims[-c(1,2,3,6,7)]) {
++ 	
++ wpath <- wpath_geotopsims[itsim]
++ geotop.param.file <- paramfiles[itsim]
++ 
++ 
++ 
++ 
++ 
++ 
++ ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
++ 
++ tz <- "Etc/GMT-1"
++ 
++ ## Set the full path for GEOtop simulation template
++ 
++ wpath <- wpath
++ 
++ 
++ ## Set a temporary path where to run GEOtop simulations
++ 
++ runpath <- Sys.getenv("GEOTOPOPTIM2_TEMP_DIR")
++ if (runpath=="") runpath <- runpath0
++ savepath <- Sys.getenv("GEOTOPOPTIM2_SAVE_DIR")
++ if (savepath=="") savepath <- savepath0
++ ## Set/get  parameter calibartion values (upper and lower values and names)
++ ## Here parameters are read from a CSV ascii files and then imported as a data frame
++ 
++ geotop.param.file <-  geotop.param.file ###system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
++ geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
++ 
++ 
++ ## Parametrer value are saved as separate vactors: one for upper values , one for lower values, another for suggested value (only PSO not lhoat)
++ ## Each vector elements must be named with parameter name in accordance with geotopOptim2 documention (see vignette)
++ lower <- geotop.param$lower
++ upper <- geotop.param$upper
++ x <- geotop.param$suggested
++ names(lower) <- geotop.param$name
++ names(upper) <- geotop.param$name
++ if (!is.null(x)) names(x) <- geotop.param$name
++ 
++ 
++ ### Set Target Observed Variables (here are used the same names of observation file!)
++ ### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
++ var <- c('soil_moisture_content_50','soil_moisture_content_200') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
++ uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
++ 
++ names(var)  <- var
++ names(uscale) <- var
++ 
++ 
++ ### Here 'lhoat' is triggered!
++ 
++ 
++ pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
++ 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
++ 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
++ 
++ 
++ 
++ dirsim <- paste(savepath,itsim,sep="/")
++ dir.create(dirsim)
++ dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
++ dir.create(dirPSO)
++ 
++ 
++ file.copy(from=runpath,to=dirsim,recursive=TRUE)
++ file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
++ save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
++ 
++ }
+Warning in file(con, "r") :
+  cannot open file '/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001/soiltype.asc': No such file or directory
+Warning (get.geotop.inpts.keyword.value): keyword PointFile without value:
+Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointX without value:
+Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointY without value:
+Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
+  [ 'REPORT' is greater than 'maxit' => 'REPORT=maxit' ]
+                                                                                
+================================================================================
+[                                Initialising  ...                             ]
+================================================================================
+                                                                                
+[npart=4 ; maxit=4 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
+         
+[ user-definitions in control: maxit=4 ; npart=4 ]
+         
+                                                                                
+================================================================================
+[ Writing the 'PSO_logfile.txt' file ...                                       ]
+================================================================================
+                                                                                
+================================================================================
+[                                 Running  PSO ...                             ]
+================================================================================
+                                                                                
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:03:39
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb12a0e0b3/DOMES_1500_Optim_001 at 2016-11-09 18:03:43
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb12a0e0b3/DOMES_1500_Optim_001 at 2016-11-09 18:05:13
+End GEOtop Running!
+Finish GOF 0.318904374382039 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb12a0e0b3/DOMES_1500_Optim_001 at 2016-11-09 18:05:54
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb12a0e0b3/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:05:54
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1396382d/DOMES_1500_Optim_001 at 2016-11-09 18:05:57
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1396382d/DOMES_1500_Optim_001 at 2016-11-09 18:08:02
+End GEOtop Running!
+Finish GOF 0.333016516106934 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1396382d/DOMES_1500_Optim_001 at 2016-11-09 18:08:34
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1396382d/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:08:34
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb320301ba/DOMES_1500_Optim_001 at 2016-11-09 18:08:37
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb320301ba/DOMES_1500_Optim_001 at 2016-11-09 18:10:42
+End GEOtop Running!
+Finish GOF 0.29 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb320301ba/DOMES_1500_Optim_001 at 2016-11-09 18:11:18
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb320301ba/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:11:18
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb7924f836/DOMES_1500_Optim_001 at 2016-11-09 18:11:21
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb7924f836/DOMES_1500_Optim_001 at 2016-11-09 18:12:49
+End GEOtop Running!
+Finish GOF 0.164012194668567 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb7924f836/DOMES_1500_Optim_001 at 2016-11-09 18:13:23
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb7924f836/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:13:23
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb412c7d98/DOMES_1500_Optim_001 at 2016-11-09 18:13:26
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb412c7d98/DOMES_1500_Optim_001 at 2016-11-09 18:15:32
+End GEOtop Running!
+Finish GOF 0.166433169770932 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb412c7d98/DOMES_1500_Optim_001 at 2016-11-09 18:16:05
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb412c7d98/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:16:05
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb72a06a34/DOMES_1500_Optim_001 at 2016-11-09 18:16:08
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb72a06a34/DOMES_1500_Optim_001 at 2016-11-09 18:17:46
+End GEOtop Running!
+Finish GOF 0.158113883008419 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb72a06a34/DOMES_1500_Optim_001 at 2016-11-09 18:18:17
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb72a06a34/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:18:17
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001 at 2016-11-09 18:18:20
+
+Error::Run time error
+Error::Error 1 in tridiag
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001 at 2016-11-09 18:18:34
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001 at 2016-11-09 18:18:34
+Warning in FUN(newX[, i], ...) :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001 !
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:18:34
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1ceef73e/DOMES_1500_Optim_001 at 2016-11-09 18:18:37
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1ceef73e/DOMES_1500_Optim_001 at 2016-11-09 18:20:50
+End GEOtop Running!
+Finish GOF 0.242074368738204 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1ceef73e/DOMES_1500_Optim_001 at 2016-11-09 18:21:24
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1ceef73e/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:21:24
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb6af7c6e2/DOMES_1500_Optim_001 at 2016-11-09 18:21:27
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb6af7c6e2/DOMES_1500_Optim_001 at 2016-11-09 18:30:50
+End GEOtop Running!
+Finish GOF 0.237065391822594 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb6af7c6e2/DOMES_1500_Optim_001 at 2016-11-09 18:31:25
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb6af7c6e2/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:31:25
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb633aef53/DOMES_1500_Optim_001 at 2016-11-09 18:31:28
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb633aef53/DOMES_1500_Optim_001 at 2016-11-09 18:33:07
+End GEOtop Running!
+Finish GOF 0.172046505340853 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb633aef53/DOMES_1500_Optim_001 at 2016-11-09 18:33:40
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb633aef53/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:33:40
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb4e108ad8/DOMES_1500_Optim_001 at 2016-11-09 18:33:43
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb4e108ad8/DOMES_1500_Optim_001 at 2016-11-09 18:35:40
+End GEOtop Running!
+Finish GOF 0.14422205101856 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb4e108ad8/DOMES_1500_Optim_001 at 2016-11-09 18:36:14
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb4e108ad8/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:36:14
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001 at 2016-11-09 18:36:17
+
+Error::Run time error
+Error::Error 1 in tridiag
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001 at 2016-11-09 18:36:35
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001 at 2016-11-09 18:36:35
+Warning in FUN(newX[, i], ...) :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001 !
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:36:35
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb41867571/DOMES_1500_Optim_001 at 2016-11-09 18:36:38
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb41867571/DOMES_1500_Optim_001 at 2016-11-09 18:38:39
+End GEOtop Running!
+Finish GOF 0.14422205101856 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb41867571/DOMES_1500_Optim_001 at 2016-11-09 18:39:13
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb41867571/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:39:13
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb7878f928/DOMES_1500_Optim_001 at 2016-11-09 18:39:16
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb7878f928/DOMES_1500_Optim_001 at 2016-11-09 18:40:44
+End GEOtop Running!
+Finish GOF 0.156524758424985 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb7878f928/DOMES_1500_Optim_001 at 2016-11-09 18:41:19
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb7878f928/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:41:19
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb5a6b6865/DOMES_1500_Optim_001 at 2016-11-09 18:41:21
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb5a6b6865/DOMES_1500_Optim_001 at 2016-11-09 18:49:09
+End GEOtop Running!
+Finish GOF 0.130384048104053 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb5a6b6865/DOMES_1500_Optim_001 at 2016-11-09 18:49:43
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb5a6b6865/DOMES_1500_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:49:43
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfbe0f16d6/DOMES_1500_Optim_001 at 2016-11-09 18:49:45
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfbe0f16d6/DOMES_1500_Optim_001 at 2016-11-09 18:55:44
+End GEOtop Running!
+Finish GOF 0.222036033111745 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfbe0f16d6/DOMES_1500_Optim_001 at 2016-11-09 18:56:19
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfbe0f16d6/DOMES_1500_Optim_001
+iter:4  Gbest: 1.304E-01  Gbest_rate:  9.59%  Iter_best_fit: 1.304E-01  nSwarm_Radius: 1.27E-01  |g-mean(p)|/mean(p): 12.37%
+                           
+[ Writing output files... ]
+                           
+                                    |                                           
+================================================================================
+[                          Creating the R output ...                           ]
+================================================================================
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-09 18:56:19
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001/INhorizon', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001/INmeteo', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001/INsoil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001/INhorizon', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001/INmeteo', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001/INsoil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7/DOMES_1500_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf/DOMES_1500_Optim_001', reason 'Directory not empty'
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001 at 2016-11-09 18:56:22
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001 at 2016-11-09 19:04:09
+End GEOtop Running!
+Finish GOF 0.130384048104053 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001 at 2016-11-09 19:04:45
+Warning in dir.create(dirsim) :
+  '/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMES_1500_Optim_001' already exists
+Warning in dir.create(dirPSO) :
+  '/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMES_1500_Optim_001_PSO.out' already exists
+Warning in file(con, "r") :
+  cannot open file '/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001/soiltype.asc': No such file or directory
+Warning (get.geotop.inpts.keyword.value): keyword PointFile without value:
+Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointX without value:
+Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointY without value:
+Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
+  [ 'REPORT' is greater than 'maxit' => 'REPORT=maxit' ]
+                                                                                
+================================================================================
+[                                Initialising  ...                             ]
+================================================================================
+                                                                                
+[npart=4 ; maxit=4 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
+         
+[ user-definitions in control: maxit=4 ; npart=4 ]
+         
+                                                                                
+================================================================================
+[ Writing the 'PSO_logfile.txt' file ...                                       ]
+================================================================================
+                                                                                
+================================================================================
+[                                 Running  PSO ...                             ]
+================================================================================
+                                                                                
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:04:47
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5c8cb646/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:04:51
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5c8cb646/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:07:37
+End GEOtop Running!
+Finish GOF 0.382099463490856 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5c8cb646/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:08:28
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5c8cb646/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:08:28
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb812fb7f/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:08:31
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb812fb7f/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:11:08
+End GEOtop Running!
+Finish GOF 0.29732137494637 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb812fb7f/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:11:57
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb812fb7f/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:11:57
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb46a8a661/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:12:00
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb46a8a661/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:14:32
+End GEOtop Running!
+Finish GOF 0.332415402771893 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb46a8a661/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:15:17
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb46a8a661/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:15:17
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb25265429/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:15:20
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb25265429/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:17:40
+End GEOtop Running!
+Finish GOF 0.304138126514911 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb25265429/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:18:29
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb25265429/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:18:29
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5d1192ad/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:18:32
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5d1192ad/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:21:04
+End GEOtop Running!
+Finish GOF 0.325576411921994 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5d1192ad/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:21:49
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5d1192ad/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:21:49
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfbd70fe4e/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:21:52
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfbd70fe4e/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:24:07
+End GEOtop Running!
+Finish GOF 0.396988664825584 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfbd70fe4e/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:24:53
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfbd70fe4e/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:24:53
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:24:56
+
+Error::Run time error
+Error::Fatal Error! Geotop is closed. See failing report.
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:25:16
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:25:16
+Warning in FUN(newX[, i], ...) :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001 !
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:25:16
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb25f037e2/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:25:19
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb25f037e2/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:30:38
+End GEOtop Running!
+Finish GOF 0.134536240470737 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb25f037e2/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:31:28
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb25f037e2/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:31:28
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfbd328a22/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:31:31
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfbd328a22/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:33:35
+End GEOtop Running!
+Finish GOF 0.254950975679639 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfbd328a22/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:20
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfbd328a22/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:20
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:23
+
+Error::Run time error
+Error::Fatal Error! Geotop is closed. See failing report.
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:31
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:31
+Warning in FUN(newX[, i], ...) :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001 !
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:31
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:34
+
+Error::Run time error
+Error::Fatal Error! Geotop is closed. See failing report.
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:42
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:42
+Warning in FUN(newX[, i], ...) :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001 !
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:42
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb2be75b80/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:34:45
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb2be75b80/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:36:48
+End GEOtop Running!
+Finish GOF 0.361247837363769 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb2be75b80/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:37:33
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb2be75b80/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:37:34
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb27d914f8/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:37:36
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb27d914f8/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:51:45
+End GEOtop Running!
+Finish GOF 0.248394846967484 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb27d914f8/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:52:32
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb27d914f8/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:52:32
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb1cb7af51/Matsch_B2_DVM_Optim_001 at 2016-11-09 19:52:35
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb1cb7af51/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:09:18
+End GEOtop Running!
+Finish GOF 0.148660687473185 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb1cb7af51/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:10:08
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb1cb7af51/Matsch_B2_DVM_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:10:08
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:10:11
+
+Error::Run time error
+Error::Fatal Error! Geotop is closed. See failing report.
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:10:18
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:10:18
+Warning in FUN(newX[, i], ...) :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001 !
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:10:18
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb3a79f5ac/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:10:22
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb3a79f5ac/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:16:05
+End GEOtop Running!
+Finish GOF 0.142126704035519 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb3a79f5ac/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:16:55
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb3a79f5ac/Matsch_B2_DVM_Optim_001
+iter:4  Gbest: 1.345E-01  Gbest_rate:  0.00%  Iter_best_fit: 1.421E-01  nSwarm_Radius: 2.48E-01  |g-mean(p)|/mean(p): 37.72%
+                           
+[ Writing output files... ]
+                           
+                                    |                                           
+================================================================================
+[                          Creating the R output ...                           ]
+================================================================================
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:16:55
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb59640fc7/Matsch_B2_DVM_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb5debe681/Matsch_B2_DVM_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6ac19b0e/Matsch_B2_DVM_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx2bfb6e3af012/Matsch_B2_DVM_Optim_001', reason 'Directory not empty'
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:16:58
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:22:16
+End GEOtop Running!
+Finish GOF 0.134536240470737 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001 at 2016-11-09 20:23:02
+Warning in file.copy(from = runpath, to = dirsim, recursive = TRUE) :
+  problem creating directory /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/INmeteo: No space left on device
+Warning in file.copy(from = runpath, to = dirsim, recursive = TRUE) :
+  problem creating directory /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/obs: No space left on device
+Warning in file.copy(from = runpath, to = dirsim, recursive = TRUE) :
+  problem creating directory /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/INhorizon: No space left on device
+Warning in file.copy(from = runpath, to = dirsim, recursive = TRUE) :
+  problem creating directory /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb1e85c3bf: No space left on device
+Warning in file.copy(from = runpath, to = dirsim, recursive = TRUE) :
+  problem creating directory /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2bfb13d64fe7: No space left on device
+Warning in file.copy(from = "PSO.out", to = dirPSO, r                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+================================================================================
+[                                 Running  PSO ...                             ]
+================================================================================
+                                                                                
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:23:05
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb304de77e/Matsch_B2_Optim_001 at 2016-11-09 20:23:09
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb304de77e/Matsch_B2_Optim_001 at 2016-11-09 20:23:45
+End GEOtop Running!
+Finish GOF 0.403112887414928 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb304de77e/Matsch_B2_Optim_001 at 2016-11-09 20:24:00
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb304de77e/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:24:00
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbb671181/Matsch_B2_Optim_001 at 2016-11-09 20:24:03
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbb671181/Matsch_B2_Optim_001 at 2016-11-09 20:24:40
+End GEOtop Running!
+Finish GOF 0.388973006775535 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbb671181/Matsch_B2_Optim_001 at 2016-11-09 20:24:55
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbb671181/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:24:55
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb339eede2/Matsch_B2_Optim_001 at 2016-11-09 20:24:58
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb339eede2/Matsch_B2_Optim_001 at 2016-11-09 20:25:35
+End GEOtop Running!
+Finish GOF 0.395979797464467 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb339eede2/Matsch_B2_Optim_001 at 2016-11-09 20:25:50
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb339eede2/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:25:50
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb717a6517/Matsch_B2_Optim_001 at 2016-11-09 20:25:53
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb717a6517/Matsch_B2_Optim_001 at 2016-11-09 20:26:30
+End GEOtop Running!
+Finish GOF 0.332415402771893 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb717a6517/Matsch_B2_Optim_001 at 2016-11-09 20:26:46
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb717a6517/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:26:46
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb7e077bb5/Matsch_B2_Optim_001 at 2016-11-09 20:26:49
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb7e077bb5/Matsch_B2_Optim_001 at 2016-11-09 20:28:35
+End GEOtop Running!
+Finish GOF 0.158113883008419 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb7e077bb5/Matsch_B2_Optim_001 at 2016-11-09 20:28:51
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb7e077bb5/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:28:51
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb47753dc9/Matsch_B2_Optim_001 at 2016-11-09 20:28:53
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb47753dc9/Matsch_B2_Optim_001 at 2016-11-09 20:29:23
+End GEOtop Running!
+Finish GOF 0.339411254969543 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb47753dc9/Matsch_B2_Optim_001 at 2016-11-09 20:29:37
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb47753dc9/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:29:37
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbe695c55/Matsch_B2_Optim_001 at 2016-11-09 20:29:40
+
+Error::Run time error
+Error::Error 1 in tridiag
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbe695c55/Matsch_B2_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbe695c55/Matsch_B2_Optim_001 at 2016-11-09 20:29:53
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbe695c55/Matsch_B2_Optim_001 at 2016-11-09 20:29:53
+Warning in FUN(newX[, i], ...) :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfbe695c55/Matsch_B2_Optim_001 !
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:29:53
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb68ff4297/Matsch_B2_Optim_001 at 2016-11-09 20:29:56
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb68ff4297/Matsch_B2_Optim_001 at 2016-11-09 20:30:42
+End GEOtop Running!
+Finish GOF 0.403112887414928 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb68ff4297/Matsch_B2_Optim_001 at 2016-11-09 20:30:57
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb68ff4297/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:30:57
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb2ab02d1c/Matsch_B2_Optim_001 at 2016-11-09 20:31:00
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb2ab02d1c/Matsch_B2_Optim_001 at 2016-11-09 20:31:35
+End GEOtop Running!
+Finish GOF 0.311126983722081 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb2ab02d1c/Matsch_B2_Optim_001 at 2016-11-09 20:31:49
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb2ab02d1c/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-09 20:31:49
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb5c79e72d/Matsch_B2_Optim_001 at 2016-11-09 20:31:52
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2bfb5c79e72d/Matsch_B2_Optim_001 at 2016-11-09 20:34:31

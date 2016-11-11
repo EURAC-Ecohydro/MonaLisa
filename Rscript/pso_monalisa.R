@@ -82,6 +82,8 @@ if (USE_SE27XX==TRUE) {
 
 project_path0 <- '/home/ecor/local-projects/MonaLisa' 
 project_path <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR")
+itsim <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR")
+
 if (project_path=="") project_path <- project_path0
 
 geotopsims <- c("DOMEF_1500_Optim_001",
@@ -110,7 +112,7 @@ savepath0 <- paste(project_path,"save",sep="/")
 #if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
 
 
-for (itsim in geotopsims[-c(2,3,6,7)]) {
+for (itsim in geotopsims[-c(1,2,3,6,7)]) {
 	
 wpath <- wpath_geotopsims[itsim]
 geotop.param.file <- paramfiles[itsim]
