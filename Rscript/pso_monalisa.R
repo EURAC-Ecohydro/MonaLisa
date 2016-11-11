@@ -108,12 +108,30 @@ savepath0 <- paste(project_path,"save",sep="/")
 ## Choose the MonaLisa Site 
 
 
-#itsim <- 1
-#if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
+itsim <- Sys.getenv("GEOTOP_FOLDER") 
+if (itsim=="") itsim <- 1
+if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
 
 
-for (itsim in geotopsims[-c(1,2,3,6,7)]) {
+####for (itsim in geotopsims[-c(1,2,3,6,7)]) {
 	
+wpath <- wpath_geotopsims[itsim]
+geotop.param.file <- paramfiles[itsim]
+
+
+
+
+
+
+## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
+
+tz <- "Etc/GMT-1"
+
+## Set the full path for GEOtop simulation template
+
+wpath <- wpath
+
+
 wpath <- wpath_geotopsims[itsim]
 geotop.param.file <- paramfiles[itsim]
 
@@ -163,8 +181,11 @@ names(var)  <- var
 names(uscale) <- var
 
 
-### Here 'lhoat' is triggered!
-
+### Preparing diagram
+dirsim <- paste(savepath,itsim,sep="/")
+dir.create(dirsim)
+dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+control[["drty.out"]] <- dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
 
 pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
@@ -172,9 +193,8 @@ pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 
 
 
-dirsim <- paste(savepath,itsim,sep="/")
-dir.create(dirsim)
-dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+
+#dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
 dir.create(dirPSO)
 
 
@@ -182,6 +202,61 @@ file.copy(from=runpath,to=dirsim,recursive=TRUE)
 file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
 save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
 
-}
+
+
+## Set a temporary path where to run GEOtop simulations
+
+runpath <- Sys.getenv("GEOTOPOPTIM2_TEMP_DIR")
+if (runpath=="") runpath <- runpath0
+savepath <- Sys.getenv("GEOTOPOPTIM2_SAVE_DIR")
+if (savepath=="") savepath <- savepath0
+## Set/get  parameter calibartion values (upper and lower values and names)
+## Here parameters are read from a CSV ascii files and then imported as a data frame
+
+geotop.param.file <-  geotop.param.file ###system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
+geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
+
+
+## Parametrer value are saved as separate vactors: one for upper values , one for lower values, another for suggested value (only PSO not lhoat)
+## Each vector elements must be named with parameter name in accordance with geotopOptim2 documention (see vignette)
+lower <- geotop.param$lower
+upper <- geotop.param$upper
+x <- geotop.param$suggested
+names(lower) <- geotop.param$name
+names(upper) <- geotop.param$name
+if (!is.null(x)) names(x) <- geotop.param$name
+
+
+### Set Target Observed Variables (here are used the same names of observation file!)
+### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
+var <- c('soil_moisture_content_50','soil_moisture_content_200') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
+uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
+
+names(var)  <- var
+names(uscale) <- var
+
+
+### Preparing diagram
+dirsim <- paste(savepath,itsim,sep="/")
+dir.create(dirsim)
+dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+control[["drty.out"]] <- dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+
+pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
+		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
+		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
+
+
+
+
+#dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+dir.create(dirPSO)
+
+
+file.copy(from=runpath,to=dirsim,recursive=TRUE)
+######file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
+save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
+
+####}
 
 if (USE_RMPI==TRUE) mpi.finalize()
