@@ -113,95 +113,47 @@ The following objects are masked from ‘package:parallel’:
     stopCluster
 
 Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-12 23:45:53
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-12 18:33:24
 GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d58363a36fb/DOMES_1500_Optim_001 at 2016-11-12 23:45:57F
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx1490ccc5e40/DOMES_1500_Optim_001 at 2016-11-12 18:33:28
+
 Error::Run time error
 Error::Error 1 in tridiag
 ........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 at 2016-11-12 23:50:02
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx1490ccc5e40/DOMES_1500_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx1490ccc5e40/DOMES_1500_Optim_001 at 2016-11-12 18:44:20
 End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 at 2016-11-12 23:50:02
+Finish GOF Preparing a GEPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-1GEOtop is runnGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx148c6a381cc5/DOMES_1500_Optim_001 at 2016-1FINISH rundirFFINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx4d776e2d41f5/DOMES_1500_Optim_001 at 2016-11-12 18:54:45
+End GEOtop Running!
+Finish GOF 0.487954915950234 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx4d776e2d41f5/DOMES_1500_Optim_001 at 2016-11-12 18:55:20
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx4d776e2d41f5/DOMES_1Preparing a GEPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-1GEOtop is runnGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx148c19cbdfa1/DOMES_1500_Optim_001 at 2016-1FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx147b1d5af2bc/DOMES_1500_Optim_001 at 2016-11-12 19:04:44
+End GEOtop Running!
+Finish GOF 0.116619037896906 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx147b1d5af2bc/DOMES_1500_Optim_001 at 2016-11-12 19:05:15
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx147b1d5af2bc/DOMES_1500_Optim_001
+Preparing a GEPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-1GEOtop is runnGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx148c43b2095b/DOMES_1500_Optim_001 at 2016-1FINISH runFINIFINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx4d78730effb1/DOMES_1500_Optim_001 at 2016-11-12 19:12:53
+End GEOtop Running!
+Finish GOF 0.29732137494637 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx4d78730effb1/DOMES_1500_Optim_001 at 2016-11-12 19:13:25
+Deleting /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx4d78730effb1/DOMES_1500_Optim_001
+
+e701e615/DOMES_1500_Optim_001 at 2016-11-12 19:09:59
+End GEOtop RunnFinisFinish GOF 0.166433169770932 :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx4d6e701e615/DOMES_1500_Optim_001 at 2016-11-12 19:10:31
+Deleting /tmp/geotopOtim2_tempdir/DOME
+Error::Run time error
+Error::Error 1 in tridiag
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx148a758bc98e/DOMES_1500_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx148a758bc98e/DOMES_1500_Optim_001 at 2016-11-12 19:19:17
+End GEOtop Running!
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx148a758bc98e/DOMES_1500_Optim_001 at 2016-11-12 19:19:17
 Warning in FUN(newX[, i], ...) :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 !
-f("param_%s.csv",geotopsims)
-> paramfiles <- paste(project_path,"param",paramfiles,sep="/")
-> names(paramfiles) <- geotopsims
-> runpath0 <- paste(project_path,"run",sep="/")
-> savepath0 <- paste(project_path,"save",sep="/")
-> 
-> 
-> ## Choose the MonaLisa Site 
-> 
-> 
-> itsim <- Sys.getenv("GEOTOP_FOLDER") 
-> if (itsim=="") stop("GEOTOP FOLDER MISSING")
-> if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
-> 
-> 
-> ####for (itsim in geotopsims[-c(1,2,3,6,7)]) {
-> 	
-> wpath <- wpath_geotopsims[itsim]
-> geotop.param.file <- paramfiles[itsim]
-> 
-> 
-> 
-> 
-> 
-> 
-> ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
-> 
-> tz <- "Etc/GMT-1"
-> 
-> ## Set the full path for GEOtop simulation template
-> 
-> wpath <- wpath
-> 
-> 
-> wpath <- wpath_geotopsims[itsim]
-> geotop.param.file <- paramfiles[itsim]
-> 
-> 
-> 
-> 
-> 
-> 
-> ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
-> 
-> tz <- "Etc/GMT-1"
-> 
-> ## Set the full path for GEOtop simulation template
-> 
-> wpath <- wpath
-> 
-> 
-> ## Set a temporary path where to run GEOtop simulations
-> 
-> runpath <- Sys.getenv("GEOTOPOPTIM2_TEMP_DIR")
-> if (runpath=="") runpath <- runpath0
-> savepath <- Sys.getenv("GEOTOPOPTIM2_SAVE_DIR")
-> if (savepath=="") savepath <- savepath0
-> ## Set/get  parameter calibartion values (upper and lower values and names)
-> ## Here parameters are read from a CSV ascii files and then imported as a data frame
-> 
-> geotop.param.file <-  geotop.param.file ###system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
-> geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
-> 
-> 
-> ## Parametrer value are saved as separate vactors: one for upper values , one for lower values, another for suggested value (only PSO not lhoat)
-> ## Each vector elements must be named with parameter name in accordance with geotopOptim2 documention (see vignette)
-> lower <- geotop.param$lower
-> upper <- geotop.param$upper
-> x <- geotop.param$suggested
-> names(lower) <- geotop.param$name
-> names(upper) <- geotop.param$name
-> if (!is.null(x)) names(x) <- geotop.param$name
-> 
-> 
-> ### Set Target Observed Variables (here are used the same names of observation file!)
-> ### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
-> var <- c('soil_moisture_content_50','soil_moisture_content_200') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx148a758bc98e/DOMES_1500_Optim_001 !
+###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
 > uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
 > 
 > names(var)  <- var

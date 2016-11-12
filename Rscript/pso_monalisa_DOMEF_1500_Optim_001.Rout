@@ -17,6 +17,8 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
+[Previously saved workspace restored]
+
 > #!/usr/bin/env Rscript
 > # file psol_example_script_vsmle.R
 > #
@@ -89,8 +91,8 @@ Warning: replacing previous import by ‘zoo::index<-’ when loading ‘geotopO
 + 	}
 + 	
 + 	parallel <- "parallel"
-+ 	npart <- 4
-+ 	control <- list(maxit=4,npart=npart,parallel=parallel)
++ 	npart <- 31
++ 	control <- list(maxit=10,npart=npart,parallel=parallel)
 + 	
 + } else {
 + 	
@@ -111,981 +113,67 @@ The following objects are masked from ‘package:parallel’:
     stopCluster
 
 Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-11 18:15:25
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-12 23:45:53
 GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708333771490/DOMEF_1500_Optim_001 at 2016-11-11 18:15:2
-FFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708333771490/DOMEF_1500_Optim_001 at 2016-11-11 18:17:37
-End GEOtop RunningFiFinish GOF 0.375366487582469 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708333771490/DOMEF_1500_Optim_001 at 2016-11-11 18:18:12
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708333771490/DOMEF_1500_Optim_PrepPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-11 18:18GEOtGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70833f4b765d/DOMEF_1500_Optim_001 at 2016-11-11 18:18
-ErFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709129afc48/DOMEF_1500_Optim_001 at 2016-11-11 18:20:20
-End GEOtop Running!
-Finish GOF 0.325269119345812 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709129afc48/DOMEF_1500_Optim_001 at 2016-11-11 18:20:52
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709129afc48/DOMEF_1500_Optim_001
-PrepPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-11 18:20GEOtGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70836e0cf11/DOMEF_1500_Optim_001 at 2016-11-11 18:20:FINFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70836e0cf11/DOMEF_1500_Optim_001 at 2016-11-11 18:24:00
-End GEOtop RunningFiFinish GOF 0.348855270850248 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70836e0cf11/DOMEF_1500_Optim_001 at 2016-11-11 18:24:31
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70836e0cf11/DOMEF_1500_Optim_001
-Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-11 18:24:35
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7083528dd2/DOMEF_1500_Optim_001 at 2016-11-11 18:24:38
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7083528dd2/DOMEF_1500_Optim_001 at 2016-11-11 18:32:10
-End GEOtop Running!
-Finish GOF 0.177200451466694 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7083528dd2/DOMEF_1500_Optim_001 at 2016-11-11 18:32:42
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7083528dd2/DOMEF_1500_Optim_001
-tim_001
-xx709119942f3a/DOMEF_1500_Optim_001 at 2016-11-11 18:26:34
-End GEOtop Running!
-Finish GOF 0.260768096208106 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709119942f3a/DOMEF_1500_Optim_001 at 2016-11-11 18:27:04
-Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709119942f3a/DOMEF_1500_Optim_001
- See failing report.
-........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001 at 2016-11-11 18:24:49
-End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001 at 2016-11-11 18:24:49
-Warning in FUN(ne
-Erro
+rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx30d1ec982b1/DOMEF_1500_Optim_001 at 2016-11-12 23:45:56FI
 Error::Run time error
-Error::Fatal Error! Geotop is closed. See failing report.
+Error::Error 1 in tridiag
 ........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001 at 2016-11-11 18:24:55
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx27454ac0f6e1/DOMEF_1500_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx27454ac0f6e1/DOMEF_1500_Optim_001 at 2016-11-12 23:49:11
 End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001 at 2016-11-11 18:24:55
-Warning in FUN(if (length(d.call) < 2L) newX[, 1] else array(newX[, 1L],  :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001 !
-01 !
-unpath,clean=TRUE,data.frame=TRUE,
-+ 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
-Warning in file(con, "r") :
-  cannot open file '/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001/soiltype.asc': No such file or directory
-Warning (get.geotop.inpts.keyword.value): keyword PointFile without value:
-Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointX without value:
-Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointY without value:
-Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
-  [ 'REPORT' is greater than 'maxit' => 'REPORT=maxit' ]
-                                                                                
-================================================================================
-[                                Initialising  ...                             ]
-================================================================================
-                                                                                
-[npart=4 ; maxit=4 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
-         
-[ user-definitions in control: maxit=4 ; npart=4 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMEF_1500_Optim_001_PSO.out ]
-         
-                               
-[ Parallel initialization ... ]
-[ MPI environment detected ]
-[ Number of cores/nodes detected: 16 ]
-Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
-  [ 'par.nnodes' > npart (16>4) =>  par.nnodes=4 ] !
-[ Number of cores/nodes used    : 4 ]
-[ spinning up MPI cluster ]
-                                                                                
-================================================================================
-[ Writing the 'PSO_logfile.txt' file ...                                       ]
-================================================================================
-                                                                                
-================================================================================
-[                                 Running  PSO ...                             ]
-================================================================================
-                                                                                
-iter:4  Gbest: 1.772E-01  Gbest_rate:  3.62%  Iter_best_fit: 1.772E-01  nSwarm_Radius: 2.65E-01  |g-mean(p)|/mean(p): 29.46%
-                           
-[ Writing output files... ]
-                           
-                                    |                                           
-================================================================================
-[                          Creating the R output ...                           ]
-================================================================================
-Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-11 18:32:46
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559/DOMEF_1500_Optim_001/INhorizon', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559/DOMEF_1500_Optim_001/INmeteo', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559/DOMEF_1500_Optim_001/INsoil', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559/DOMEF_1500_Optim_001/obs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559/DOMEF_1500_Optim_001/tabs', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b221d3b98/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b631d116a/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707b6f9d80ec/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707bbebf566/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3157662e/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c35d708a5/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c3da1f346/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx707c6de29661/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708720de5b8a/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708741d1b714/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7087510ec0/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708762e60eed/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70881fee9fd2/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708843a22080/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70887f7b3a61/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx7089235d4a43/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70892ddcf7f5/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70896c3ffb95/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70897764b850/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a1569c8af/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a26cdc460/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708a6141b1a9/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708aa5b56a9/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b40badce9/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b45d787a/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b5db62429/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708b7c0798e0/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c15f34f5c/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c3c3d45fd/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c5ba6ba0d/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708c60d7a96/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3177535f/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d378034c7/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d3965c729/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708d46a078bb/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e52b5ad9a/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e63cb16e3/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708e7668917/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708efc78d37/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f438ee255/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f660477fa/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708f79ea389e/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx708fa38fad5/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709034d5d490/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70905fbb0be0/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709066a51d15/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx70909fcb2a6/DOMEF_1500_Optim_001', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559', reason 'Directory not empty'
-Warning in file.remove(torv) :
-  cannot remove file '/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx709114a52559/DOMEF_1500_Optim_001', reason 'Directory not empty'
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001 at 2016-11-11 18:32:49
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001 at 2016-11-11 18:40:17
-End GEOtop Running!
-Finish GOF 0.177200451466694 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001 at 2016-11-11 18:40:52
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx27454ac0f6e1/DOMEF_1500_Optim_001 at 2016-11-12 23:49:11
+Warning in FUN(newX[, i], ...) :
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx27454ac0f6e1/DOMEF_1500_Optim_001 !
+f("param_%s.csv",geotopsims)
+> paramfiles <- paste(project_path,"param",paramfiles,sep="/")
+> names(paramfiles) <- geotopsims
+> runpath0 <- paste(project_path,"run",sep="/")
+> savepath0 <- paste(project_path,"save",sep="/")
+> 
+> 
+> ## Choose the MonaLisa Site 
+> 
+> 
+> itsim <- Sys.getenv("GEOTOP_FOLDER") 
+> if (itsim=="") stop("GEOTOP FOLDER MISSING")
+> if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
+> 
+> 
+> ####for (itsim in geotopsims[-c(1,2,3,6,7)]) {
+> 	
+> wpath <- wpath_geotopsims[itsim]
+> geotop.param.file <- paramfiles[itsim]
 > 
 > 
 > 
 > 
-> #dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
-> ######dir.create(dirPSO)
 > 
 > 
-> file.copy(from=runpath,to=dirsim,recursive=TRUE)
-[1] TRUE
-> #######file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
-> save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
+> ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
 > 
+> tz <- "Etc/GMT-1"
+> 
+> ## Set the full path for GEOtop simulation template
+> 
+> wpath <- wpath
+> 
+> 
+> wpath <- wpath_geotopsims[itsim]
+> geotop.param.file <- paramfiles[itsim]
+> 
+> 
+> 
+> 
+> 
+> 
+> ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
+> 
+> tz <- "Etc/GMT-1"
+> 
+> ## Set the full path for GEOtop simulation template
+> 
+> wpath <- wpath
 > 
 > 
 > ## Set a temporary path where to run GEOtop simulations
@@ -1123,8 +211,6 @@ Finish GOF 0.177200451466694 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001 at 2
 > ### Preparing diagram
 > dirsim <- paste(savepath,itsim,sep="/")
 > dir.create(dirsim)
-Warning in dir.create(dirsim) :
-  '/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMEF_1500_Optim_001' already exists
 > dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
 > control[["drty.out"]] <- dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
 > 
@@ -1143,15 +229,27 @@ Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = F
 [                                Initialising  ...                             ]
 ================================================================================
                                                                                 
-[npart=4 ; maxit=4 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
+[npart=31 ; maxit=10 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
          
-[ user-definitions in control: maxit=4 ; npart=4 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMEF_1500_Optim_001_PSO.out ]
+[ user-definitions in control: maxit=10 ; npart=31 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMEF_1500_Optim_001_PSO.out ]
          
+                                            
+[ Output directory 'DOMEF_1500_Optim_001_PSO.out' was created on: '/home/lv70864/ecordano/Simulations/MonaLisaSims' ]
+                                            
                                
 [ Parallel initialization ... ]
 [ MPI environment detected ]
-[ Number of cores/nodes detected: 16 ]
+[ Number of cores/nodes detected: 32 ]
 Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
-  [ 'par.nnodes' > npart (16>4) =>  par.nnodes=4 ] !
-[ Number of cores/nodes used    : 4 ]
+  [ 'par.nnodes' > npart (32>31) =>  par.nnodes=31 ] !
+[ Number of cores/nodes used    : 31 ]
 [ spinning up MPI cluster ]
+                                                                                
+================================================================================
+[ Writing the 'PSO_logfile.txt' file ...                                       ]
+================================================================================
+                                                                                
+================================================================================
+[                                 Running  PSO ...                             ]
+================================================================================
+                                                                                

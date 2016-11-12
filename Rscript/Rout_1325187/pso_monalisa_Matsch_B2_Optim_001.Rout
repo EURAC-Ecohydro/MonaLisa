@@ -1,0 +1,716 @@
+
+R version 3.2.3 (2015-12-10) -- "Wooden Christmas-Tree"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> #!/usr/bin/env Rscript
+> # file psol_example_script_vsmle.R
+> #
+> # This script is an examples of a GEOtop PSO Calibration via geotopOptim2
+> #
+> # author: Emanuele Cordano on 16-10-2016
+> 
+> #This program is free software: you can redistribute it and/or modify
+> #it under the terms of the GNU General Public License as published by
+> #the Free Software Foundation, either version 3 of the License, or
+> #(at your option) any later version.
+> #
+> #This program is distributed in the hope that it will be useful,
+> #but WITHOUT ANY WARRANTY; without even the implied warranty of
+> #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> #GNU General Public License for more details.
+> #
+> #You should have received a copy of the GNU General Public License
+> #along with this program.  If not, see <http://www.gnu.org/licenses/>.
+> 
+> ###############################################################################
+> #### export MONALISA_TEMPDIR=/home/ecor/temp/monalisa
+> 
+> rm(list=ls())
+> options(warn=1)
+> 
+> library(zoo)
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+> library(geotopOptim2)
+Loading required package: geotopbricks
+Loading required package: raster
+Loading required package: sp
+Loading required package: stringr
+Warning: replacing previous import by ‘stringr::str_split’ when loading ‘geotopbricks’
+Warning: replacing previous import by ‘stringr::str_trim’ when loading ‘geotopbricks’
+Loading required package: hydroPSO
+(C) 2011-2013 M. Zambrano-Bigiarini and R. Rojas (GPL >=2 license)
+Type 'citation('hydroPSO')' to see how to cite this package
+Loading required package: hydroGOF
+Note: the specification for S3 class “zoo” in package ‘spacetime’ seems equivalent to one from package ‘geotopbricks’: not turning on duplicate class definitions for this class.
+Loading required package: soilwater
+Warning: replacing previous import by ‘zoo::index<-’ when loading ‘geotopOptim2’
+> 
+> ## Set a seed for the random generation
+> set.seed(7999)
+> ## This 'if' loop was introduced if hydroPSO has been worked on a MPI/parallel way 
+> ## to optimize VSC performances.
+> ## In these lines 'control' argument for 'lhoat' or 'hydroPSO' ('geotoplhoat' or 'geotopPSO') is set. See documentation: help(lhoat) or help(hydropso)  
+> USE_RMPI <- TRUE
+> 
+> if (USE_RMPI==TRUE) {
++ 	library("parallel")
++ 	
++ 	library(Rmpi)
++ 	require(snow)
++ 	
++ 	if (mpi.comm.rank(0) > 0) {
++ 		sink(file="/dev/null")
++ 		#runMPIslave()
++ 		slaveLoop(makeMPImaster())
++ 		mpi.quit()
++ 		
++ 		
++ 	}
++ 	
++ 	parallel <- "parallel"
++ 	npart <- 31
++ 	control <- list(maxit=10,npart=npart,parallel=parallel)
++ 	
++ } else {
++ 	
++ 	parallel <- "none"
++ 	npart <- 4
++ 	control <- list(maxit=4,npart=npart)
++ 	
++ }
+Loading required package: snow
+
+Attaching package: ‘snow’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 18:33:22
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641959fda090/Matsch_B2_Optim_001 at 2016-11-12 18:33:26F
+Error::Run time error
+Error::Error 1 in tridiag
+........exiting...
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641959fda090/Matsch_B2_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641959fda090/Matsch_B2_Optim_001 at 2016-11-12 18:39:29
+End GEOtop Running!
+Finish GOF unsucPrepPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 18:39GEOtGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64216bf3c26a/Matsch_B2_Optim_001 at 2016-11-12 18:39FINFFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641b6266e557/Matsch_B2_Optim_001 at 2016-11-12 18:43:50
+End GEOtop Running!
+Finish GOF 0.136014705087354 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641b6266e557/Matsch_B2_Optim_001 at 2016-11-12 18:44:05
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641b6266e557/MatschPreparing a GEPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-1GEOtop is runnGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64216b02cc2f/Matsch_B2_Optim_001 at 2016-1FINISH rundirFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641c1ee4c176/Matsch_B2_Optim_001 at 2016-11-12 18:51:09
+End GEOtop Running!
+Finish GOF 0.0781024967590666 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641c1ee4c176/Matsch_B2_Optim_001 at 2016-11-12 18:51:25
+Deleting /tmp/geotopOtim2_temFINI
+Error::Run time error
+Error::Error 1 in tPreparing a GEPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-1GEOtop is runnGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64212623246b/Matsch_B2_Optim_001 at 2016-1
+Error::RFFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f794ad7fb9e/Matsch_B2_Optim_001 at 2016-11-12 19:00:14
+End GEOtop Running!
+Finish GOF 0.10816653826392 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f794ad7fb9e/Matsch_B2_Optim_001 at 2016-11-12 19:00:30
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f794ad7fb9e/Matsch_B2_Optim_001
+PPrepPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 19:00GEOtGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx6421346e4bc5/Matsch_B2_Optim_001 at 2016-11-12 19:0FFINIFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx6421346e4bc5/Matsch_B2_Optim_001 at 2016-11-12 19:03:04
+End GEOtop Running!
+Finish GOF 0.381837661840736 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx6421346e4bc5/Matsch_B2_Optim_001 at 2016-11-12 19:03:19
+Deleting /tmp/geotopOtim2_teFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_0PPPrePreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 19:05:GEOGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64215224e827/Matsch_B2_Optim_001 at 2016-11-12 19:0FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f732448d6ff/Matsch_B2_Optim_001 at 2016-11-12 19:08:17
+End GEOtop Running!
+Finish GOF 0.247588368062799 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f732448d6ff/Matsch_B2_Optim_001 at 2016-11-12 19:08:32
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f732448d6ff/Matsch_B2_Optim_001
+PPPrePreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 19:09GGEOGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx6421f9c2627/Matsch_B2_Optim_001 at 2016-11-12 19:09FIFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641510b23c9d/Matsch_B2_Optim_001 at 2016-11-12 19:12:52
+End GEOtop Running!
+Finish GOF 0.0806225774829855 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx641510b23c9d/Matsch_B2_Optim_001 at 2016-11-12 19:13:07
+Deleting /tmp/geotopOtim2_tFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xxPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 19:35:12
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64217eddb8a1/Matsch_B2_Optim_001 at 2016-11-12 19:35:1FFFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f744db23103/Matsch_B2_Optim_001 at 2016-11-12 19:37:45
+End GEOtop Running!
+Finish GOF 0.165529453572468 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f744db23103/Matsch_B2_Optim_001 at 2016-11-12 19:38:00
+Deleting /tmp/geotopOtim2_tempdFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_OptimPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 19:40:02
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64182f441e3b/Matsch_B2_Optim_001 at 2016-11-12 19:40:05
+
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f73697658a2/Matsch_B2_Optim_001 at 2016-11-12 19:44:05
+End GEOtop Running!
+Finish GOF 0.0721110255092798 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f73697658a2/Matsch_B2_Optim_001 at 2016-11-12 19:44:19
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f73697658a2/Matsch_B2_Optim_001
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 19:44:22
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f731fa0111f/Matsch_B2_Optim_001 at 2016-11-12 19:44:25
+FINISH FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7742419048/Matsch_B2_Optim_001 at 2016-11-12 19:47:17
+End GEOtop Running!
+Finish GOF 0.0806225774829855 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7742419048/Matsch_B2_Optim_001 at 2016-11-12 19:47:32
+Deleting /tmp/geotopOtFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64142f8a5326/Matsch_B2_Optim_001 at 2016-11-12 19:52:43
+End GEOtop Running!
+Finish GOF 0.424264068711929 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64142f8a5326/Matsch_B2_Optim_001 at 2016-11-12 19:52:57
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx64142f8a5326/Matsch_B2_Optim_001
+otopOtim2_tempdir/Matsch_B2_Optim_001/xx641754cdbe9e/Matsch_B2_Optim_001 at 2016-11-12 iter:10  Gbest: 7.211E-02  Gbest_rate:  0.00%  Iter_best_fit: 8.062E-02  nSwarm_Radius: 1.53E-01  |g-mean(p)|/mean(p): 31.87%
+                           
+[ Writing output files... ]
+                           
+                                    |                                           
+================================================================================
+[                          Creating the R output ...                           ]
+================================================================================
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_Optim_001 at 2016-11-12 19:53:05
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6327968b15', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6327968b15/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6327968b15/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6327968b15/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6327968b15/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6327968b15/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f632b01b96b', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f632b01b96b/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f632b01b96b/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f632b01b96b/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f632b01b96b/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f632b01b96b/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f63551e6d89', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f63551e6d89/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f63551e6d89/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f63551e6d89/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f63551e6d89/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f63551e6d89/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6363307ae5', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6363307ae5/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6363307ae5/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6363307ae5/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6363307ae5/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6363307ae5/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6649b5a8a5', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6649b5a8a5/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6649b5a8a5/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6649b5a8a5/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6649b5a8a5/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6649b5a8a5/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f667bec6c91', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f667bec6c91/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f667bec6c91/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f667bec6c91/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f667bec6c91/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f667bec6c91/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6714c490f', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6714c490f/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6714c490f/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6714c490f/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6714c490f/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6714c490f/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6779bba4e9', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6779bba4e9/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6779bba4e9/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6779bba4e9/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6779bba4e9/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6779bba4e9/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7464b3fe43', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7464b3fe43/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7464b3fe43/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7464b3fe43/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7464b3fe43/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7464b3fe43/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7516852c06', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7516852c06/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7516852c06/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7516852c06/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7516852c06/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7516852c06/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f766c6f32fe', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f766c6f32fe/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f766c6f32fe/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f766c6f32fe/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f766c6f32fe/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f766c6f32fe/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f76735779e9', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f76735779e9/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f76735779e9/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f76735779e9/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f76735779e9/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f76735779e9/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7674b361cb', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7674b361cb/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7674b361cb/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7674b361cb/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7674b361cb/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7674b361cb/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7848846dbe', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7848846dbe/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7848846dbe/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7848846dbe/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7848846dbe/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7848846dbe/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f786ef1ec3d', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f786ef1ec3d/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f786ef1ec3d/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f786ef1ec3d/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f786ef1ec3d/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f786ef1ec3d/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f79425f9331', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f79425f9331/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f79425f9331/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f79425f9331/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f79425f9331/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f79425f9331/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a64ee1407', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a64ee1407/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a64ee1407/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a64ee1407/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a64ee1407/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a64ee1407/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a6af4a0d3', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a6af4a0d3/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a6af4a0d3/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a6af4a0d3/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a6af4a0d3/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a6af4a0d3/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ab7ddaf9', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ab7ddaf9/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ab7ddaf9/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ab7ddaf9/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ab7ddaf9/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ab7ddaf9/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b14ee23b7', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b14ee23b7/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b14ee23b7/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b14ee23b7/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b14ee23b7/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b14ee23b7/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b73760790', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b73760790/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b73760790/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b73760790/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b73760790/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b73760790/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7bba79c3e', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7bba79c3e/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7bba79c3e/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7bba79c3e/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7bba79c3e/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7bba79c3e/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c77667f1b', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c77667f1b/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c77667f1b/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c77667f1b/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c77667f1b/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c77667f1b/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c7f3e6123', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c7f3e6123/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c7f3e6123/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c7f3e6123/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c7f3e6123/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c7f3e6123/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7d6eaa537', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7d6eaa537/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7d6eaa537/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7d6eaa537/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7d6eaa537/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7d6eaa537/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7da959adb', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7da959adb/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7da959adb/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7da959adb/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7da959adb/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7da959adb/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e3d12d81c', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e3d12d81c/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e3d12d81c/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e3d12d81c/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e3d12d81c/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e3d12d81c/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e47ab0969', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e47ab0969/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e47ab0969/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e47ab0969/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e47ab0969/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e47ab0969/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e74b7fd1c', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e74b7fd1c/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e74b7fd1c/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e74b7fd1c/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e74b7fd1c/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e74b7fd1c/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ec807e4c', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ec807e4c/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ec807e4c/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ec807e4c/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ec807e4c/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ec807e4c/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7eea2ad0a', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7eea2ad0a/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7eea2ad0a/Matsch_B2_Optim_001/obs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7eea2ad0a/Matsch_B2_Optim_001/soil', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7eea2ad0a/Matsch_B2_Optim_001/tabs', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7eea2ad0a/Matsch_B2_Optim_001/temp', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6327968b15', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6327968b15/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f632b01b96b', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f632b01b96b/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f63551e6d89', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f63551e6d89/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6363307ae5', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6363307ae5/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6649b5a8a5', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6649b5a8a5/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f667bec6c91', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f667bec6c91/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6714c490f', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6714c490f/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6779bba4e9', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f6779bba4e9/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7464b3fe43', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7464b3fe43/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7516852c06', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7516852c06/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f766c6f32fe', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f766c6f32fe/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f76735779e9', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f76735779e9/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7674b361cb', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7674b361cb/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7848846dbe', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7848846dbe/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f786ef1ec3d', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f786ef1ec3d/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f79425f9331', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f79425f9331/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a64ee1407', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a64ee1407/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a6af4a0d3', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7a6af4a0d3/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ab7ddaf9', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ab7ddaf9/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b14ee23b7', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b14ee23b7/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b73760790', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7b73760790/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7bba79c3e', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7bba79c3e/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c77667f1b', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c77667f1b/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c7f3e6123', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7c7f3e6123/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7d6eaa537', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7d6eaa537/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7da959adb', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7da959adb/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e3d12d81c', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e3d12d81c/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e47ab0969', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e47ab0969/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e74b7fd1c', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7e74b7fd1c/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ec807e4c', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7ec807e4c/Matsch_B2_Optim_001', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7eea2ad0a', reason 'Directory not empty'
+Warning in file.remove(torv) :
+  cannot remove file '/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001/xx2f7eea2ad0a/Matsch_B2_Optim_001', reason 'Directory not empty'
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001 at 2016-11-12 19:53:08
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001 at 2016-11-12 19:53:43
+End GEOtop Running!
+Finish GOF 0.0721110255092798 :/tmp/geotopOtim2_tempdir/Matsch_B2_Optim_001 at 2016-11-12 19:53:59
+> 
+> 
+> 
+> 
+> #dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+> ######dir.create(dirPSO)
+> 
+> 
+> file.copy(from=runpath,to=dirsim,recursive=TRUE)
+[1] TRUE
+> #######file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
+> save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
+> 
+> 
+> if (USE_RMPI==TRUE) mpi.finalize()
+[1] 1
+> 
+> proc.time()
+    user   system  elapsed 
+4829.796   30.466 4862.905 

@@ -1,15 +1,12 @@
-#$ -N geotopoptim2_MonaLisa_array
+#$ -N geotopoptim2_MonaLisa_array_32_20
 #$ -V
-#$ -pe mpich 16
+#$ -pe mpich 32
 #$ -M emanuele.cordano@gmail.com
 #$ -m beas  # all job events sent via email
-#$ -l h_rt=01:00:00
-#####$ -t 1-4
-####export GEOTOP_FOLDERS=folder_1
-export GEOTOP_FOLDER=DOMEF_1500_Optim_001 
-
-
-########   $(awk "NR==$SGE_TASK_ID" $GEOTOP_FOLDERS)
+#$ -l h_rt=10:00:00
+#$ -t 1-4
+export GEOTOP_FOLDERS=folders
+export GEOTOP_FOLDER=$(awk "NR==$SGE_TASK_ID" $GEOTOP_FOLDERS)
 
 export GEOTOPOPTIM2_TEMP_DIR=/tmp/geotopOtim2_tempdir
 export GEOTOPOPTIM2_SAVE_DIR=/home/lv70864/ecordano/Simulations/MonaLisaSims
@@ -26,8 +23,8 @@ mpirun -machinefile $TMPDIR/machines -np $NSLOTS R CMD BATCH pso_monalisa.R pso_
 #####R CMD BATCH pso_example_script_monalisa_vsmle2.R  
 
 
-mkdir $GEOTOPOTIM2_SAVE_DIR/saved
-mv $GEOTOPOTIM2_SAVE_DIR $GEOTOPOTIM2_SAVE_DIR/saved
+#mkdir $GEOTOPOTIM2_SAVE_DIR/saved
+#mv $GEOTOPOTIM2_SAVE_DIR $GEOTOPOTIM2_SAVE_DIR/saved
 
 ######rm -rf $GEOTOPOTIM2_TEMP_DIR
 

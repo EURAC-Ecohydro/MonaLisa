@@ -113,113 +113,55 @@ The following objects are masked from ‘package:parallel’:
     stopCluster
 
 Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-12 23:45:53
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-12 18:33:23
 GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d58363a36fb/DOMES_1500_Optim_001 at 2016-11-12 23:45:57F
+rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174d4e68ad1c/DOMEF_1500_Optim_001 at 2016-11-12 18:33:2FF
 Error::Run time error
 Error::Error 1 in tridiag
 ........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 at 2016-11-12 23:50:02
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174d4e68ad1c/DOMEF_1500_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174d4e68ad1c/DOMEF_1500_Optim_001 at 2016-11-12 18:47:48
 End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 at 2016-11-12 23:50:02
-Warning in FUN(newX[, i], ...) :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 !
-f("param_%s.csv",geotopsims)
-> paramfiles <- paste(project_path,"param",paramfiles,sep="/")
-> names(paramfiles) <- geotopsims
-> runpath0 <- paste(project_path,"run",sep="/")
-> savepath0 <- paste(project_path,"save",sep="/")
-> 
-> 
-> ## Choose the MonaLisa Site 
-> 
-> 
-> itsim <- Sys.getenv("GEOTOP_FOLDER") 
-> if (itsim=="") stop("GEOTOP FOLDER MISSING")
-> if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
-> 
-> 
-> ####for (itsim in geotopsims[-c(1,2,3,6,7)]) {
-> 	
-> wpath <- wpath_geotopsims[itsim]
-> geotop.param.file <- paramfiles[itsim]
-> 
-> 
-> 
-> 
-> 
-> 
-> ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
-> 
-> tz <- "Etc/GMT-1"
-> 
-> ## Set the full path for GEOtop simulation template
-> 
-> wpath <- wpath
-> 
-> 
-> wpath <- wpath_geotopsims[itsim]
-> geotop.param.file <- paramfiles[itsim]
-> 
-> 
-> 
-> 
-> 
-> 
-> ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
-> 
-> tz <- "Etc/GMT-1"
-> 
-> ## Set the full path for GEOtop simulation template
-> 
-> wpath <- wpath
-> 
-> 
-> ## Set a temporary path where to run GEOtop simulations
-> 
-> runpath <- Sys.getenv("GEOTOPOPTIM2_TEMP_DIR")
-> if (runpath=="") runpath <- runpath0
-> savepath <- Sys.getenv("GEOTOPOPTIM2_SAVE_DIR")
-> if (savepath=="") savepath <- savepath0
-> ## Set/get  parameter calibartion values (upper and lower values and names)
-> ## Here parameters are read from a CSV ascii files and then imported as a data frame
-> 
-> geotop.param.file <-  geotop.param.file ###system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
-> geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
-> 
-> 
-> ## Parametrer value are saved as separate vactors: one for upper values , one for lower values, another for suggested value (only PSO not lhoat)
-> ## Each vector elements must be named with parameter name in accordance with geotopOptim2 documention (see vignette)
-> lower <- geotop.param$lower
-> upper <- geotop.param$upper
-> x <- geotop.param$suggested
-> names(lower) <- geotop.param$name
-> names(upper) <- geotop.param$name
-> if (!is.null(x)) names(x) <- geotop.param$name
-> 
-> 
-> ### Set Target Observed Variables (here are used the same names of observation file!)
-> ### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
-> var <- c('soil_moisture_content_50','soil_moisture_content_200') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
-> uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
-> 
-> names(var)  <- var
-> names(uscale) <- var
-> 
-> 
-> ### Preparing diagram
-> dirsim <- paste(savepath,itsim,sep="/")
-> dir.create(dirsim)
-> dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
-> control[["drty.out"]] <- dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
-> 
-> pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
-+ 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
-+ 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
-Warning in file(con, "r") :
-  cannot open file '/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001/soiltype.asc': No such file or directory
-Warning (get.geotop.inpts.keyword.value): keyword PointFile without value:
+Finish GOF unsuccePrePPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-12 18:47GEOGGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174b2296a73a/DOMEF_1500_Optim_001 at 2016-11-12 FINI
+ErroFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17453b778679/DOMEF_1500_Optim_001 at 2016-11-12 19:32:31
+End GEOtop Running!
+Finish GOF 0.352278299076171 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17453b778679/DOMEF_1500_Optim_001 at 2016-11-12 19:33:02
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17453b778679/DOMEF_15PrepaPrepPrePPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-12 19:33GEOGGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174b7e63322d/DOMEF_1500_Optim_001 at 2016-1FFINIFINISH rFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17493e59f110/DOMEF_1500_Optim_001 at 2016-11-12 19:49:20
+End GEOtop Running!
+Finish GOF 0.186815416922694 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17493e59f110/DOMEF_1500_Optim_001 at 2016-11-12 19:49:50
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17493e59f110/DPreparing a GEOtoPrePPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-12 19:49GEOGGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174b1b42e2f8/DOMEF_1500_Optim_001 atFINISH rundir:/tmp/geFINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17435dea71d8/DOMEF_1500_Optim_001 at 2016-11-12 19:59:13
+End GEOtop Running!
+Finish GOF 0.167630546142402 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17435dea71d8/DOMEF_1500_Optim_001 at 2016-11-12 19:59:44
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17435dea71PrePreparing a GEOtop SiPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMEF_1500_Optim_001 at 2016-11-12 19:59:52
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174b57594e0/DOMEF_1500_Optim_001FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx6ee25825437/DOMEF_1500_Optim_001 at 2016-11-12 20:07:42
+End GEOtop Running!
+Finish GOF 0.21095023109729 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx6ee25825437/DOMEF_1500_Optim_001 at 2016-11-12 20:08:14
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx6ee25825437/DOMEF_1500_Optim_001
+4e0/DOMEF_1500_Optim_001
+01/x[19:r25n30] unexpected disconnect completion event from [1:r19n08]
+p Running!
+Finish GOF 0.183847763108502 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx17494fdc2031/DOMEF_1500_Optim_001 at 2016-11-12 20:05:44
+Deleting /tmpFINISH rundir:/tmp/FINISH rundir:/tmp/geotopOtim2_tempdir/DOMEF_1500_Op[23:r2[27:r25n30] unexpected disconnect completion event from [1:r19n08]
+ completion event from [1:r19n08]
+92921502 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174010d5077f/DOMEF_1500_Optim_001 at 2016-11-12 20:10:04
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx174010d5077f/DOMEF_1500_Optim_001
+[28:r25n30] unexpected disconnect completion event from [1:r19n08]
+ompletion event from [1:r19n08]
+op Running!
+Finish GOF 0.212132034355964 :/tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx1747795a5bef/DOMEF_1500_Optim_001 at 2016-11-12 20:04:12
+Deleting /tmp/geotopOtim2_tempdir/DOMEF_1500_Optim_001/xx1747795a5bef/DOMEF_1500_Optim_001
+[16:r25n30] unexpected disconnect completion event from [1:r19n08]
+Assertion failed in file ../../dapl_conn_rc.c at line 1179: 0
+internal ABORT - process 16
+et.geotop.inpts.keyword.value): keyword PointFile without value:
 Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointX without value:
 Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointY without value:
 Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
@@ -231,10 +173,10 @@ Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = F
                                                                                 
 [npart=31 ; maxit=10 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
          
-[ user-definitions in control: maxit=10 ; npart=31 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMES_1500_Optim_001_PSO.out ]
+[ user-definitions in control: maxit=10 ; npart=31 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMEF_1500_Optim_001_PSO.out ]
          
                                             
-[ Output directory 'DOMES_1500_Optim_001_PSO.out' was created on: '/home/lv70864/ecordano/Simulations/MonaLisaSims' ]
+[ Output directory 'DOMEF_1500_Optim_001_PSO.out' was created on: '/home/lv70864/ecordano/Simulations/MonaLisaSims' ]
                                             
                                
 [ Parallel initialization ... ]

@@ -113,19 +113,19 @@ The following objects are masked from ‘package:parallel’:
     stopCluster
 
 Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001 at 2016-11-12 23:45:53
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-12 18:33:24
 GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d58363a36fb/DOMES_1500_Optim_001 at 2016-11-12 23:45:57F
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xxc6916b52073/Matsch_B2_DVM_Optim_001 at 2016-11-12 18:33:27F
 Error::Run time error
 Error::Error 1 in tridiag
 ........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 at 2016-11-12 23:50:02
+Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xxc6677aa07d4/Matsch_B2_DVM_Optim_001' had status 1
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xxc6677aa07d4/Matsch_B2_DVM_Optim_001 at 2016-11-12 18:42:50
 End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 at 2016-11-12 23:50:02
+Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xxc6677aa07d4/Matsch_B2_DVM_Optim_001 at 2016-11-12 18:42:50
 Warning in FUN(newX[, i], ...) :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/DOMES_1500_Optim_001/xx2d553723a059/DOMES_1500_Optim_001 !
-f("param_%s.csv",geotopsims)
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xxc6677aa07d4/Matsch_B2_DVM_Optim_001 !
+
 > paramfiles <- paste(project_path,"param",paramfiles,sep="/")
 > names(paramfiles) <- geotopsims
 > runpath0 <- paste(project_path,"run",sep="/")
@@ -218,7 +218,7 @@ f("param_%s.csv",geotopsims)
 + 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
 + 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
 Warning in file(con, "r") :
-  cannot open file '/home/lv70864/ecordano/Simulations/MonaLisa/geotop/DOMES_1500_Optim_001/soiltype.asc': No such file or directory
+  cannot open file '/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001/soiltype.asc': No such file or directory
 Warning (get.geotop.inpts.keyword.value): keyword PointFile without value:
 Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointX without value:
 Warning (get.geotop.inpts.keyword.value): keyword HeaderCoordinatePointY without value:
@@ -231,10 +231,10 @@ Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = F
                                                                                 
 [npart=31 ; maxit=10 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
          
-[ user-definitions in control: maxit=10 ; npart=31 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/DOMES_1500_Optim_001_PSO.out ]
+[ user-definitions in control: maxit=10 ; npart=31 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/Matsch_B2_DVM_Optim_001_PSO.out ]
          
                                             
-[ Output directory 'DOMES_1500_Optim_001_PSO.out' was created on: '/home/lv70864/ecordano/Simulations/MonaLisaSims' ]
+[ Output directory 'Matsch_B2_DVM_Optim_001_PSO.out' was created on: '/home/lv70864/ecordano/Simulations/MonaLisaSims' ]
                                             
                                
 [ Parallel initialization ... ]

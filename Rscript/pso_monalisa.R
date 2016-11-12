@@ -50,8 +50,8 @@ if (USE_RMPI==TRUE) {
 	}
 	
 	parallel <- "parallel"
-	npart <- 4
-	control <- list(maxit=4,npart=npart,parallel=parallel)
+	npart <- 31
+	control <- list(maxit=10,npart=npart,parallel=parallel)
 	
 } else {
 	

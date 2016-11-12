@@ -17,6 +17,8 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
+[Previously saved workspace restored]
+
 > #!/usr/bin/env Rscript
 > # file psol_example_script_vsmle.R
 > #
@@ -89,8 +91,8 @@ Warning: replacing previous import by ‘zoo::index<-’ when loading ‘geotopO
 + 	}
 + 	
 + 	parallel <- "parallel"
-+ 	npart <- 4
-+ 	control <- list(maxit=4,npart=npart,parallel=parallel)
++ 	npart <- 31
++ 	control <- list(maxit=10,npart=npart,parallel=parallel)
 + 	
 + } else {
 + 	
@@ -111,55 +113,106 @@ The following objects are masked from ‘package:parallel’:
     stopCluster
 
 Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:22:24
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-12 23:45:53
 GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b1216b23a0/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:22:27FFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b06efa8b15/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:24:52
-End GEOtop RunningFiFinish GOF 0.396232255123179 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b06efa8b15/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:25:45
-Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b06efa8b15/Matsch_B2_DVM_Optim_PrepPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:25GEOtGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b17c6e550a/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:25FINIFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66a857f94cde/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:31:01
-End GEOtop Running!
-Finish GOF 0.346554469023269 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66a857f94cde/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:31:47
-Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66a857f94cde/Matsch_B2_DVM_Optim_PrepPreparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:31GEOtGEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b144a58da6/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:31
-Error::Run time error
-Error::Error 1 in tridiag
-........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b655171aa5/Matsch_B2_DVM_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b655171aa5/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:11
-End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:15
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b17d2d249e/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:18
-171aa5/Matsch_B2_DVM_Optim_001 !
-Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:14
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b6438678d8/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:17
-xx66b024a7f76f/Matsch_B2_DVM_Optim_001 !
-Preparing a GEOtop Simulation!!
-wpath:/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:12
-GEOtop is running!!
-rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b07877e447/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:16
+rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx57c07971bef8/Matsch_B2_DVM_Optim_001 at 2016-11-12 23:45:57FFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx23295b0dce4b/Matsch_B2_DVM_Optim_001 at 2016-11-12 23:48:43
+End GEOtop RunningFiFinish GOF 0.43139309220246 :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx23295b0dce4b/Matsch_B2_DVM_Optim_001 at 2016-11-12 23:49:36
+Deleting /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx23295b0dce4b/Matsch_B2_DVM_Optim_001
 
-Error::Run time error
-Error::Fatal Error! Geotop is closed. See failing report.
-........exiting...
-Warning: running command 'geotop_se27xx /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b07877e447/Matsch_B2_DVM_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b07877e447/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:26
-End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b07877e447/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:26
+tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx57b51b502734/Matsch_B2_DVM_Optim_001 at 2016-11-12 23:47:25
 Warning in FUN(newX[, i], ...) :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b07877e447/Matsch_B2_DVM_Optim_001 !
-x66b54ad6eee9/Matsch_B2_DVM_Optim_001' had status 1
-FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b54ad6eee9/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:26
-End GEOtop Running!
-Finish GOF unsuccessfully :/tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b54ad6eee9/Matsch_B2_DVM_Optim_001 at 2016-11-11 17:43:26
-Warning in FUN(if (length(d.call) < 2L) newX[, 1] else array(newX[, 1L],  :
-  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx66b54ad6eee9/Matsch_B2_DVM_Optim_001 !
-l=control,temporary.runpath=TRUE)
+  Goodness of fit non-successful (return Inf))beceause of GEOtop non-0 exit : /tmp/geotopOtim2_tempdir/Matsch_B2_DVM_Optim_001/xx57b51b502734/Matsch_B2_DVM_Optim_001 !
+ramfiles <- paste(project_path,"param",paramfiles,sep="/")
+> names(paramfiles) <- geotopsims
+> runpath0 <- paste(project_path,"run",sep="/")
+> savepath0 <- paste(project_path,"save",sep="/")
+> 
+> 
+> ## Choose the MonaLisa Site 
+> 
+> 
+> itsim <- Sys.getenv("GEOTOP_FOLDER") 
+> if (itsim=="") stop("GEOTOP FOLDER MISSING")
+> if (is.numeric(itsim)) itsim <- geotopsims[itsim] 
+> 
+> 
+> ####for (itsim in geotopsims[-c(1,2,3,6,7)]) {
+> 	
+> wpath <- wpath_geotopsims[itsim]
+> geotop.param.file <- paramfiles[itsim]
+> 
+> 
+> 
+> 
+> 
+> 
+> ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
+> 
+> tz <- "Etc/GMT-1"
+> 
+> ## Set the full path for GEOtop simulation template
+> 
+> wpath <- wpath
+> 
+> 
+> wpath <- wpath_geotopsims[itsim]
+> geotop.param.file <- paramfiles[itsim]
+> 
+> 
+> 
+> 
+> 
+> 
+> ## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
+> 
+> tz <- "Etc/GMT-1"
+> 
+> ## Set the full path for GEOtop simulation template
+> 
+> wpath <- wpath
+> 
+> 
+> ## Set a temporary path where to run GEOtop simulations
+> 
+> runpath <- Sys.getenv("GEOTOPOPTIM2_TEMP_DIR")
+> if (runpath=="") runpath <- runpath0
+> savepath <- Sys.getenv("GEOTOPOPTIM2_SAVE_DIR")
+> if (savepath=="") savepath <- savepath0
+> ## Set/get  parameter calibartion values (upper and lower values and names)
+> ## Here parameters are read from a CSV ascii files and then imported as a data frame
+> 
+> geotop.param.file <-  geotop.param.file ###system.file('examples_script/param/param_pso_cland002.csv',package="geotopOptim2") ###'/home/ecor/Dropbox/R-packages/geotopOptim/inst/examples_2rd/param/param_pso_test3.csv' 
+> geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
+> 
+> 
+> ## Parametrer value are saved as separate vactors: one for upper values , one for lower values, another for suggested value (only PSO not lhoat)
+> ## Each vector elements must be named with parameter name in accordance with geotopOptim2 documention (see vignette)
+> lower <- geotop.param$lower
+> upper <- geotop.param$upper
+> x <- geotop.param$suggested
+> names(lower) <- geotop.param$name
+> names(upper) <- geotop.param$name
+> if (!is.null(x)) names(x) <- geotop.param$name
+> 
+> 
+> ### Set Target Observed Variables (here are used the same names of observation file!)
+> ### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
+> var <- c('soil_moisture_content_50','soil_moisture_content_200') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
+> uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
+> 
+> names(var)  <- var
+> names(uscale) <- var
+> 
+> 
+> ### Preparing diagram
+> dirsim <- paste(savepath,itsim,sep="/")
+> dir.create(dirsim)
+> dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+> control[["drty.out"]] <- dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+> 
+> pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
++ 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
++ 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
 Warning in file(con, "r") :
   cannot open file '/home/lv70864/ecordano/Simulations/MonaLisa/geotop/Matsch_B2_DVM_Optim_001/soiltype.asc': No such file or directory
 Warning (get.geotop.inpts.keyword.value): keyword PointFile without value:
@@ -172,17 +225,20 @@ Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = F
 [                                Initialising  ...                             ]
 ================================================================================
                                                                                 
-[npart=4 ; maxit=4 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
+[npart=31 ; maxit=10 ; method=spso2011 ; topology=random ; boundary.wall=absorbing2011]
          
-[ user-definitions in control: maxit=4 ; npart=4 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/Matsch_B2_DVM_Optim_001_PSO.out ]
+[ user-definitions in control: maxit=10 ; npart=31 ; parallel=parallel ; drty.out=/home/lv70864/ecordano/Simulations/MonaLisaSims/Matsch_B2_DVM_Optim_001_PSO.out ]
          
+                                            
+[ Output directory 'Matsch_B2_DVM_Optim_001_PSO.out' was created on: '/home/lv70864/ecordano/Simulations/MonaLisaSims' ]
+                                            
                                
 [ Parallel initialization ... ]
 [ MPI environment detected ]
-[ Number of cores/nodes detected: 16 ]
+[ Number of cores/nodes detected: 32 ]
 Warning in hydroPSO(par = par, fn = fn, gof.mes = gof.mes, output_simulation = FALSE,  :
-  [ 'par.nnodes' > npart (16>4) =>  par.nnodes=4 ] !
-[ Number of cores/nodes used    : 4 ]
+  [ 'par.nnodes' > npart (32>31) =>  par.nnodes=31 ] !
+[ Number of cores/nodes used    : 31 ]
 [ spinning up MPI cluster ]
                                                                                 
 ================================================================================
