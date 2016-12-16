@@ -1,5 +1,5 @@
 # MonaLisa
-This  projects contains GEOtop simulation templates to be used used within  [R/geotopOtim2](https://github.com/ecor/geotopOptim2) framework.  
+This  project contains GEOtop simulation templates to be used used within  [R/geotopOtim2](https://github.com/ecor/geotopOptim2) framework.  
 
 
 The project MONALISA is the starting point of a multi-annual special research area, founded by the Autonomous Province of Bolzano / Bozen. Aim of both MONALISA and the special research area is to increase the collaboration within the South Tyrolean research system (EURAC, Free University Bolzano, VZ Laimburg, TIS ֠Innovation Park). The whole production chain of agriculture will be monitored from environmental conditions to the quality of apples. Multi-scale means that key environmental parameters will be consistently monitored across scales from regional scale (full area of South Tyrol, 7400kmҩ, landscape scale, plot scale down to the level of plants, fruits and leaves. In the laboratory, Laimburg will analyze fruit texture and tissue with NDT.
