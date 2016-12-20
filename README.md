@@ -21,48 +21,56 @@ Documentation on the simulated variable could be found here: http://geotopmodel.
 
 The source code version of the model used for the simulations could be found here: https://github.com/geotopmodel/geotop/tree/se27xx 
 
-# 1D Simulations names:
+## 1D Simulations:
 
-•	DOMEF_1500_Optim_001	Station Name DOMEF1500 Land use: meadow
+In the folder MonaLisa/geotop/1D/ you can find the following simulations:
+
+*	DOMEF_1500_Optim_001	
+
+Station Name DOMEF1500 Land use: meadow
 CoordinatePointX	=	688655 CoordinatePointY	=	5141530
 PointElevation		=	1415 PointSlope		=	1	PointAspect		=	300
 
-•	DOMES_1500_Optim_001	Station Name DOMES_1500 Land use: meadow
+*	DOMES_1500_Optim_001	Station Name DOMES_1500 Land use: meadow
 CoordinatePointX	=	688074 CoordinatePointY	=	5141091
 PointElevation		=	1473 PointSlope		=	27	PointAspect		=	180
 
-•	DOPAS_2000_Optim_001	Station Name DOPAS_2000Land use: meadow
+*	DOPAS_2000_Optim_001	Station Name DOPAS_2000Land use: meadow
 CoordinatePointX	=	688359.5 CoordinatePointY	=	5135797
 PointElevation		=	2062 PointSlope		=	27 PointAspect		=	180
 
-•	Kaltern_Optim_001
+*	Kaltern_Optim_001
 Station Name Kaltern LUB Land use: apple orchard
 CoordinatePointX	=	674401.2 CoordinatePointY	=	5135433
 PointElevation		=	214.294 PointSlope			=	0 PointAspect			=	225
 	
-•	Matsch_B2_DVM_Optim_001 Station Name Matsch B2_1500 Land use: meadow
+*	Matsch_B2_DVM_Optim_001 Station Name Matsch B2_1500 Land use: meadow
 Settings: time-variable vegetation phenology from dynamic vegetation model
 CoordinatePointX	=	620815 CoordinatePointY	=	5171506
 PointElevation		=	1480 PointSlope			=	15 PointAspect			=	225
 	
-•	Matsch_B2_Optim_001	Station Name Matsch B2_1500 Land use: meadow
-CoordinatePointX	=	620815 CoordinatePointY	=	5171506 PointElevation		=	1480 PointSlope			=	15 PointAspect			=	225
+*	Matsch_B2_Optim_001	Station Name Matsch B2_1500 Land use: meadow
+CoordinatePointX	=	620815 CoordinatePointY	=	5171506 
+PointElevation		=	1480 PointSlope			=	15 PointAspect			=	225
 
-•	Matsch_P2_DVE_Optim_001 Station Name Matsch P2_1500 Land use: pasture
+*	Matsch_P2_DVE_Optim_001 Station Name Matsch P2_1500 Land use: pasture
 Settings: imposed time-variable vegetation phenology
 CoordinatePointX	=	621227 CoordinatePointY	=	5171306
 PointElevation		=	1549 PointSlope			=	21.4 PointAspect			=	221.6
 	
-•	Matsch_P2_Optim_001	Station Name Matsch P2_1500 Land use: pasture
+*	Matsch_P2_Optim_001	Station Name Matsch P2_1500 Land use: pasture
 CoordinatePointX	=	621227 CoordinatePointY	=	5171306
 PointElevation		=	1549 PointSlope			=	21.4 PointAspect			=	221.6
 
-•	Latsch1_Calib_001	Station Name Latsch1 Beratungsring Land use: apple orchard
+*	Latsch1_Calib_001	Station Name Latsch1 Beratungsring Land use: apple orchard
 CoordinatePointX	=	641470 CoordinatePointY	=	5164589
 PointElevation		=	641 PointSlope			=	0 PointAspect			=	0
 
-•	NEPAS_2000_Optim_001	Station Name NPEAS_2000 Land use: meadow
+*	NEPAS_2000_Optim_001	Station Name NPEAS_2000 Land use: meadow
 
-# 3-D Simulations
+## 3-D Simulations
 
+In the folder MonaLisa/geotop/3D/ you can find the following simulation:
+
+* Muntatschini_dstr_20m_006
 
