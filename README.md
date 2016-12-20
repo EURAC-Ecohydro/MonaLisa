@@ -25,7 +25,9 @@ The source code version of the model used for the simulations could be found her
 
 In the folder MonaLisa/geotop/1D/ you can find the following simulations:
 
-*	DOMEF_1500_Optim_001	Station Name DOMEF1500 Land use: meadow
+*	DOMEF_1500_Optim_001	
+
+Station Name DOMEF1500 Land use: meadow
 CoordinatePointX	=	688655 CoordinatePointY	=	5141530
 PointElevation		=	1415 PointSlope		=	1	PointAspect		=	300
 
