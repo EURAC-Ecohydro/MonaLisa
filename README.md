@@ -61,4 +61,4 @@ PointElevation		=	1549 PointSlope			=	21.4 PointAspect			=	221.6
 CoordinatePointX	=	641470 CoordinatePointY	=	5164589
 PointElevation		=	641 PointSlope			=	0 PointAspect			=	0
 
-
+•	NEPAS_2000_Optim_001	Station Name NPEAS_2000 Land use: meadow
