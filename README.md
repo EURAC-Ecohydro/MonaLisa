@@ -21,7 +21,7 @@ Documentation on the simulated variable could be found here: http://geotopmodel.
 
 The source code version of the model used for the simulations could be found here: https://github.com/geotopmodel/geotop/tree/se27xx 
 
-Simulation names:
+# 1D Simulations names:
 
 •	DOMEF_1500_Optim_001	Station Name DOMEF1500 Land use: meadow
 CoordinatePointX	=	688655 CoordinatePointY	=	5141530
@@ -62,3 +62,7 @@ CoordinatePointX	=	641470 CoordinatePointY	=	5164589
 PointElevation		=	641 PointSlope			=	0 PointAspect			=	0
 
 •	NEPAS_2000_Optim_001	Station Name NPEAS_2000 Land use: meadow
+
+# 3-D Simulations
+
+
