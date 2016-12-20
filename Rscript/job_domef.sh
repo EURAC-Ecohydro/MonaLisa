@@ -1,9 +1,9 @@
-#$ -N geotopoptim2_MonaLisa_array
+#$ -N geotopoptim2_MonaLisa_array_domef
 #$ -V
-#$ -pe mpich 16
+#$ -pe mpich 32
 #$ -M emanuele.cordano@gmail.com
 #$ -m beas  # all job events sent via email
-#$ -l h_rt=01:00:00
+#$ -l h_rt=12:00:00
 #####$ -t 1-4
 ####export GEOTOP_FOLDERS=folder_1
 export GEOTOP_FOLDER=DOMEF_1500_Optim_001 
