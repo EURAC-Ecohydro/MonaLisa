@@ -16,10 +16,10 @@ export GEOTOP_FOLDER=$(awk "NR==$SGE_TASK_ID" $GEOTOP_FOLDERS)
 export GEOTOPOPTIM2_TEMP_DIR=/tmp/geotopOtim2_tempdir
 
 ### folder where you find the final optimized simulation
-export GEOTOPOPTIM2_SAVE_DIR=/home/lv70864/ecordano/Simulations/MonaLisaSims
+export GEOTOPOPTIM2_SAVE_DIR=/home/lv70864/gbertoldi/Simulations/MonaLisaSims
 
 ### directory where there is the Monalisa project in github with the input data
-export GEOTOPOPTIM2_PROJECT_DIR=/home/lv70864/ecordano/Simulations/MonaLisa
+export GEOTOPOPTIM2_PROJECT_DIR=/home/lv70864/gbertoldi/Simulations/MonaLisa
 
 mkdir -p $GEOTOPOTIM2_TEMP_DIR
 mkdir -p $GEOTOPOTIM2_SAVE_DIR

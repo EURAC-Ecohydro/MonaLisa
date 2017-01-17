@@ -87,7 +87,7 @@ if (USE_SE27XX==TRUE) {
 ##################################
 ## MonaLisa sites
 
-project_path0 <- '/home/ecor/local-projects/MonaLisa'  # default root directory where are the data
+project_path0 <- '/home/lv70864/gbertoldi/Simulations/MonaLisa'  # default root directory where are the data
 project_path <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR") # you apecify here the root directory where are the data (Monalisa github repository)  defined in the job bash script (job_allnew.sh)
 #itsim <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR")
 
