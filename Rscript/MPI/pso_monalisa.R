@@ -36,6 +36,7 @@ set.seed(7999)
 ## this script uses MPI (you need to have intstalled the following package 
 ## install_git("https://gitlab.inf.unibz.it/Samuel.Senoner/hydroPSO")
 
+# flag to use with MPI; HydroPso package should be updated for using with MPI
 USE_RMPI <- TRUE
 
 if (USE_RMPI==TRUE) {
@@ -61,6 +62,12 @@ if (USE_RMPI==TRUE) {
 	
 } else {
 	
+# you define here some parameters
+# npart: number of particles ; used only for optimizazion, not for sensitivity
+# N: number of realizazion to divide each parameter range: 
+# used for sensitivity only; total number of simulations should be N * (#parameters +1 )
+# REPORT: frequency of report messages printed on screen
+
 	parallel <- "none"
 	npart <- 4
 	control <- list(maxit=4,npart=npart)
@@ -188,6 +195,7 @@ control[["drty.out"]] <- dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_")
 pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
+
 
 
 #dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
