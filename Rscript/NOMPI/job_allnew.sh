@@ -4,6 +4,8 @@
 #$ -M emanuele.cordano@gmail.com,giacomo.bertoldi@eurac.edu
 #$ -m beas  # all job events sent via email
 #$ -l h_rt=10:00:00
+#$ -o /home/lv70864/gbertoldi/Simulations/MonaLisaSims
+#$ -e /home/lv70864/gbertoldi/Simulations/MonaLisaSims
 ##$ -t 1-4
 
 #### bash script for jon to optimize several 1D GEOtop simulations with GEOtop Optim for monalisa station
@@ -31,7 +33,7 @@ export I_MPI_PIN_PROCESSOR_LIST=1,14,9,6,5,10,13,2,3,12,11,4,7,8,15,0
 
 #### command to launch R in background whth the R script for launching the simulation pso_monalisa.R
 #mpirun -machinefile $TMPDIR/machines -np $NSLOTS R CMD BATCH pso_monalisa.R pso_monalisa_$GEOTOP_FOLDER.Rout
-R CMD BATCH pso_monalisa.R pso_monalisa_$GEOTOP_FOLDER.Rout
+R CMD BATCH pso_monalisa.R $GEOTOPOPTIM2_SAVE_DIR/pso_monalisa_$GEOTOP_FOLDER.Rout
 
 
 #####R CMD BATCH pso_example_script_monalisa_vsmle2.R  
