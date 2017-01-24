@@ -1,11 +1,11 @@
 #$ -N geotopoptim2_MonaLisa_array_20170113
 #$ -V
 #$ -pe mpich 16
-#$ -M emanuele.cordano@gmail.com,giacomo.bertoldi@eurac.edu
+#$ -M samuel.senoner@eurac.edu 
 #$ -m beas  # all job events sent via email
 #$ -l h_rt=10:00:00
-#$ -o $HOME/Simulations/MonaLisaSims
-#$ -e $HOME/Simulations/MonaLisaSims
+#$ -o $HOME/Simulations/MonaLisaSims/
+#$ -e $HOME/Simulations/MonaLisaSims/
 ##$ -t 1-4
 
 #### bash script for jon to optimize several 1D GEOtop simulations with GEOtop Optim for monalisa station
@@ -26,7 +26,7 @@ export GEOTOPOPTIM2_SAVE_DIR=$HOME/Simulations/MonaLisaSims
 export GEOTOPOPTIM2_PROJECT_DIR=$HOME/Simulations/MonaLisa
 
 mkdir -p $GEOTOPOPTIM2_TEMP_DIR
-mkdir -p $GEOTOPOPTIM2_SAVE_DIR
+#mkdir -p $GEOTOPOPTIM2_SAVE_DIR
 
 export I_MPI_PIN_PROCESSOR_LIST=1,14,9,6,5,10,13,2,3,12,11,4,7,8,15,0
 
