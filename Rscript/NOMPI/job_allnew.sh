@@ -1,7 +1,7 @@
-#$ -N geotopoptim2_MonaLisa_array_20170113
+#$ -N geotopoptim2_MonaLisa_nompi
 #$ -V
 #$ -pe mpich 16
-#$ -M samuel.senoner@eurac.edu 
+#$ -M emanuele.cordano@gmail.com,giacomo.bertoldi@eurac.edu,samuel.senoner@eurac.edu 
 #$ -m beas  # all job events sent via email
 #$ -l h_rt=10:00:00
 #$ -o $HOME/Simulations/MonaLisaSims/
