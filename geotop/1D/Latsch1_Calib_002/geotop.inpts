@@ -1,0 +1,266 @@
+!InputforGEOtopVersion1.225.15
+!Plotsimulation
+!Apple Orchard Latsch/Laces
+
+
+TimeStepEnergyAndWater	=	900
+
+! Start and End Date of Simulation
+InitDateDDMMYYYYhhmm	=	30/05/2015 00:00
+EndDateDDMMYYYYhhmm	=	01/01/2016 00:00
+
+!Simulation Settings
+RecoverSim	=	0
+PointSim	=	1
+
+WaterBalance	=	1
+EnergyBalance	=	1
+
+!Output time step in hours
+DtPlotDischarge	=	1.0
+DtPlotBasin	=	1.0
+DtPlotPoint	=	1.0
+StandardTimeSimulation	=	1.0
+
+!Catchment Centroid (for sun position)
+Latitude	=	46.618
+Longitude	=	10.859
+
+!Energy Budget Settings
+FlagSkyViewFactor	=	1
+LWinParameterization	=	4
+MoninObukhov		=	1
+CanopyStabCorrection	=	1
+
+!=======================================
+!METEOSTATIONS
+!=======================================
+
+NumberOfMeteoStations	=	1
+MeteoStationCoordinateX	=	641470 
+MeteoStationCoordinateY	=	5164589
+MeteoStationElevation	=	641
+
+! TAir and Wind measurements in 8m height from eddy (4m over canopy)
+MeteoStationWindVelocitySensorHeight	=	8
+MeteoStationTemperatureSensorHeight	=	8
+
+!=======================================
+!METEOHAEDERS
+!=======================================
+
+HeaderDateDDMMYYYYhhmmMeteo	=	"Date"
+HeaderJulianDayfrom0Meteo	=	"JDfrom0"
+HeaderIPrec	=	"Iprec"
+HeaderPrec	=	"Prec"
+HeaderWindVelocity	="	WindSp"
+HeaderWindDirection	=	"WindDir"
+HeaderWindX	=	"WindX"
+HeaderWindY	=	"WindY"
+HeaderRH	=	"RelHum"
+HeaderAirTemp	=	"AirT"
+HeaderDewTemp	=	"DewT"
+HeaderAirPress	=	"AirP"
+HeaderSWglobal	=	"Swglobal"
+!HeaderSWnet	=	"Swnet"
+HeaderCloudSWTransmissivity	=	"CloudTrans"
+HeaderLWin	=	"LWin"
+
+!=======================================
+!POINTSETTINGS
+!=======================================
+CoordinatePointX	=	641470 
+CoordinatePointY	=	5164589
+PointElevation		=	641
+PointSlope			=	0
+!PointAspect			=	0
+
+!=======================================
+!LANDCOVER
+!=======================================
+
+NumLandCoverTypes	=	1
+SoilRoughness		=	100
+ThresSnowSoilRough	=	100
+!(Clementi 2012 - Bachelor Thesis) mean height
+VegHeight		=	3600
+ThresSnowVegUp		=	50
+ThresSnowVegDown	=	10
+!(Zanotelli 2015) LAI: max mid-June - mid-July, 2.8-3.2, data available 2010 - 2012
+! prepare dynamic vegetaion file for LAI
+LSAI			=	5
+CanopyFraction		=	1
+DecayCoeffCanopy	=	2.5
+VegSnowBurying		=	1
+!root presence up to 60 cm depth (soil core analysis), approaches to zero up to 100 cm depth
+RootDepth		=	600
+MinStomatalRes	=	20
+VegReflectVis	=	0.1
+VegReflNIR	=	0.2
+VegTransVis	=	0.07
+VegTransNIR	=	0.25
+LeafAngles	=	0
+CanDensSurface	=	0.5
+SoilAlbVisDry	=	0.15
+SoilAlbNIRDry	=	0.25
+SoilAlbVisWet	=	0.15
+SoilAlbNIRWet	=	0.25
+SoilEmissiv	=	0.96
+SurFlowResLand	=	0.5
+SurFlowResExp	=	0.667
+
+!=======================================
+!Vegetation
+!=======================================
+! TimeDependentVegetationParameterFile	=	"vegetation_par"
+
+
+!=======================================
+!Numericalparameters
+!=======================================
+
+RichardTol	=	1.E-7
+MinLambdaWater	=	1.E-7
+RichardMaxIter	=	100
+MaxTimesHalvingTimeStepWater	=	20
+MaxCourantSupFlowLand	=	0.1
+MinSupWaterDepthLand	=	1
+MinTimeStepSupFlow	=	1
+HeatEqTol	=	1.E-4
+HeatEqMaxIter	=	200
+MaxTimesHalvingTimeStepEnergy	=	5
+CanopyMaxIter	=	2
+BusingerMaxIter	=	2
+TsMaxIter	=	2
+LocMaxIter	=	2
+
+==============================
+!SNOWANDGLACIERS
+!=======================================
+
+NumMaxSnowLayers	=	5
+InfiniteSnowLayer	=	2
+MinLayerThicknessSnow	=	5,120,30,5,5
+MaxLayerThicknessSnow	=	20,1.E10,150,50,10
+
+!=======================================
+!SOIL
+!=======================================
+!SOIL LATSCH1! - LAIMBURG TEXTURE ANALYSIS and VanGenuchten  param with Hydrus1D
+!clay	silt	sand	om	Texture Class	thetaS [%vol]	alpha [1/cm]	n [-]	thetaR [%vol]	Ks [cm/day]	depth[cm]
+!5	28	67	1.4	Sandy Loam	0.3929	0.0354	1.4256	0.0323	60.61	0-20
+!5	36	59	1.3	Sandy Loam	0.3977	0.0238	1.4214	0.0318	55	20-40
+
+!(Clementi 2012 / Marseiler 2012 - Master Thesis) soil information
+! 0-60cm
+! texture: clay 10.6%, silt 44.7%, sand 44.7%
+! soil density: 1.5 g/cm3
+! field capacity: 35 vol%
+! wilting point (estimation Saxton&Rawls): 14 vol%
+! residual WC (estimation Saxton&Rawls): 5.6 vol%
+
+! after Wosten ptf
+! saturated WC: 40 vol%
+! Ksat: 0.00265 mm/s
+! alpha: 0.25 m^-1
+! N: 1.284
+
+! after Rosetta Model - Schaap 2001 TODO
+
+
+! used as a first guess of soil parameterization for 0-60cm
+
+
+PointSoilType	=	1
+SoilLayerTypes	=	1
+![mm]
+!InitWaterTableHeightOverTopoSurface	=	-2000
+![C]
+InitSoilTemp	=	4
+ThermalConductivitySoilSolids	=	1.9
+ThermalCapacitySoilSolids	=	2.16E+06
+
+HeaderSoilDz			=	"Dz"
+HeaderLateralHydrConductivity	=	"Kh"
+HeaderNormalHydrConductivity	=	"Kv"
+HeaderThetaRes			=	"vwc_r"
+HeaderWiltingPoint		=	"vwc_w"
+HeaderFieldCapacity		=	"vwc_fc"
+HeaderThetaSat			=	"vwc_s"
+HeaderAlpha			=	"alpha"
+HeaderN				=	"n"
+HeaderSpecificStorativity	=	"stor"
+HeaderKthSoilSolids		=	"Kth"
+HeaderCthSoilSolids		=	"Cth"
+HeaderSoilInitPres 		= 	"InitPsi"
+
+FreeDrainageAtBottom	=	0
+
+!=======================================
+!FILENAMES
+!=======================================
+
+!Inputfiles
+
+SoilParFile		= 	"soil/soil"	
+MeteoFile		=	"meteo/meteo"
+! HorizonMeteoStationFile	=	"horizon/horizon"
+
+!Outputfiles
+
+!Tabs
+DischargeFile	=	"tabs/discharge"
+PointOutputFile	=	"tabs/point"
+PointAll	=	1
+
+! SnowProfileFile	=	"tabs/snow"
+! SnowDepthLayersFile	=	"tabs/snowDepth"
+! SnowTempProfileFile	=	"tabs/snowT"
+! SnowLiqContentProfileFile	=	"tabs/snowLiq"
+! SnowIceContentProfileFile	=	"tabs/snowIce"
+! SnowAll	=	1
+
+BasinOutputFile	=	"tabs/basin"
+BasinAll	=	1
+
+SoilAveragedTempProfileFile		=	"tabs/soilTz"
+SoilLiqWaterPressProfileFile		=	"tabs/psizliq"
+SoilTotWaterPressProfileFile		=	"tabs/psiztot"
+SoilLiqContentProfileFile		=	"tabs/thetaliq"
+SoilIceContentProfileFile		=	"tabs/thetaice"
+SoilAll=1
+!======================================= 
+!=======================================
+
+
+
+!======================================= 
+
+
+!======================================= 
+
+
+
+!======================================= 
+!=======================================
+
+
+
+!======================================= 
+!=======================================
+
+
+
+!======================================= 
+!=======================================
+
+
+
+!======================================= 
+! OBSERVATION
+!=======================================
+
+!>>!ObservationProfileFile = "obs/obs"
+!>>!ObservationLookupTblFile = "lookup_tbl_observation"
+
+
