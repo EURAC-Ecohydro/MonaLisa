@@ -24,13 +24,13 @@ export GEOTOPOPTIM2_SAVE_DIR=$HOME/Simulations/MonaLisaSims
 export GEOTOPOPTIM2_PROJECT_DIR=$HOME/Simulations/MonaLisa
 
 mkdir -p $GEOTOPOPTIM2_TEMP_DIR
-#mkdir -p $GEOTOPOTIM2_SAVE_DIR
+mkdir -p $GEOTOPOPTIM2_SAVE_DIR/$GEOTOP_FOLDER
 
 export I_MPI_PIN_PROCESSOR_LIST=1,14,9,6,5,10,13,2,3,12,11,4,7,8,15,0
 
 
 #### command to launch R in background whth the R script for launching the simulation pso_monalisa.R
-mpirun -machinefile $TMPDIR/machines -np $NSLOTS R CMD BATCH pso_monalisa_MPI.R $GEOTOPOPTIM2_SAVE_DIR/pso_monalisa_$GEOTOP_FOLDER.Rout
+mpirun -machinefile $TMPDIR/machines -np $NSLOTS R CMD BATCH pso_monalisa_MPI.R $GEOTOPOPTIM2_SAVE_DIR/$GEOTOP_FOLDER/pso_monalisa_$GEOTOP_FOLDER.Rout
 
 
 #####R CMD BATCH pso_example_script_monalisa_vsmle2.R  

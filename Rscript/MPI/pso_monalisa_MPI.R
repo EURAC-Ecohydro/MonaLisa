@@ -189,7 +189,7 @@ dirsim <- paste(savepath,itsim,sep="/")
 dir.create(dirsim)
 dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
 # you add this path to the pso control list
-control[["drty.out"]] <- dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+control[["drty.out"]] <- dirPSO <- paste(savepath,itsim,paste(itsim,"PSO.out",sep="_"),sep="/")
 
 #### here you finally launch the optimization (level is the the number of control file of GEOtop)
 pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
