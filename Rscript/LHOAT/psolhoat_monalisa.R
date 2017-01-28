@@ -19,10 +19,6 @@
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ###############################################################################
-
-
-
-
 #### export MONALISA_TEMPDIR=/home/ecor/temp/monalisa
 
 rm(list=ls()) # clean all variables
@@ -31,20 +27,11 @@ options(warn=1) # write the warnings
 library(zoo)
 library(geotopOptim2)
 
-
-
-
-
-
-
 ## Set a seed for the random generation
 set.seed(7999)
 ## This 'if' loop was introduced if hydroPSO has been worked on a MPI/parallel way 
 ## to optimize VSC performances.
 ## In these lines 'control' argument for 'lhoat' or 'hydroPSO' ('geotoplhoat' or 'geotopPSO') is set. See documentation: help(lhoat) or help(hydropso)  
-
-
-
 
 ## this script uses MPI (you need to have intstalled the following package 
 ## install_git("https://gitlab.inf.unibz.it/Samuel.Senoner/hydroPSO")
@@ -55,69 +42,114 @@ USE_RMPI <- FALSE
 
 if (USE_RMPI==TRUE) {
 	library("parallel")
-
+	
 	library(Rmpi)
 	require(snow)
-
+	
 	if (mpi.comm.rank(0) > 0) {
-	    sink(file="/dev/null")
+		sink(file="/dev/null")
 		#runMPIslave()
 		slaveLoop(makeMPImaster())
 		mpi.quit()
+		
+		
 	}
 	
-
 	parallel <- "parallel"
-
 	mynpart <- 31  # npart particles number maxit number of iterations the number of simulations is (npart x maxit)
 	mymaxit <- 10
 	# control is the list of all the control arguments in hydropso. See hydropso documentation
 	control <- list(maxit=mymaxit,npart=mynpart,parallel=parallel)
 	
 } else {
-
+	
 # you define here some parameters
 # npart: number of particles ; used only for optimizazion, not for sensitivity
 # N: number of realizazion to divide each parameter range: 
 # used for sensitivity only; total number of simulations should be N * (#parameters +1 )
 # REPORT: frequency of report messages printed on screen
-	
+
 	parallel <- "none"
-	npart <- 4  
-	control <- list(N=20,parallel="parallel",REPORT=10) ##list(maxit=5,npart=npart)
+	npart <- 4
+	control <- list(N=8,parallel="parallel",REPORT=10) ##list(maxit=5,npart=npart)
 	
 }
 
-# specify the time zone. Is needed by geotopbricks
-tz <- "Etc/GMT-1" # this is solar time in Rome (signs are opposite to UTC)
+## This 'if' loop was introduced to set the GEOtop binary file which be used in GEOtop 
 
-# specify il working  path della simulazione
-#wpath <- system.file('geotop-simulation/B2site',package="geotopOptim2")
-wpath <- '/home/lv70864/gbertoldi/Simulations/geotopOptim2_tests/Matsch_B2_Optim_001'
-
-# flag to choose GEOtop executable
 USE_SE27XX <- TRUE
 
+## define the name of GEOtop executable file 
 if (USE_SE27XX==TRUE) {
 	
 	##bin <- ' geotop-2.0.0'
 	bin <- 'geotop_se27xx'
+##bin<- '/home/ecor/local/geotop/GEOtop/bin/geotop-2.0.0'
 	
 } else {
 	
 	bin  <-  'geotop_dev'
 	
-}  ##bin  <-'/home/ecor/local/geotop/GEOtop/bin/geotop-2.0.0' 
+}  
 
-## LOcal path where to write output for PSO
-##runpath <- "/home/ecor/temp/geotopOptim_tests"
-runpath <- Sys.getenv("GEOTOPOTIM2_TEMP_DIR")
+##################################
+## MonaLisa sites
 
-# you specify here the file with the pameters to optimize/sentitive with ranges
+project_path <- Sys.getenv("GEOTOPOPTIM2_PROJECT_DIR") # you apecify here the root directory where are the data (Monalisa github repository)  defined in the job bash script (job_allnew.sh)
 
-#geotop.param.file <-  system.file('examples-script/param/param_pso_cland002.csv',package="geotopOptim2") 
-geotop.param.file <-  'param_pso_cland_vsmle002.csv'
+# list of all possible simulations avaliable
+geotopsims <- c("DOMEF_1500_Optim_001",
+"Kaltern_Optim_001",
+"Matsch_P2_DVE_Optim_001",
+"DOMES_1500_Optim_001",
+"Matsch_B2_DVM_Optim_001",
+"Matsch_P2_Optim_001",
+"DOPAS_2000_Optim_001","Matsch_B2_Optim_001")
+
+# creates an array whith path where there are all simulations
+wpath_geotopsims <- paste(project_path,"geotop/1D",geotopsims,sep="/")
+
+# gives a name to each array element with the simulation name
+names(wpath_geotopsims) <-  geotopsims
+
+## Set  parameter calibartion values file names (upper and lower values and names)
+# creates an array whith path where there is the file with the parameters list to optimize with their ranges for each simulation
+paramfiles <- sprintf("param_%s.csv",geotopsims)
+paramfiles <- paste(project_path,"param/1D",paramfiles,sep="/")
+names(paramfiles) <- geotopsims
+
+## Choose the MonaLisa simulation Site as specified in the job bash script (job_allnew.sh) 
+# This command will be done several times depending how many simulations are defined in GEOTOP_FOLDER
+
+
+itsim <- Sys.getenv("GEOTOP_FOLDER") 
+if (itsim=="") stop("GEOTOP FOLDER MISSING")
+
+## Set the full path for GEOtop simulation template
+# simulaton ther you will run as specified in GEOTOP_FOLDER
+wpath <- wpath_geotopsims[itsim]
+geotop.param.file <- paramfiles[itsim]
+
+# specify the time zone. Is needed by geotopbricks
+# this is solar time in Rome (signs are opposite to UTC)
+## Set time zone: here GMT+1 (solar time in Rome/Berlin/Zurich/Brussel)
+tz <- "Etc/GMT-1"
+
+
+
+## Set a temporary path where to run GEOtop simulations specified in the job bash script (job_allnew.sh) 
+runpath <- Sys.getenv("GEOTOPOPTIM2_TEMP_DIR")
+
+## Set a  path where to save final GEOtop simulations specified in the job bash script (job_allnew.sh) 
+savepath <- Sys.getenv("GEOTOPOPTIM2_SAVE_DIR")
+
+## Set parameter calibartion values (upper and lower values and names)
+## Here parameters are read from a CSV ascii files and then imported as a data frame
 geotop.param <- read.table(geotop.param.file,header=TRUE,sep=",",stringsAsFactors=FALSE)
+
+
+## Parametrer value are saved as separate vectors: one for upper values , one for lower values, another for suggested value (only PSO not lhoat)
+## Each vector elements must be named with parameter name in accordance with geotopOptim2 documention (see vignette)
 lower <- geotop.param$lower
 upper <- geotop.param$upper
 x <- geotop.param$suggested
@@ -137,16 +169,24 @@ uscale <- c(0.03,0.03,25,25)/0.03
 names(var)  <- var
 names(uscale) <- var
 
+
+### Preparing diagram
+### you create the directory with all the pso optimization output in a subfolder of GEOTOPOPTIM2_SAVE_DIR with the specific suimulation name
+dirsim <- paste(savepath,itsim,sep="/")
+dir.create(dirsim)
+# you add this path to the pso control list
+control[["drty.out"]] <- paste(savepath,itsim,paste(itsim,"LH_OAT",sep="_"),sep="/")
+
+
+
 # here I launch the sensitivity using lhoat
 lhoat <- geotoplhoat(par=x,run.geotop=TRUE,bin=bin,
 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control)
 
 # output file with some additional results
-file_lhoat <-  'lhoat_n.rda' 
-save(lhoat,file=file_lhoat)
+save(lhoat,file=paste(savepath,itsim,"lhoat_n.rda",sep="/"))
 
-if (USE_RMPI==TRUE) mpi.finalize()
 
 # In the same folder where there is the script it will create a folder called LH_OAT with the output files.
 # LH_OAT-Ranking.txt
@@ -155,4 +195,4 @@ if (USE_RMPI==TRUE) mpi.finalize()
 # LH_OAT-logfile.txt
 # parallel-logfile.txt
 
-
+if (USE_RMPI==TRUE) mpi.finalize()
