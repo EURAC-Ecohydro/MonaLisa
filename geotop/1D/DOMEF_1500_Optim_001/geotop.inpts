@@ -118,6 +118,9 @@ SurFlowResExp		=	0.667
 !======================================= 
 !Numerical parameters 
 !======================================= 
+
+MinTimeStep=400
+
  RichardTol						=	1.E-7 
 MinLambdaWater 					= 	1.E-7 
 RichardMaxIter					=	100 
