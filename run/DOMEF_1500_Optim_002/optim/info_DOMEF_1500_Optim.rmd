@@ -130,7 +130,10 @@ Optimizazion parameters file:
 
 * **Settings**
 + as DOMEF_1500_Optim_001_PSO, optimized with PSO
-+ shorter simulation duration InitDateDDMMYYYYhhmm	=	01/10/2013 00:00 
++ shorter simulation duration 
++ TimeStepEnergyAndWater	=	600
++ MinTimeStep = 30
++ InitDateDDMMYYYYhhmm	=	01/10/2013 00:00
 
 + improved optimization settings 
     + no variation with depth of soil parameters
