@@ -118,7 +118,6 @@ if (itsim=="") stop("GEOTOP FOLDER MISSING")
 
 ## Set the full path for GEOtop simulation template
 # simulaton ther you will run as specified in GEOTOP_FOLDER
-wpath <- wpath_geotopsims[itsim]
 
 wpath <- paste(project_path,"run",itsim,sep="/")
 
