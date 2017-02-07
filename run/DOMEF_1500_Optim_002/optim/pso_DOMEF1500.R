@@ -146,8 +146,8 @@ if (!is.null(x)) names(x) <- geotop.param$name
 
 ### Set Target Observed Variables (here are used the same names of observation file!)
 ### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
-var <- c('soil_moisture_content_20','soil_moisture_content_50') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
-uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
+var <- c('soil_moisture_content_50') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
+uscale <- c(1) ### c(0.03,0.03,25,25)/0.03
 
 names(var)  <- var
 names(uscale) <- var
@@ -165,7 +165,6 @@ control[["drty.out"]] <- dirPSO <- paste(savepath,itsim,paste(itsim,"PSO.out",se
 pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
 		level=1,intern=TRUE,target=var,gof.mes="RMSE",uscale=uscale,lower=lower,upper=upper,control=control,temporary.runpath=TRUE)
-
 
 
 #dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")

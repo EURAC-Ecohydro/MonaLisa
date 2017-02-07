@@ -5,7 +5,7 @@
 ! Calculation max time step dt in s 
  
 TimeStepEnergyAndWater	=	900
-InitDateDDMMYYYYhhmm	=	01/01/2012 00:00  
+InitDateDDMMYYYYhhmm	=	01/10/2013 00:00  
 EndDateDDMMYYYYhhmm	=	01/06/2016 00:00
 
 !Simulation settings
