@@ -1,6 +1,6 @@
 #$ -N geotopoptim2_MonaLisa_array
 #$ -V
-#$ -pe mpich 128 # number of cores: 
+#$ -pe mpich 32 # number of cores: 
 #$ -M giacomo.bertoldi@eurac.edu,samuel.senoner@eurac.edu
 #$ -m beas  # all job events sent via email
 #$ -l h_rt=5:00:00
@@ -16,7 +16,7 @@ export PSO_SCRIPT=pso_DOMEF1500.R
 export GEOTOPOPTIM2_PROJECT_DIR=$HOME/Simulations/MonaLisa
 
 # the file folders are the base simulation names
-export GEOTOP_FOLDER=DOMEF_1500_Optim_002
+export GEOTOP_FOLDER=DOMEF_1500_Optim_003
 
 ### temporary working directory. Be aware that sometimes the folder tmp should be emptied
 export GEOTOPOPTIM2_TEMP_DIR=/tmp/geotopOtim2_tempdir

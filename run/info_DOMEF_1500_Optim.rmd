@@ -153,7 +153,8 @@ Optimizazion parameters file:
 
 * **Settings**
 + as DOMEF_1500_Optim_003
-+ used here 64 cores particles to be faster
++ used here 32 cores particles to be faster
++ original lookuptable without smc 2 cm
 
 * **Results:** 
 + 
