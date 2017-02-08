@@ -1,8 +1,8 @@
-#$ -N geotopoptim2_MonaLisa
+#$ -N geotopoptim2_MonaLisa_20170113
 #$ -V
 #$ -pe mpich 16
 #$ -l h_rt=24:00:00
-#$ -M emanuele.cordano@gmail.com
+#$ -M emanuele.cordano@gmail.com,giacomo.bertoldi@eurac.edu
 #$ -m beas  # all job events sent via email
 ##$ -q long.q
 ##$ -q devel.q

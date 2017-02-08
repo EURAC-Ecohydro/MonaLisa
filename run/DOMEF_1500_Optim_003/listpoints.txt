@@ -1,0 +1,3 @@
+ID,xcoord,ycoord,landcover,name
+1,688655,5141530,1,Domef1500
+

@@ -1,0 +1,6 @@
+obs_var;geotop_where;geotop_what;unit
+soil_moisture_content_200;SoilLiqContentProfileFile+SoilIceContentProfileFile;z0020; 
+soil_moisture_content_400;SoilLiqContentProfileFile+SoilIceContentProfileFile;z0040;
+soil_temperature_200;SoilAveragedTempProfileFile;z0020; 
+soil_temperature_400;SoilAveragedTempProfileFile;z0040;
+
