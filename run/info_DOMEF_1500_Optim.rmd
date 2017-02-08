@@ -143,7 +143,7 @@ Optimizazion parameters file:
 * **Results:** 
 + error in optimization: variable ivarsoil not found
 * **Reccomentation**
-+
++ check error with Emanuele
 
 ###Simulation name: DOMEF_1500_Optim_003
 
@@ -154,9 +154,45 @@ Optimizazion parameters file:
 * **Settings**
 + as DOMEF_1500_Optim_003
 + used here 32 cores particles to be faster
-+ original lookuptable without smc 2 cm
++ fit toward total SWC 5cm only
++ original lookuptable without smc 2 cm and total SWC
 
 * **Results:** 
 + 
 * **Reccomentation**
 +
+
+###Simulation name: DOMEF_1500_Optim_004
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_003
++ fit toward liquid SWC 5cm only
++  modified lookuptable without smc 2 cm but liquid SWC
+
+* **Results:** 
++ 
+* **Reccomentation**
++
+
+###Simulation name: DOMEF_1500_Optim_005
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_003
++ fit toward total SWC 5cm only
++ modified observations with NAN in SWC during freezing soil periods
++ original  lookuptable without smc 2 cm and totlal SWC
+
+* **Results:** 
++ 
+* **Reccomentation**
++
+
+
