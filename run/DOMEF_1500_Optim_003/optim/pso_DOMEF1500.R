@@ -161,6 +161,22 @@ dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
 # you add this path to the pso control list
 control[["drty.out"]] <- dirPSO <- paste(savepath,itsim,paste(itsim,"PSO.out",sep="_"),sep="/")
 
+### print  fileames and settings to check script
+print("Filenames and settings")
+print(paste("itsim = ", itsim))
+print(paste("project_path = ", project_path))
+print(paste("wpath = ", wpath))
+print(paste("savepath = ", savepath))
+print(paste("runpath = ", runpath))
+print(paste("dirsim = ", dirsim))
+print(paste("dirPSO = ", dirPSO))
+print(paste("bin = ", bin))
+print(paste("geotop.param.file = ", geotop.param.file))
+print(paste("itsim = ", itsim))
+print("COntrol list")
+control
+
+
 #### here you finally launch the optimization (level is the the number of control file of GEOtop)
 pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 		simpath=wpath,runpath=runpath,clean=TRUE,data.frame=TRUE,
@@ -174,6 +190,8 @@ pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 file.copy(from=runpath,to=dirsim,recursive=TRUE)
 #######file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
 save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
+
+
 
 
 if (USE_RMPI==TRUE) mpi.finalize()
