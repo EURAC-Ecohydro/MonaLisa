@@ -1,9 +1,9 @@
-#$ -N geotopoptim2_MonaLisa_array
+#$ -N DOMEF_003_geotopoptim2_MonaLisa_array
 #$ -V
 #$ -pe mpich 32 # number of cores: 
 #$ -M giacomo.bertoldi@eurac.edu,samuel.senoner@eurac.edu
 #$ -m beas  # all job events sent via email
-#$ -l h_rt=5:00:00
+#$ -l h_rt=10:00:00
 #$ -o $HOME/Simulations/MonaLisaSims/
 #$ -e $HOME/Simulations/MonaLisaSims/
 

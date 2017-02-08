@@ -152,9 +152,9 @@ Optimizazion parameters file:
 * **Purpose:**Test to understand optimization errors
 
 * **Settings**
-+ as DOMEF_1500_Optim_003
++ as DOMEF_1500_Optim_002
 + used here 32 cores particles to be faster
-+ fit toward total SWC 5cm only
++ fit toward SWC 5cm only total
 + original lookuptable without smc 2 cm and total SWC
 
 * **Results:** 
@@ -170,7 +170,7 @@ Optimizazion parameters file:
 
 * **Settings**
 + as DOMEF_1500_Optim_003
-+ fit toward liquid SWC 5cm only
++ fit toward  SWC 5cm liquid
 +  modified lookuptable without smc 2 cm but liquid SWC
 
 * **Results:** 
@@ -186,7 +186,7 @@ Optimizazion parameters file:
 
 * **Settings**
 + as DOMEF_1500_Optim_003
-+ fit toward total SWC 5cm only
++ fit toward SWC 5cm total
 + modified observations with NAN in SWC during freezing soil periods
 + original  lookuptable without smc 2 cm and totlal SWC
 
