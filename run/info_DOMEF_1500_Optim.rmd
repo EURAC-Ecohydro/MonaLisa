@@ -1,0 +1,161 @@
+
+---
+title: "GEOtop simulations for geotopOptim2 optimizazion for Monalisa"
+author: "Giacomo Bertoldi"
+date: "6 February 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+A detailed table with all simulations settings will be found in the following Google doc: **Info_sim_Emanuele_Optim.xlsx**
+
+<https://docs.google.com/spreadsheets/d/1UI_-ve58C_owmVyrC3VYY9-k33Mi762hRykDR6oXgO4/edit?usp=sharing>
+
+Basic simulations input are cloned from the following git:
+
+<https://github.com/EURAC-Ecohydro/MonaLisa/tree/master/geotop/1D>
+
+* DOMEF_1500_Optim_001
+* DOMES_1500_Optim_001
+* DOPAS_2000_Optim_001
+* Kaltern_Optim_001
+* Matsch_B2_DVM_Optim_001
+* Matsch_B2_Optim_001
+* Matsch_P2_DVE_Optim_001
+* Matsch_P2_Optim_001
+* NEPAS_2000_001
+* Latsch1_Calib_002
+
+Optimized simulations with GEOtop Optim 2 are calculated on the VSC server
+
+/home/lv70864/gbertoldi/Simulations/
+
+To visulalize results use the scripts in:
+<https://github.com/EURAC-Ecohydro/geotopOptim2/tree/master/inst/examples_animation>
+
+===========================================================
+
+### ORIGINAL SIMULATIONS
+
+===========================================================
+
+
+### Simulation name: DOMEF_1500_Optim_001
+
+* **Infor:** base simulation Deutschnofen 1500 m, meadow, flat location.
+* **Settings:** from git <https://github.com/ecor/MonaLisa/tree/master/geotop>
+
+* **Results**: 
+  + model is generally drier, 
+  + does not reproduce freezing soil
+  + probably too less snow in the model
+  + SWC 5cm:  ME=-0.11; RMSE=0.22; KGE=-0.43
+  + SWC 20cm:  ME=-0.20; RMSE=0.21; KGE=-0.017
+
+* **Reccomentdations**
++ Check if the location is irrigated
++ check input air temperatures
++ put shallow water table b.c.
++ put wet inital conditions
++ optimize initial psi profile
+
+
+==============================================================
+
+### OPTIMIZED SIMULATIONS
+
+==============================================================
+
+
+### Simulation name: DOMEF_1500_Optim_001_PSO
+
+* **Infor:** base simulation Deutschnofen 1500 m, meadow, flat location
+* **Settings**:
++ as DOMEF_1500_Optim_001, optimized with PSO
+Optimizazion parameters file:
++ param_DOMEF_1500_Optim_001.csv
+
+
+* **Final parameters evaluation:**
++ final parameters: in pso.out BestParamPerIter.txt
++ parameters at lower ends: n, NormalHydrConductivity_V_L0003, NormalHydrConductivity_V_L0004
++ parameters at upperends: alpha, soilroughness, rootdepth, VegTransVis, VegTransNIR, SoilAlbVisWet, SoilEmissiv, CanopyMaxIter, NormalHydrConductivity_V_L0001, SNormalHydrConductivity_V_L0002, SOIL__NormalHydrConductivity_V_L0005
++  very different Kv values in different layers
+
+* **Results**:  
++ SWC 5cm:  ME=+0.02; RMSE=0.16; KGE=+0.33
+	+ model is drier than observations in summer
+	+ observations show freezing soil in winter
++ SWC 20cm:  ME=0.01; RMSE=0.05; KGE=0.33
+	+ model has 0.05 drier peaks
+
++ E surface increased, Tranp canopy strogly decrease
++ Optimizazion strongly decreases total LE flux, slightly increases H flux
++ SWC increases, with better fit with observations
+
+* **Reccomendations**
++ compare only liquid water content or skip winter periods
++ consider different soil parameters at 5 and 20 cm changing with depth
++ need to increase root water uptake / ET
++ do not optimize for Tranpiration parameters
++ change target with no ET
++ shorter simulation with only one winter spin+up
++ decrease number of parameters of optimize trough sensistivity
++ *explore sensitivity with respect to number of particles*
++ *explore parameter N in LHOAT*
++ correct uscale
++ *explore sensitivity with respect to objective function RMSE, NSE, KGE ...*
+
+### PSO SETTINGS SENSITIVITY ANALISIS
+
+* **Increasing particles # from 32 to 1024**
+    + performances increases but not allways
+    + if you increase # of cores, does not increase computation time
+    + it matters a lot! Very different final parameter sets and shape of the time series with many particles.
+
+###Simulation name: DOMEF_1500_Optim_002
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Improved optimizzion settings for surface water content (Monalisa repor to compare with remote sensing data)
+
+* **Settings**
++ as DOMEF_1500_Optim_001_PSO, optimized with PSO
++ shorter simulation duration 
++ TimeStepEnergyAndWater	=	600
++ MinTimeStep = 30
++ InitDateDDMMYYYYhhmm	=	01/10/2013 00:00
+
++ improved optimization settings 
+    + no variation with depth of soil parameters
+    + optimized toward only liquid water content 
+    + optimized for layer at  5 cm (satellites observations)
+    + only 21 parameters to optimize
++ Changed Optimization parameters file: param_DOMEF_1500_Optim_002.csv
++ Changed lookuptable observations with SWC 2 cm, fit for liquid water content
++ Prepared observations with no data when soil freezes, but not used so far
++ used here 128 cores particles 
+
+* **Results:** 
++ error in optimization: variable ivarsoil not found
+* **Reccomentation**
++
+
+###Simulation name: DOMEF_1500_Optim_003
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_003
++ used here 64 cores particles to be faster
+
+* **Results:** 
++ 
+* **Reccomentation**
++
