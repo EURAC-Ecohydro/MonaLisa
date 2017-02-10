@@ -255,7 +255,7 @@ SurfaceTempMapFile		=	"maps/Ts"
 ! OBSERVATION
 !=======================================
 
-!>>!ObservationProfileFile = "obs/obs"
-!>>!ObservationLookupTblFile = "lookup_tbl_observation_nofr"
+!>>!ObservationProfileFile = "obs/obs_domef1500_nofr0001"
+!>>!ObservationLookupTblFile = "lookup_tbl_observation"
 
 

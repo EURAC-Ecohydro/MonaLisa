@@ -162,11 +162,18 @@ Optimizazion parameters file:
 + it is working, but it takes too long and is quitted by VSC
 + it does not converge for high n values
 + best results for very low n values
++ with low n values computation time increases, also SWC remains high ...
+      + n = 1.1 Time =6´01´´
+      + n = 1.2 Time =1´50´´
+      + n = 2.0 Time =1´15´´
 
 * **Reccomentation**
 + increase time step
 + decrease simulaton time
 + restrict parameters ranges
+
++ do not allow too high values of Ksat and  alpha 
++ a logarithmic sampling is needed 
 
 ###Simulation name: DOMEF_1500_Optim_004
 

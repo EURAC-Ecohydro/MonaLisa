@@ -163,7 +163,11 @@ HeaderFieldCapacity				=	"vwc_fc"
 HeaderThetaSat					=	"vwc_s"
 HeaderAlpha						=	"alpha"
 HeaderN							=	"n"
-HeaderSpecificStorativity		=	"stor"
+
+! HeaderSpecificStorativity		=	"stor"
+
+SpecificStorativity		=	1.00E-06
+
 HeaderKthSoilSolids				=	"Kth"
 HeaderCthSoilSolids				=	"Cth"
 HeaderSoilInitPres = "InitPsi"
