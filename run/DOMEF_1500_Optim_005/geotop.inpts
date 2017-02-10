@@ -4,8 +4,8 @@
  
 ! Calculation max time step dt in s 
  
-TimeStepEnergyAndWater	=	600
-MinTimeStep = 30
+TimeStepEnergyAndWater	=	900
+MinTimeStep = 300
 InitDateDDMMYYYYhhmm	=	01/10/2013 00:00  
 EndDateDDMMYYYYhhmm	=	31/05/2016 00:00
 
@@ -119,7 +119,7 @@ SurFlowResExp		=	0.667
 !======================================= 
 !Numerical parameters 
 !======================================= 
- RichardTol						=	1.E-7 
+RichardTol						=	1.E-6 
 MinLambdaWater 					= 	1.E-7 
 RichardMaxIter					=	100 
 MaxTimesHalvingTimeStepWater 	= 	20 
@@ -255,7 +255,7 @@ SurfaceTempMapFile		=	"maps/Ts"
 ! OBSERVATION
 !=======================================
 
-!>>!ObservationProfileFile = "obs/obs_domef1500_nofr0001"
-!>>!ObservationLookupTblFile = "lookup_tbl_observation"
+!>>!ObservationProfileFile = "obs/obs"
+!>>!ObservationLookupTblFile = "lookup_tbl_observation_nofr"
 
 
