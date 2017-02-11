@@ -189,13 +189,20 @@ Optimizazion parameters file:
 + TimeStepEnergyAndWater	=	900
 + MinTimeStep = 300
 + -l h_rt=20:00:00
-+ improved parameters ranges param_DOMEF_1500_Optim_004.csv
++ improved and restricted parameters ranges param_DOMEF_1500_Optim_004.csv
++ n > 1.15 to avoit too long computations
 
 
 * **Results:** 
-+ 
++ it is working in about 1 hour 
++ best parameters are often at the limit of the imposed range
++ SWC 5cm:  ME=-0.01; RMSE=0.12;
++ fit is better than previous optimization, but is in general to dry 
++ too little variations of SMC
+
 * **Reccomentation**
-+
++ try different optimization goals
++ do not consider winter
 
 ###Simulation name: DOMEF_1500_Optim_005
 

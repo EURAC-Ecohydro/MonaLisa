@@ -292,11 +292,17 @@ $(document).ready(function () {
 <li>TimeStepEnergyAndWater = 900</li>
 <li>MinTimeStep = 300</li>
 <li>-l h_rt=20:00:00</li>
-<li><p>improved parameters ranges param_DOMEF_1500_Optim_004.csv</p></li>
+<li>improved and restricted parameters ranges param_DOMEF_1500_Optim_004.csv</li>
+<li><p>n &gt; 1.15 to avoit too long computations</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li>it is working in about 1 hour</li>
+<li>best parameters are often at the limit of the imposed range</li>
+<li>SWC 5cm: ME=-0.01; RMSE=0.12;</li>
+<li>fit is better than previous optimization, but is in general to dry</li>
+<li><p>too little variations of SMC</p></li>
 <li><strong>Reccomentation</strong></li>
-<li></li>
+<li>try different optimization goals</li>
+<li><p>do not consider winter</p></li>
 </ul>
 </div>
 <div id="simulation-name-domef_1500_optim_005" class="section level3">
