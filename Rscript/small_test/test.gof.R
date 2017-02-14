@@ -10,7 +10,9 @@
 rm(list=ls())
 library(geotopOptim2)
 
-wpath <-  '/home/ecor/local-projects/MonaLisa/run/DOMEF_1500_Optim_005' 
+#wpath <-  '/home/ecor/local-projects/MonaLisa/run/DOMEF_1500_Optim_005' 
+
+wpath <- "C:\\Users\\GBertoldi\\Documents\\Simulations_local\\MonaLisaSims_20170207\\DOMEF_1500_Optim_005"
 
 ##wpath <- system.file('geotop-simulation/B2site',package="geotopOptim2")
 bin <-   "/home/ecor/local/geotop/GEOtop/bin/geotop-2.0.0"
