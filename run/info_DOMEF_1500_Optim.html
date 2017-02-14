@@ -259,11 +259,24 @@ $(document).ready(function () {
 <li>as DOMEF_1500_Optim_002</li>
 <li>used here 32 cores particles to be faster</li>
 <li>fit toward SWC 5cm only total</li>
-<li><p>original lookuptable without smc 2 cm and total SWC</p></li>
+<li>original lookuptable without smc 2 cm and total SWC</li>
+<li><p>max computation time 10 hours</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li>it is working, but it takes too long and is quitted by VSC</li>
+<li>it does not converge for high n values</li>
+<li>best results for very low n values</li>
+<li>with low n values computation time increases, also SWC remains high …
+<ul>
+<li>n = 1.1 Time =6´01´´</li>
+<li>n = 1.2 Time =1´50´´</li>
+<li>n = 2.0 Time =1´15´´</li>
+</ul></li>
 <li><strong>Reccomentation</strong></li>
-<li></li>
+<li>increase time step</li>
+<li>decrease simulaton time</li>
+<li><p>restrict parameters ranges</p></li>
+<li>do not allow too high values of Ksat and alpha</li>
+<li><p>a logarithmic sampling is needed</p></li>
 </ul>
 </div>
 <div id="simulation-name-domef_1500_optim_004" class="section level3">
@@ -274,11 +287,22 @@ $(document).ready(function () {
 <li><strong>Settings</strong></li>
 <li>as DOMEF_1500_Optim_003</li>
 <li>fit toward SWC 5cm liquid</li>
-<li><p>modified lookuptable without smc 2 cm but liquid SWC</p></li>
+<li>modified lookuptable without smc 2 cm but only liquid SWC as target</li>
+<li>RichardTol = 1.E-6</li>
+<li>TimeStepEnergyAndWater = 900</li>
+<li>MinTimeStep = 300</li>
+<li>-l h_rt=20:00:00</li>
+<li>improved and restricted parameters ranges param_DOMEF_1500_Optim_004.csv</li>
+<li><p>n &gt; 1.15 to avoit too long computations</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li>it is working in about 1 hour</li>
+<li>best parameters are often at the limit of the imposed range</li>
+<li>SWC 5cm: ME=-0.01; RMSE=0.12;</li>
+<li>fit is better than previous optimization, but is in general to dry</li>
+<li><p>too little variations of SMC</p></li>
 <li><strong>Reccomentation</strong></li>
-<li></li>
+<li>try different optimization goals</li>
+<li><p>do not consider winter</p></li>
 </ul>
 </div>
 <div id="simulation-name-domef_1500_optim_005" class="section level3">
@@ -292,9 +316,9 @@ $(document).ready(function () {
 <li>modified observations with NAN in SWC during freezing soil periods</li>
 <li><p>original lookuptable without smc 2 cm and totlal SWC</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li>does not work error “cannot find connection” also when plotted simulations</li>
 <li><strong>Reccomentation</strong></li>
-<li></li>
+<li><p>fix error</p></li>
 </ul>
 </div>
 

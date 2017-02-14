@@ -156,11 +156,24 @@ Optimizazion parameters file:
 + used here 32 cores particles to be faster
 + fit toward SWC 5cm only total
 + original lookuptable without smc 2 cm and total SWC
++ max computation time 10 hours
 
 * **Results:** 
-+ 
++ it is working, but it takes too long and is quitted by VSC
++ it does not converge for high n values
++ best results for very low n values
++ with low n values computation time increases, also SWC remains high ...
+      + n = 1.1 Time =6´01´´
+      + n = 1.2 Time =1´50´´
+      + n = 2.0 Time =1´15´´
+
 * **Reccomentation**
-+
++ increase time step
++ decrease simulaton time
++ restrict parameters ranges
+
++ do not allow too high values of Ksat and  alpha 
++ a logarithmic sampling is needed 
 
 ###Simulation name: DOMEF_1500_Optim_004
 
@@ -171,12 +184,25 @@ Optimizazion parameters file:
 * **Settings**
 + as DOMEF_1500_Optim_003
 + fit toward  SWC 5cm liquid
-+  modified lookuptable without smc 2 cm but liquid SWC
++  modified lookuptable without smc 2 cm but only liquid SWC as target
++ RichardTol						=	1.E-6 
++ TimeStepEnergyAndWater	=	900
++ MinTimeStep = 300
++ -l h_rt=20:00:00
++ improved and restricted parameters ranges param_DOMEF_1500_Optim_004.csv
++ n > 1.15 to avoit too long computations
+
 
 * **Results:** 
-+ 
++ it is working in about 1 hour 
++ best parameters are often at the limit of the imposed range
++ SWC 5cm:  ME=-0.01; RMSE=0.12;
++ fit is better than previous optimization, but is in general to dry 
++ too little variations of SMC
+
 * **Reccomentation**
-+
++ try different optimization goals
++ do not consider winter
 
 ###Simulation name: DOMEF_1500_Optim_005
 
@@ -191,8 +217,8 @@ Optimizazion parameters file:
 + original  lookuptable without smc 2 cm and totlal SWC
 
 * **Results:** 
-+ 
++ does not work error "cannot find connection" also when plotted simulations
 * **Reccomentation**
-+
++ fix error
 
 
