@@ -77,7 +77,7 @@ To visulalize results use the scripts in:
 ==============================================================
 
 
-### Simulation name: NEPAS_2000_001
+### Simulation name: NEPAS_2000_OPTIM_001
 
 * **Infor:** bbase simulation EURAC Monalisa NEPAS 2000 site, pasture, south exposed .
 * **Settings**:
@@ -85,10 +85,15 @@ To visulalize results use the scripts in:
 
 
 * **Final parameters evaluation:**
-+ 
++ solution with very low n (1.15) and K (1E-5)
 
 * **Results**:  
-+ 
++ quite good fit
++ RMSE 0.05, ME -0.01
 
 * **Reccomendations**
-+ 
++ *USED SIMULATION FOR MONALISA PUBLIC REPORT*
++ for the purpose of the techincal report results are fine
++ many things to check on final parameters
+
+
