@@ -1,0 +1,94 @@
+
+---
+title: "GEOtop simulations for geotopOptim2 optimizazion for Monalisa"
+author: "Giacomo Bertoldi"
+date: "6 February 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+A detailed table with all simulations settings will be found in the following Google doc: **Info_sim_Emanuele_Optim.xlsx**
+
+<https://docs.google.com/spreadsheets/d/1UI_-ve58C_owmVyrC3VYY9-k33Mi762hRykDR6oXgO4/edit?usp=sharing>
+
+Basic simulations input are cloned from the following git:
+
+<https://github.com/EURAC-Ecohydro/MonaLisa/tree/master/geotop/1D>
+
+* DOMEF_1500_Optim_001
+* DOMES_1500_Optim_001
+* DOPAS_2000_Optim_001
+* Kaltern_Optim_001
+* Matsch_B2_DVM_Optim_001
+* Matsch_B2_Optim_001
+* Matsch_P2_DVE_Optim_001
+* Matsch_P2_Optim_001
+* NEPAS_2000_001
+* Latsch1_Calib_002
+
+Optimized simulations with GEOtop Optim 2 are calculated on the VSC server
+
+/home/lv70864/gbertoldi/Simulations/
+
+To visulalize results use the scripts in:
+<https://github.com/EURAC-Ecohydro/geotopOptim2/tree/master/inst/examples_animation>
+
+===========================================================
+
+### ORIGINAL SIMULATIONS
+
+===========================================================
+
+
+### Simulation name: NEPAS_2000_001
+
+* **Infor:** base simulation EURAC Monalisa NEPAS 2000 site, pasture, south exposed .
+* **Settings:** 
+    +from git <https://github.com/ecor/MonaLisa/tree/master/run>
+    + updated observations and input data according NEPAS 2000 
+    + from Monalisa folder H:\Projekte\MONALISA\04_Daten_Ergebnisse\02_Basisdaten\00_Measuring_Stations\Grassland\NEPAS2000\averaged_data
+    + optimization settings as /run/DOMEF_1500_Optim_004
+    + impermeable bottom
+    + InitWaterTableDepth	=	1000
+    + 16 cores 5 hours
+    + alibration only for liquid water content
+
+* **Results**: 
+    + it runs
+    + SMC understimated especially in winter
+    + ME -0.20; RMSE 0.22
+    + ET seems ok 450 mm / year
+    + Total P underestimated 1950 mm vs 1750 mm, but it is ok given the slope
+    + Snow likely understimated
+
+* **Reccomentdations**
+    + skip winter periods
+    + update snow parametrization according to Michael´s conservative settings of snow_dstr_SENSITIVITY_sim_157 
+
+
+==============================================================
+
+### OPTIMIZED SIMULATIONS
+
+==============================================================
+
+
+### Simulation name: NEPAS_2000_001
+
+* **Infor:** bbase simulation EURAC Monalisa NEPAS 2000 site, pasture, south exposed .
+* **Settings**:
++ as NEPAS_2000_001, optimized with PSO
+
+
+* **Final parameters evaluation:**
++ 
+
+* **Results**:  
++ 
+
+* **Reccomendations**
++ 
