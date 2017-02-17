@@ -125,6 +125,7 @@ Optimizazion parameters file:
 
 * **Settings**
 + as DOMEF_1500_Optim_001_PSO, optimized with PSO
++ 64 cores
 + shorter simulation duration 
 + TimeStepEnergyAndWater	=	600
 + MinTimeStep = 30
