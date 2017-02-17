@@ -64,6 +64,7 @@ To visulalize results use the scripts in:
     + ET seems ok 450 mm / year
     + Total P underestimated 1950 mm vs 1750 mm, but it is ok given the slope
     + Snow likely understimated
+    + For LHOAT only n thetasat thertares are sensitive, alpha and Kv not important 
 
 * **Reccomentdations**
     + skip winter periods
