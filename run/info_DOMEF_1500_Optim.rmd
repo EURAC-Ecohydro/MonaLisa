@@ -218,8 +218,16 @@ Optimizazion parameters file:
 + original  lookuptable without smc 2 cm and totlal SWC
 
 * **Results:** 
-+ does not work error "cannot find connection" also when plotted simulations
++ *SIMULATION USED FOR CHART IN MONALISA PUBLIC REPORT*
++ it is working in about 1 hour
++ SWC 5cm:  ME=0.02; RMSE=0.09;
++ visual fit is quite good
++ best parameters are often at the limit of the imposed range
++ very high n; very low Kv; fc = 0
+
+
 * **Reccomentation**
-+ fix error
++ optimize less paramters
++ reduce ranges to have more pyisical values
 
 
