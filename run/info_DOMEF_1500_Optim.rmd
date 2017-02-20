@@ -224,10 +224,54 @@ Optimizazion parameters file:
 + visual fit is quite good
 + best parameters are often at the limit of the imposed range
 + very high n; very low Kv; fc = 0
++ several parameters are sensitive
 
 
 * **Reccomentation**
 + optimize less paramters
 + reduce ranges to have more pyisical values
+
+###Simulation name: DOMEF_1500_Optim_006
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_005
++ using more decimal digits for optimizaton
++ 16 cores
+
+* **Results:** 
++
+
+
+* **Reccomentation**
++ 
+
+###Simulation name: DOMEF_1500_Optim_007
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_005
++ using logarthmic variations for K and alpha
++ 16 cores
+
+* **Results:** 
+
+
+
+* **Reccomentation**
++ 
+
+* **Results:** 
++
+
+
+* **Reccomentation**
++ 
 
 

@@ -80,13 +80,16 @@ To visulalize results use the scripts in:
 
 ### Simulation name: NEPAS_2000_OPTIM_001
 
-* **Infor:** bbase simulation EURAC Monalisa NEPAS 2000 site, pasture, south exposed .
+* **Infor:** base simulation EURAC Monalisa NEPAS 2000 site, pasture, south exposed .
 * **Settings**:
 + as NEPAS_2000_001, optimized with PSO
 
 
 * **Final parameters evaluation:**
 + solution with very low n (1.15) and K (1E-5)
++ little physical parameters
++ only a few parameters sensitive 
++ For LHOAT only n thetasat thertares are sensitive, alpha and Kv not important
 
 * **Results**:  
 + quite good fit
