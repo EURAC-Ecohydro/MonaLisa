@@ -258,11 +258,33 @@ Optimizazion parameters file:
 * **Settings**
 + as DOMEF_1500_Optim_006
 + using logarthmic variations for K and alpha
-+ 16 cores
 
 * **Results:** 
++
+
+* **Reccomentation**
++ 
+
+* **Results:** 
++
 
 
+* **Reccomentation**
++ 
+
+###Simulation name: DOMEF_1500_Optim_008
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_006
++ optimizing initial conditions
++ less parameters to optimize
+
+* **Results:** 
++
 
 * **Reccomentation**
 + 
