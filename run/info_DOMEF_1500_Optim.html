@@ -314,6 +314,7 @@ $(document).ready(function () {
 <li><strong>Settings</strong></li>
 <li>as DOMEF_1500_Optim_003</li>
 <li>fit toward SWC 5cm total</li>
+<li>32 cores</li>
 <li>modified observations with NAN in SWC during freezing soil periods</li>
 <li><p>original lookuptable without smc 2 cm and totlal SWC</p></li>
 <li><strong>Results:</strong></li>
@@ -339,9 +340,21 @@ $(document).ready(function () {
 <li>using more decimal digits for optimizaton</li>
 <li><p>16 cores</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li>quite different from DOMEF_1500_Optim_005</li>
+<li>visually agreement is worse</li>
+<li>better ME, similar RMSE</li>
+<li>SWC 5cm: ME=0.00; RMSE=0.09;</li>
+<li>final parameter set is very different from DOMEF_1500_Optim_005</li>
+<li>best parameters are often at the limit of the imposed range, but opposite boundary compared to DOMEF_1500_Optim_005</li>
+<li><p>very low n; very high Kv; fc = 0</p></li>
 <li><strong>Reccomentation</strong></li>
-<li></li>
+<li>need to find operational settings that give stable results</li>
+<li><strong>Operational settings according a Samuel</strong>
+<ul>
+<li>use at least 40 particles</li>
+<li>Use more iterations (more than 100)</li>
+<li>Use n=20 for LHOAT</li>
+</ul></li>
 </ul>
 </div>
 <div id="simulation-name-domef_1500_optim_007" class="section level3">
@@ -353,7 +366,12 @@ $(document).ready(function () {
 <li>as DOMEF_1500_Optim_006</li>
 <li><p>using logarthmic variations for K and alpha</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li>visually quite similar DOMEF_1500_Optim_006</li>
+<li>SWC 5cm: ME=0.01; RMSE=0.09;</li>
+<li>final parameter set is different both from DOMEF_1500_Optim_005 and 006</li>
+<li>final parameters are not in the border of the range</li>
+<li>quite low n; low Kv; fc = 0.7</li>
+<li><p>n seems to dominate results, fc counts almost nothing</p></li>
 <li><strong>Reccomentation</strong></li>
 <li></li>
 <li><strong>Results:</strong></li>
@@ -372,13 +390,9 @@ $(document).ready(function () {
 <li>optimizing initial conditions</li>
 <li><p>less parameters to optimize</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li><p>some errors</p></li>
 <li><strong>Reccomentation</strong></li>
-<li></li>
-<li><strong>Results:</strong></li>
-<li></li>
-<li><strong>Reccomentation</strong></li>
-<li></li>
+<li><p>revise settings</p></li>
 </ul>
 </div>
 
