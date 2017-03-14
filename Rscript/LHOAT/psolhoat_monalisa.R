@@ -71,7 +71,7 @@ if (USE_RMPI==TRUE) {
 
 	parallel <- "none"
 	npart <- 4
-	control <- list(N=8,parallel="parallel",REPORT=10) ##list(maxit=5,npart=npart)
+	control <- list(N=20,parallel="parallel",REPORT=10) ##list(maxit=5,npart=npart)
 	
 }
 
@@ -158,13 +158,19 @@ names(upper) <- geotop.param$name
 if (!is.null(x)) names(x) <- geotop.param$name
 
 # Variabilies target defined as keywords of observed variables in the observation file and in the lookup table
-var <- c('soil_moisture_content_50','soil_moisture_content_200','latent_heat_flux_in_air','sensible_heat_flux_in_air')
 
 # Vector used in geotopGOF when you optimize a target including multiple variables
 # Before is calculated the choosen marginal GOF for each target variable, 
 # then the variables are rescaled and adimensinalized dividing by a scale number based on the expected accuracy  
 # more details in help geotopGOF
-uscale <- c(0.03,0.03,25,25)/0.03
+### Here you define the taget observed variables you want to optimize
+# the variable names should correspond to what is defined in the file lookup_tbl_observation.txt in each simulation folder
+# you define also hoe to scale different variables for the target function as a pnorm
+
+### Set Target Observed Variables (here are used the same names of observation file!)
+### Set a scale value for each target values (here these values are proportial to its respenctive uncertainity error!) 
+var <- c('soil_moisture_content_50','soil_moisture_content_200') ###,'latent_heat_flux_in_air','sensible_heat_flux_in_air')
+uscale <- c(1,1) ### c(0.03,0.03,25,25)/0.03
 
 names(var)  <- var
 names(uscale) <- var
