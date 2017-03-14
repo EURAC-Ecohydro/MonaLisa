@@ -55,10 +55,10 @@ if (USE_RMPI==TRUE) {
 	}
 	
 	parallel <- "parallel"
-	mynpart <- 31  # npart particles number maxit number of iterations the number of simulations is (npart x maxit)
-	mymaxit <- 10
+	mynpart <- mpi.universe.size() - 1  # npart particles number maxit number of iterations the number of simulations is (npart x maxit)
+	mymaxit <- 100
 	# control is the list of all the control arguments in hydropso. See hydropso documentation
-	control <- list(maxit=mymaxit,npart=mynpart,parallel=parallel)
+	control <- list(maxit=mymaxit,npart=mynpart,parallel=parallel,REPORT=10,K=11,normalise=TRUE)
 	
 } else {
 	
