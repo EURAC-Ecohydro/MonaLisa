@@ -117,7 +117,7 @@ Optimizazion parameters file:
     + if you increase # of cores, does not increase computation time
     + it matters a lot! Very different final parameter sets and shape of the time series with many particles.
 
-###Simulation name: DOMEF_1500_Optim_002
+### Simulation name: DOMEF_1500_Optim_002
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -146,7 +146,7 @@ Optimizazion parameters file:
 * **Reccomentation**
 + check error with Emanuele
 
-###Simulation name: DOMEF_1500_Optim_003
+### Simulation name: DOMEF_1500_Optim_003
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -164,9 +164,9 @@ Optimizazion parameters file:
 + it does not converge for high n values
 + best results for very low n values
 + with low n values computation time increases, also SWC remains high ...
-      + n = 1.1 Time =6´01´´
-      + n = 1.2 Time =1´50´´
-      + n = 2.0 Time =1´15´´
+      + n = 1.1 Time =6Â´01Â´Â´
+      + n = 1.2 Time =1Â´50Â´Â´
+      + n = 2.0 Time =1Â´15Â´Â´
 
 * **Reccomentation**
 + increase time step
@@ -176,7 +176,7 @@ Optimizazion parameters file:
 + do not allow too high values of Ksat and  alpha 
 + a logarithmic sampling is needed 
 
-###Simulation name: DOMEF_1500_Optim_004
+### Simulation name: DOMEF_1500_Optim_004
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -205,7 +205,7 @@ Optimizazion parameters file:
 + try different optimization goals
 + do not consider winter
 
-###Simulation name: DOMEF_1500_Optim_005
+### Simulation name: DOMEF_1500_Optim_005
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -232,7 +232,7 @@ Optimizazion parameters file:
 + optimize less paramters
 + reduce ranges to have more pyisical values
 
-###Simulation name: DOMEF_1500_Optim_006
+### Simulation name: DOMEF_1500_Optim_006
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -260,7 +260,7 @@ Optimizazion parameters file:
     + Use more iterations (more than 100)
     + Use n=20 for LHOAT
 
-###Simulation name: DOMEF_1500_Optim_007
+### Simulation name: DOMEF_1500_Optim_007
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -288,7 +288,7 @@ Optimizazion parameters file:
 * **Reccomentation**
 + 
 
-###Simulation name: DOMEF_1500_Optim_008
+### Simulation name: DOMEF_1500_Optim_008
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
