@@ -306,4 +306,20 @@ Optimizazion parameters file:
 + revise settings
 
 
+### Simulation name: DOMEF_1500_Optim_009
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:** have a very good fit improvement
+
+* **Settings**
++ as DOMEF_1500_Optim_007
++ 128 particles, K=25 a fifth of paticles, normalise true, more iterations
+
+* **Results:**
++ very good visual agreement 
++ SWC 5cm:  ME=0.00; RMSE=0.07, good improvement, ME 0 is incredible;
+
+* **Reccomentation**
++
 
