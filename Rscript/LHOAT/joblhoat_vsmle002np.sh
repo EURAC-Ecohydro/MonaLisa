@@ -6,7 +6,7 @@
 #$ -l h_rt=10:00:00
 #$ -o $HOME/Simulations/MonaLisaSims/
 #$ -e $HOME/Simulations/MonaLisaSims/
-#$ -t 1-4
+#$ -t 1-7
 
 #### bash script for jon to optimize several 1D GEOtop simulations with GEOtop Optim for monalisa station
 

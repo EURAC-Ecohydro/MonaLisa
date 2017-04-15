@@ -229,6 +229,7 @@ $(document).ready(function () {
 <li><p><strong>Purpose:</strong>Improved optimizzion settings for surface water content (Monalisa repor to compare with remote sensing data)</p></li>
 <li><strong>Settings</strong></li>
 <li>as DOMEF_1500_Optim_001_PSO, optimized with PSO</li>
+<li>64 cores</li>
 <li>shorter simulation duration</li>
 <li>TimeStepEnergyAndWater = 600</li>
 <li>MinTimeStep = 30</li>
@@ -259,11 +260,24 @@ $(document).ready(function () {
 <li>as DOMEF_1500_Optim_002</li>
 <li>used here 32 cores particles to be faster</li>
 <li>fit toward SWC 5cm only total</li>
-<li><p>original lookuptable without smc 2 cm and total SWC</p></li>
+<li>original lookuptable without smc 2 cm and total SWC</li>
+<li><p>max computation time 10 hours</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li>it is working, but it takes too long and is quitted by VSC</li>
+<li>it does not converge for high n values</li>
+<li>best results for very low n values</li>
+<li>with low n values computation time increases, also SWC remains high …
+<ul>
+<li>n = 1.1 Time =6´01´´</li>
+<li>n = 1.2 Time =1´50´´</li>
+<li>n = 2.0 Time =1´15´´</li>
+</ul></li>
 <li><strong>Reccomentation</strong></li>
-<li></li>
+<li>increase time step</li>
+<li>decrease simulaton time</li>
+<li><p>restrict parameters ranges</p></li>
+<li>do not allow too high values of Ksat and alpha</li>
+<li><p>a logarithmic sampling is needed</p></li>
 </ul>
 </div>
 <div id="simulation-name-domef_1500_optim_004" class="section level3">
@@ -274,11 +288,22 @@ $(document).ready(function () {
 <li><strong>Settings</strong></li>
 <li>as DOMEF_1500_Optim_003</li>
 <li>fit toward SWC 5cm liquid</li>
-<li><p>modified lookuptable without smc 2 cm but liquid SWC</p></li>
+<li>modified lookuptable without smc 2 cm but only liquid SWC as target</li>
+<li>RichardTol = 1.E-6</li>
+<li>TimeStepEnergyAndWater = 900</li>
+<li>MinTimeStep = 300</li>
+<li>-l h_rt=20:00:00</li>
+<li>improved and restricted parameters ranges param_DOMEF_1500_Optim_004.csv</li>
+<li><p>n &gt; 1.15 to avoit too long computations</p></li>
 <li><strong>Results:</strong></li>
-<li></li>
+<li>it is working in about 1 hour</li>
+<li>best parameters are often at the limit of the imposed range</li>
+<li>SWC 5cm: ME=-0.01; RMSE=0.12;</li>
+<li>fit is better than previous optimization, but is in general to dry</li>
+<li><p>too little variations of SMC</p></li>
 <li><strong>Reccomentation</strong></li>
-<li></li>
+<li>try different optimization goals</li>
+<li><p>do not consider winter</p></li>
 </ul>
 </div>
 <div id="simulation-name-domef_1500_optim_005" class="section level3">
@@ -289,12 +314,85 @@ $(document).ready(function () {
 <li><strong>Settings</strong></li>
 <li>as DOMEF_1500_Optim_003</li>
 <li>fit toward SWC 5cm total</li>
+<li>32 cores</li>
 <li>modified observations with NAN in SWC during freezing soil periods</li>
 <li><p>original lookuptable without smc 2 cm and totlal SWC</p></li>
+<li><strong>Results:</strong></li>
+<li><em>SIMULATION USED FOR CHART IN MONALISA PUBLIC REPORT</em></li>
+<li>it is working in about 1 hour</li>
+<li>SWC 5cm: ME=0.02; RMSE=0.09;</li>
+<li>visual fit is quite good</li>
+<li>best parameters are often at the limit of the imposed range</li>
+<li>very high n; very low Kv; fc = 0</li>
+<li><p>several parameters are sensitive</p></li>
+<li><strong>Reccomentation</strong></li>
+<li>optimize less paramters</li>
+<li><p>reduce ranges to have more pyisical values</p></li>
+</ul>
+</div>
+<div id="simulation-name-domef_1500_optim_006" class="section level3">
+<h3>Simulation name: DOMEF_1500_Optim_006</h3>
+<ul>
+<li><p><strong>Infor:</strong>simulation Deutschnofen 1500 m, meadow, flat location</p></li>
+<li><p><strong>Purpose:</strong>Test to understand optimization errors</p></li>
+<li><strong>Settings</strong></li>
+<li>as DOMEF_1500_Optim_005</li>
+<li>using more decimal digits for optimizaton</li>
+<li><p>16 cores</p></li>
+<li><strong>Results:</strong></li>
+<li>quite different from DOMEF_1500_Optim_005</li>
+<li>visually agreement is worse</li>
+<li>better ME, similar RMSE</li>
+<li>SWC 5cm: ME=0.00; RMSE=0.09;</li>
+<li>final parameter set is very different from DOMEF_1500_Optim_005</li>
+<li>best parameters are often at the limit of the imposed range, but opposite boundary compared to DOMEF_1500_Optim_005</li>
+<li><p>very low n; very high Kv; fc = 0</p></li>
+<li><strong>Reccomentation</strong></li>
+<li>need to find operational settings that give stable results</li>
+<li><strong>Operational settings according a Samuel</strong>
+<ul>
+<li>use at least 40 particles</li>
+<li>Use more iterations (more than 100)</li>
+<li>Use n=20 for LHOAT</li>
+</ul></li>
+</ul>
+</div>
+<div id="simulation-name-domef_1500_optim_007" class="section level3">
+<h3>Simulation name: DOMEF_1500_Optim_007</h3>
+<ul>
+<li><p><strong>Infor:</strong>simulation Deutschnofen 1500 m, meadow, flat location</p></li>
+<li><p><strong>Purpose:</strong>Test to understand optimization errors</p></li>
+<li><strong>Settings</strong></li>
+<li>as DOMEF_1500_Optim_006</li>
+<li><p>using logarthmic variations for K and alpha</p></li>
+<li><strong>Results:</strong></li>
+<li>visually quite similar DOMEF_1500_Optim_006</li>
+<li>SWC 5cm: ME=0.01; RMSE=0.09;</li>
+<li>final parameter set is different both from DOMEF_1500_Optim_005 and 006</li>
+<li>final parameters are not in the border of the range</li>
+<li>quite low n; low Kv; fc = 0.7</li>
+<li><p>n seems to dominate results, fc counts almost nothing</p></li>
+<li><strong>Reccomentation</strong></li>
+<li></li>
 <li><strong>Results:</strong></li>
 <li></li>
 <li><strong>Reccomentation</strong></li>
 <li></li>
+</ul>
+</div>
+<div id="simulation-name-domef_1500_optim_008" class="section level3">
+<h3>Simulation name: DOMEF_1500_Optim_008</h3>
+<ul>
+<li><p><strong>Infor:</strong>simulation Deutschnofen 1500 m, meadow, flat location</p></li>
+<li><p><strong>Purpose:</strong>Test to understand optimization errors</p></li>
+<li><strong>Settings</strong></li>
+<li>as DOMEF_1500_Optim_006</li>
+<li>optimizing initial conditions</li>
+<li><p>less parameters to optimize</p></li>
+<li><strong>Results:</strong></li>
+<li><p>some errors</p></li>
+<li><strong>Reccomentation</strong></li>
+<li><p>revise settings</p></li>
 </ul>
 </div>
 

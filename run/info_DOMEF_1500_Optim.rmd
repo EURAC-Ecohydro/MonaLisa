@@ -117,7 +117,7 @@ Optimizazion parameters file:
     + if you increase # of cores, does not increase computation time
     + it matters a lot! Very different final parameter sets and shape of the time series with many particles.
 
-###Simulation name: DOMEF_1500_Optim_002
+### Simulation name: DOMEF_1500_Optim_002
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -125,6 +125,7 @@ Optimizazion parameters file:
 
 * **Settings**
 + as DOMEF_1500_Optim_001_PSO, optimized with PSO
++ 64 cores
 + shorter simulation duration 
 + TimeStepEnergyAndWater	=	600
 + MinTimeStep = 30
@@ -145,7 +146,7 @@ Optimizazion parameters file:
 * **Reccomentation**
 + check error with Emanuele
 
-###Simulation name: DOMEF_1500_Optim_003
+### Simulation name: DOMEF_1500_Optim_003
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -156,13 +157,26 @@ Optimizazion parameters file:
 + used here 32 cores particles to be faster
 + fit toward SWC 5cm only total
 + original lookuptable without smc 2 cm and total SWC
++ max computation time 10 hours
 
 * **Results:** 
-+ 
-* **Reccomentation**
-+
++ it is working, but it takes too long and is quitted by VSC
++ it does not converge for high n values
++ best results for very low n values
++ with low n values computation time increases, also SWC remains high ...
+      + n = 1.1 Time =6´01´´
+      + n = 1.2 Time =1´50´´
+      + n = 2.0 Time =1´15´´
 
-###Simulation name: DOMEF_1500_Optim_004
+* **Reccomentation**
++ increase time step
++ decrease simulaton time
++ restrict parameters ranges
+
++ do not allow too high values of Ksat and  alpha 
++ a logarithmic sampling is needed 
+
+### Simulation name: DOMEF_1500_Optim_004
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -171,14 +185,27 @@ Optimizazion parameters file:
 * **Settings**
 + as DOMEF_1500_Optim_003
 + fit toward  SWC 5cm liquid
-+  modified lookuptable without smc 2 cm but liquid SWC
++  modified lookuptable without smc 2 cm but only liquid SWC as target
++ RichardTol						=	1.E-6 
++ TimeStepEnergyAndWater	=	900
++ MinTimeStep = 300
++ -l h_rt=20:00:00
++ improved and restricted parameters ranges param_DOMEF_1500_Optim_004.csv
++ n > 1.15 to avoit too long computations
+
 
 * **Results:** 
-+ 
-* **Reccomentation**
-+
++ it is working in about 1 hour 
++ best parameters are often at the limit of the imposed range
++ SWC 5cm:  ME=-0.01; RMSE=0.12;
++ fit is better than previous optimization, but is in general to dry 
++ too little variations of SMC
 
-###Simulation name: DOMEF_1500_Optim_005
+* **Reccomentation**
++ try different optimization goals
++ do not consider winter
+
+### Simulation name: DOMEF_1500_Optim_005
 
 * **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
 
@@ -187,12 +214,112 @@ Optimizazion parameters file:
 * **Settings**
 + as DOMEF_1500_Optim_003
 + fit toward SWC 5cm total
++ 32 cores
 + modified observations with NAN in SWC during freezing soil periods
 + original  lookuptable without smc 2 cm and totlal SWC
 
 * **Results:** 
-+ 
++ *SIMULATION USED FOR CHART IN MONALISA PUBLIC REPORT*
++ it is working in about 1 hour
++ SWC 5cm:  ME=0.02; RMSE=0.09;
++ visual fit is quite good
++ best parameters are often at the limit of the imposed range
++ very high n; very low Kv; fc = 0
++ several parameters are sensitive
+
+
 * **Reccomentation**
++ optimize less paramters
++ reduce ranges to have more pyisical values
+
+### Simulation name: DOMEF_1500_Optim_006
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_005
++ using more decimal digits for optimizaton
++ 16 cores
+
+* **Results:** 
++ quite different from DOMEF_1500_Optim_005
++ visually agreement is worse
++ better ME, similar RMSE
++ SWC 5cm:  ME=0.00; RMSE=0.09;
++ final parameter set is very different from DOMEF_1500_Optim_005
++ best parameters are often at the limit of the imposed range, but opposite boundary compared to DOMEF_1500_Optim_005
++ very low n; very high Kv; fc = 0
+
+
+* **Reccomentation**
++  need to find operational settings that give stable results
++ **Operational settings according a Samuel**
+    + use at least 40 particles 
+    + Use more iterations (more than 100)
+    + Use n=20 for LHOAT
+
+### Simulation name: DOMEF_1500_Optim_007
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_006
++ using logarthmic variations for K and alpha
+
+* **Results:** 
++ visually quite similar DOMEF_1500_Optim_006
++ SWC 5cm:  ME=0.01; RMSE=0.09;
++ final parameter set is different both from DOMEF_1500_Optim_005 and 006
++ final parameters are not in the border of the range
++ quite low n; low Kv; fc = 0.7
++ n seems to dominate results, fc counts almost nothing
+
+* **Reccomentation**
++ 
+
+* **Results:** 
 +
 
+
+* **Reccomentation**
++ 
+
+### Simulation name: DOMEF_1500_Optim_008
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:**Test to understand optimization errors
+
+* **Settings**
++ as DOMEF_1500_Optim_006
++ optimizing initial conditions
++ less parameters to optimize
+
+* **Results:** 
++ some errors 
+
+* **Reccomentation**
++ revise settings
+
+
+### Simulation name: DOMEF_1500_Optim_009
+
+* **Infor:**simulation Deutschnofen 1500 m, meadow, flat location
+
+* **Purpose:** have a very good fit improvement
+
+* **Settings**
++ as DOMEF_1500_Optim_007
++ 128 particles, K=25 a fifth of paticles, normalise true, more iterations
+
+* **Results:**
++ very good visual agreement 
++ SWC 5cm:  ME=0.00; RMSE=0.07, good improvement, ME 0 is incredible;
+
+* **Reccomentation**
++
 

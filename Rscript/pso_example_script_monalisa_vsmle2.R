@@ -92,12 +92,12 @@ geotopsims <- c("DOMEF_1500_Optim_001",
 "Matsch_P2_Optim_001",
 "DOPAS_2000_Optim_001","Matsch_B2_Optim_001")
 
-wpath_geotopsims <- paste(project_path,"geotop",geotopsims,sep="/")
+wpath_geotopsims <- paste(project_path,"geotop/1D",geotopsims,sep="/")
 
 names(wpath_geotopsims) <-  geotopsims
 
 paramfiles <- sprintf("param_%s.csv",geotopsims)
-paramfiles <- paste(project_path,"param",paramfiles,sep="/")
+paramfiles <- paste(project_path,"param/1D",paramfiles,sep="/")
 names(paramfiles) <- geotopsims
 runpath0 <- paste(project_path,"run",sep="/")
 savepath0 <- paste(project_path,"save",sep="/")
