@@ -1,0 +1,2 @@
+ID,xcoord,ycoord,landcover
+1,674401.2,5135433,1
