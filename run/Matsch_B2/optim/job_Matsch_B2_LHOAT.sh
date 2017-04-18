@@ -1,4 +1,4 @@
-#$ -N Kaltern
+#$ -N Matsch_B2_LHOAT
 #$ -V
 #$ -pe mpich 16 # number of cores: 
 #$ -M emanuele.cordano@gmail.com,giacomo.bertoldi@eurac.edu,samuel.senoner@eurac.edu
