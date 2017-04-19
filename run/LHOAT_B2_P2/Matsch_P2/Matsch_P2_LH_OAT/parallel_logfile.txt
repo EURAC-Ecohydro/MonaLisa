@@ -1,0 +1,1600 @@
+starting worker pid=14750 on localhost:11959 at 21:26:29.587
+starting worker pid=14751 on localhost:11959 at 21:26:29.606
+starting worker pid=14752 on localhost:11959 at 21:26:29.624
+starting worker pid=14753 on localhost:11959 at 21:26:29.641
+starting worker pid=14754 on localhost:11959 at 21:26:29.659
+starting worker pid=14755 on localhost:11959 at 21:26:29.677
+starting worker pid=14756 on localhost:11959 at 21:26:29.694
+starting worker pid=14757 on localhost:11959 at 21:26:29.712
+starting worker pid=14758 on localhost:11959 at 21:26:29.729
+starting worker pid=14759 on localhost:11959 at 21:26:29.747
+starting worker pid=14760 on localhost:11959 at 21:26:29.764
+starting worker pid=14761 on localhost:11959 at 21:26:29.782
+starting worker pid=14762 on localhost:11959 at 21:26:29.799
+starting worker pid=14763 on localhost:11959 at 21:26:29.817
+starting worker pid=14764 on localhost:11959 at 21:26:29.834
+starting worker pid=14765 on localhost:11959 at 21:26:29.852
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:26:30
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab7c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a57c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a47c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f7c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a77c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a07c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a27c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a97c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e7c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac7c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a17c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad7c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a37c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa7c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a87c3cb364/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a67c3cb364/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a97c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab7c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e7c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a67c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a57c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+GEOtop is running!!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a17c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad7c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac7c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a27c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a47c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a87c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a37c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f7c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa7c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a07c3cb364/Matsch_P2 at 2017-04-17 21:26:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a77c3cb364/Matsch_P2 at 2017-04-17 21:26:33
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac7c3cb364/Matsch_P2 at 2017-04-17 21:27:00
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad7c3cb364/Matsch_P2 at 2017-04-17 21:27:01
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a57c3cb364/Matsch_P2 at 2017-04-17 21:27:03
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab7c3cb364/Matsch_P2 at 2017-04-17 21:27:03
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa7c3cb364/Matsch_P2 at 2017-04-17 21:27:04
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a47c3cb364/Matsch_P2 at 2017-04-17 21:27:05
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f7c3cb364/Matsch_P2 at 2017-04-17 21:27:07
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a87c3cb364/Matsch_P2 at 2017-04-17 21:27:08
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e7c3cb364/Matsch_P2 at 2017-04-17 21:27:08
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a07c3cb364/Matsch_P2 at 2017-04-17 21:27:11
+End GEOtop Running!
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac7c3cb364/Matsch_P2 at 2017-04-17 21:27:17
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac7c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:17
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad7c3cb364/Matsch_P2 at 2017-04-17 21:27:17
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac202cb275/Matsch_P2
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad7c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:17
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad202cb275/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a77c3cb364/Matsch_P2 at 2017-04-17 21:27:17
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac202cb275/Matsch_P2 at 2017-04-17 21:27:19
+Finish GOF 0.112544 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a57c3cb364/Matsch_P2 at 2017-04-17 21:27:19
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a57c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:19
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a5202cb275/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad202cb275/Matsch_P2 at 2017-04-17 21:27:20
+Finish GOF 0.121335 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa7c3cb364/Matsch_P2 at 2017-04-17 21:27:20
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa7c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:20
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa202cb275/Matsch_P2
+Finish GOF 0.121285 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab7c3cb364/Matsch_P2 at 2017-04-17 21:27:20
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab7c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:20
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab202cb275/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a5202cb275/Matsch_P2 at 2017-04-17 21:27:21
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa202cb275/Matsch_P2 at 2017-04-17 21:27:23
+Finish GOF 0.123023 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f7c3cb364/Matsch_P2 at 2017-04-17 21:27:23
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f7c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:23
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f202cb275/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab202cb275/Matsch_P2 at 2017-04-17 21:27:23
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a97c3cb364/Matsch_P2 at 2017-04-17 21:27:24
+End GEOtop Running!
+Finish GOF 0.075751 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a87c3cb364/Matsch_P2 at 2017-04-17 21:27:25
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a87c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:25
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a8202cb275/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f202cb275/Matsch_P2 at 2017-04-17 21:27:26
+Finish GOF 0.123071 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e7c3cb364/Matsch_P2 at 2017-04-17 21:27:26
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e7c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:26
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e202cb275/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a67c3cb364/Matsch_P2 at 2017-04-17 21:27:27
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a8202cb275/Matsch_P2 at 2017-04-17 21:27:27
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a17c3cb364/Matsch_P2 at 2017-04-17 21:27:27
+End GEOtop Running!
+GEOtop is running!!
+Finish GOF 0.097315 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a07c3cb364/Matsch_P2 at 2017-04-17 21:27:28
+Finish GOF 0.112547 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a47c3cb364/Matsch_P2 at 2017-04-17 21:27:29
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a07c3cb364/Matsch_P2
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e202cb275/Matsch_P2 at 2017-04-17 21:27:29
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a47c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:30
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:30
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a0202cb275/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a4202cb275/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a0202cb275/Matsch_P2 at 2017-04-17 21:27:32
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a4202cb275/Matsch_P2 at 2017-04-17 21:27:32
+Finish GOF 0.096967 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a77c3cb364/Matsch_P2 at 2017-04-17 21:27:33
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a77c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:33
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a7202cb275/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a7202cb275/Matsch_P2 at 2017-04-17 21:27:35
+Finish GOF 0.075749 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a97c3cb364/Matsch_P2 at 2017-04-17 21:27:41
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a97c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:41
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a9202cb275/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a9202cb275/Matsch_P2 at 2017-04-17 21:27:43
+Finish GOF 0.096962 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a67c3cb364/Matsch_P2 at 2017-04-17 21:27:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a67c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:43
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a6202cb275/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a6202cb275/Matsch_P2 at 2017-04-17 21:27:45
+Finish GOF 0.0973 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a17c3cb364/Matsch_P2 at 2017-04-17 21:27:45
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a17c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:27:45
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a1202cb275/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac202cb275/Matsch_P2 at 2017-04-17 21:27:46
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a1202cb275/Matsch_P2 at 2017-04-17 21:27:47
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad202cb275/Matsch_P2 at 2017-04-17 21:27:48
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa202cb275/Matsch_P2 at 2017-04-17 21:27:54
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab202cb275/Matsch_P2 at 2017-04-17 21:27:54
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a5202cb275/Matsch_P2 at 2017-04-17 21:27:55
+End GEOtop Running!
+Finish GOF 0.071158 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac202cb275/Matsch_P2 at 2017-04-17 21:28:02
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:02
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac35a22c8a/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a4202cb275/Matsch_P2 at 2017-04-17 21:28:02
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac35a22c8a/Matsch_P2 at 2017-04-17 21:28:04
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a8202cb275/Matsch_P2 at 2017-04-17 21:28:05
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f202cb275/Matsch_P2 at 2017-04-17 21:28:06
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e202cb275/Matsch_P2 at 2017-04-17 21:28:06
+End GEOtop Running!
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad202cb275/Matsch_P2 at 2017-04-17 21:28:07
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:07
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad35a22c8a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad35a22c8a/Matsch_P2 at 2017-04-17 21:28:09
+Finish GOF 0.086402 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa202cb275/Matsch_P2 at 2017-04-17 21:28:09
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:09
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa35a22c8a/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a0202cb275/Matsch_P2 at 2017-04-17 21:28:10
+End GEOtop Running!
+Finish GOF 0.121344 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab202cb275/Matsch_P2 at 2017-04-17 21:28:11
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:11
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab35a22c8a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa35a22c8a/Matsch_P2 at 2017-04-17 21:28:11
+Finish GOF 0.112532 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a5202cb275/Matsch_P2 at 2017-04-17 21:28:12
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a5202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:12
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a535a22c8a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab35a22c8a/Matsch_P2 at 2017-04-17 21:28:13
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a535a22c8a/Matsch_P2 at 2017-04-17 21:28:14
+Finish GOF 0.128466 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a4202cb275/Matsch_P2 at 2017-04-17 21:28:17
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a4202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:17
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a435a22c8a/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a7202cb275/Matsch_P2 at 2017-04-17 21:28:19
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a9202cb275/Matsch_P2 at 2017-04-17 21:28:19
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a435a22c8a/Matsch_P2 at 2017-04-17 21:28:19
+Finish GOF 0.093335 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a8202cb275/Matsch_P2 at 2017-04-17 21:28:20
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a8202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:20
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a835a22c8a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a835a22c8a/Matsch_P2 at 2017-04-17 21:28:22
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a27c3cb364/Matsch_P2 at 2017-04-17 21:28:23
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a37c3cb364/Matsch_P2 at 2017-04-17 21:28:24
+End GEOtop Running!
+Finish GOF 0.123062 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f202cb275/Matsch_P2 at 2017-04-17 21:28:24
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:24
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f35a22c8a/Matsch_P2
+Finish GOF 0.077615 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a0202cb275/Matsch_P2 at 2017-04-17 21:28:24
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a0202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:24
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a035a22c8a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f35a22c8a/Matsch_P2 at 2017-04-17 21:28:26
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a035a22c8a/Matsch_P2 at 2017-04-17 21:28:26
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a1202cb275/Matsch_P2 at 2017-04-17 21:28:27
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a6202cb275/Matsch_P2 at 2017-04-17 21:28:29
+End GEOtop Running!
+Finish GOF 0.092875 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e202cb275/Matsch_P2 at 2017-04-17 21:28:29
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:29
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e35a22c8a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e35a22c8a/Matsch_P2 at 2017-04-17 21:28:31
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac35a22c8a/Matsch_P2 at 2017-04-17 21:28:32
+End GEOtop Running!
+Finish GOF 0.096969 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a7202cb275/Matsch_P2 at 2017-04-17 21:28:32
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a7202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:32
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a735a22c8a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a735a22c8a/Matsch_P2 at 2017-04-17 21:28:34
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad35a22c8a/Matsch_P2 at 2017-04-17 21:28:37
+End GEOtop Running!
+Finish GOF 0.075741 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a9202cb275/Matsch_P2 at 2017-04-17 21:28:39
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a9202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:39
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a935a22c8a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a935a22c8a/Matsch_P2 at 2017-04-17 21:28:40
+Finish GOF 0.086171 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a6202cb275/Matsch_P2 at 2017-04-17 21:28:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a6202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:43
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a635a22c8a/Matsch_P2
+Finish GOF 0.097317 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a1202cb275/Matsch_P2 at 2017-04-17 21:28:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a1202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:43
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a135a22c8a/Matsch_P2
+Finish GOF 0.085621 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a37c3cb364/Matsch_P2 at 2017-04-17 21:28:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a37c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:43
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a3202cb275/Matsch_P2
+Finish GOF 0.085654 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a27c3cb364/Matsch_P2 at 2017-04-17 21:28:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a27c3cb364/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:43
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a2202cb275/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a535a22c8a/Matsch_P2 at 2017-04-17 21:28:44
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a135a22c8a/Matsch_P2 at 2017-04-17 21:28:44
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a635a22c8a/Matsch_P2 at 2017-04-17 21:28:45
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a3202cb275/Matsch_P2 at 2017-04-17 21:28:45
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a2202cb275/Matsch_P2 at 2017-04-17 21:28:47
+Finish GOF 0.079902 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac35a22c8a/Matsch_P2 at 2017-04-17 21:28:50
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac35a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:50
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac699bc9b4/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab35a22c8a/Matsch_P2 at 2017-04-17 21:28:51
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa35a22c8a/Matsch_P2 at 2017-04-17 21:28:52
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac699bc9b4/Matsch_P2 at 2017-04-17 21:28:52
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a435a22c8a/Matsch_P2 at 2017-04-17 21:28:54
+End GEOtop Running!
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad35a22c8a/Matsch_P2 at 2017-04-17 21:28:55
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad35a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:28:55
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad699bc9b4/Matsch_P2 at 2017-04-17 21:28:57
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a835a22c8a/Matsch_P2 at 2017-04-17 21:28:59
+End GEOtop Running!
+Finish GOF 0.112506 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a535a22c8a/Matsch_P2 at 2017-04-17 21:29:01
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a535a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:01
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a5699bc9b4/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f35a22c8a/Matsch_P2 at 2017-04-17 21:29:03
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a5699bc9b4/Matsch_P2 at 2017-04-17 21:29:04
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a035a22c8a/Matsch_P2 at 2017-04-17 21:29:05
+End GEOtop Running!
+Finish GOF 0.121373 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab35a22c8a/Matsch_P2 at 2017-04-17 21:29:06
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab35a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:06
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab699bc9b4/Matsch_P2
+Finish GOF 0.122314 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa35a22c8a/Matsch_P2 at 2017-04-17 21:29:06
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa35a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:06
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab699bc9b4/Matsch_P2 at 2017-04-17 21:29:08
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e35a22c8a/Matsch_P2 at 2017-04-17 21:29:08
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa699bc9b4/Matsch_P2 at 2017-04-17 21:29:08
+Finish GOF 0.108079 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a435a22c8a/Matsch_P2 at 2017-04-17 21:29:11
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a435a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:11
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a4699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a4699bc9b4/Matsch_P2 at 2017-04-17 21:29:13
+Finish GOF 0.072398 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a835a22c8a/Matsch_P2 at 2017-04-17 21:29:13
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a835a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:13
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a8699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a8699bc9b4/Matsch_P2 at 2017-04-17 21:29:16
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a935a22c8a/Matsch_P2 at 2017-04-17 21:29:17
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a735a22c8a/Matsch_P2 at 2017-04-17 21:29:19
+End GEOtop Running!
+Finish GOF 0.123053 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f35a22c8a/Matsch_P2 at 2017-04-17 21:29:21
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f35a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:21
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f699bc9b4/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a135a22c8a/Matsch_P2 at 2017-04-17 21:29:22
+End GEOtop Running!
+Finish GOF 0.103291 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e35a22c8a/Matsch_P2 at 2017-04-17 21:29:22
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e35a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:22
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f699bc9b4/Matsch_P2 at 2017-04-17 21:29:22
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac699bc9b4/Matsch_P2 at 2017-04-17 21:29:23
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e699bc9b4/Matsch_P2 at 2017-04-17 21:29:24
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad699bc9b4/Matsch_P2 at 2017-04-17 21:29:25
+End GEOtop Running!
+Finish GOF 0.104011 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a035a22c8a/Matsch_P2 at 2017-04-17 21:29:25
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a035a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:25
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a0699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a0699bc9b4/Matsch_P2 at 2017-04-17 21:29:27
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a635a22c8a/Matsch_P2 at 2017-04-17 21:29:28
+End GEOtop Running!
+Finish GOF 0.07575 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a935a22c8a/Matsch_P2 at 2017-04-17 21:29:31
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a935a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:31
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a9699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a9699bc9b4/Matsch_P2 at 2017-04-17 21:29:33
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a5699bc9b4/Matsch_P2 at 2017-04-17 21:29:34
+End GEOtop Running!
+Finish GOF 0.096963 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a735a22c8a/Matsch_P2 at 2017-04-17 21:29:35
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a735a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:35
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a7699bc9b4/Matsch_P2
+Finish GOF 0.107369 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac699bc9b4/Matsch_P2 at 2017-04-17 21:29:36
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:36
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a7699bc9b4/Matsch_P2 at 2017-04-17 21:29:37
+Finish GOF 0.097323 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a135a22c8a/Matsch_P2 at 2017-04-17 21:29:38
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a135a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:38
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a1699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac119630ee/Matsch_P2 at 2017-04-17 21:29:38
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa699bc9b4/Matsch_P2 at 2017-04-17 21:29:38
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a1699bc9b4/Matsch_P2 at 2017-04-17 21:29:40
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad699bc9b4/Matsch_P2 at 2017-04-17 21:29:40
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:40
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad119630ee/Matsch_P2 at 2017-04-17 21:29:42
+Finish GOF 0.097659 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a635a22c8a/Matsch_P2 at 2017-04-17 21:29:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a635a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:43
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a6699bc9b4/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab699bc9b4/Matsch_P2 at 2017-04-17 21:29:45
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a6699bc9b4/Matsch_P2 at 2017-04-17 21:29:45
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a4699bc9b4/Matsch_P2 at 2017-04-17 21:29:47
+End GEOtop Running!
+Finish GOF 0.112498 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a5699bc9b4/Matsch_P2 at 2017-04-17 21:29:49
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a5699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:49
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a5119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a5119630ee/Matsch_P2 at 2017-04-17 21:29:51
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a8699bc9b4/Matsch_P2 at 2017-04-17 21:29:52
+End GEOtop Running!
+Finish GOF 0.092598 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa699bc9b4/Matsch_P2 at 2017-04-17 21:29:53
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:29:53
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa119630ee/Matsch_P2 at 2017-04-17 21:29:55
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f699bc9b4/Matsch_P2 at 2017-04-17 21:29:57
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e699bc9b4/Matsch_P2 at 2017-04-17 21:29:59
+End GEOtop Running!
+Finish GOF 0.121328 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab699bc9b4/Matsch_P2 at 2017-04-17 21:30:00
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:00
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab119630ee/Matsch_P2 at 2017-04-17 21:30:02
+Finish GOF 0.10043 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a4699bc9b4/Matsch_P2 at 2017-04-17 21:30:04
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a4699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:04
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a4119630ee/Matsch_P2
+Finish GOF 0.076984 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a8699bc9b4/Matsch_P2 at 2017-04-17 21:30:06
+GEOtop is running!!
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a8699bc9b4/Matsch_P2
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a4119630ee/Matsch_P2 at 2017-04-17 21:30:06
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:06
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a8119630ee/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac119630ee/Matsch_P2 at 2017-04-17 21:30:06
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a8119630ee/Matsch_P2 at 2017-04-17 21:30:08
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a9699bc9b4/Matsch_P2 at 2017-04-17 21:30:09
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad119630ee/Matsch_P2 at 2017-04-17 21:30:11
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a0699bc9b4/Matsch_P2 at 2017-04-17 21:30:13
+End GEOtop Running!
+Finish GOF 0.123061 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f699bc9b4/Matsch_P2 at 2017-04-17 21:30:14
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:14
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f119630ee/Matsch_P2 at 2017-04-17 21:30:16
+Finish GOF 0.092803 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e699bc9b4/Matsch_P2 at 2017-04-17 21:30:16
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:16
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e119630ee/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a1699bc9b4/Matsch_P2 at 2017-04-17 21:30:18
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e119630ee/Matsch_P2 at 2017-04-17 21:30:18
+Finish GOF 0.075741 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a9699bc9b4/Matsch_P2 at 2017-04-17 21:30:23
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a9699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:23
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a9119630ee/Matsch_P2
+Finish GOF 0.086874 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac119630ee/Matsch_P2 at 2017-04-17 21:30:24
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:24
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac68869808/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a5119630ee/Matsch_P2 at 2017-04-17 21:30:24
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a7699bc9b4/Matsch_P2 at 2017-04-17 21:30:25
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a9119630ee/Matsch_P2 at 2017-04-17 21:30:25
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad119630ee/Matsch_P2 at 2017-04-17 21:30:26
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:26
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad68869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac68869808/Matsch_P2 at 2017-04-17 21:30:26
+Finish GOF 0.076942 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a0699bc9b4/Matsch_P2 at 2017-04-17 21:30:27
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a0699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:27
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a0119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad68869808/Matsch_P2 at 2017-04-17 21:30:28
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a0119630ee/Matsch_P2 at 2017-04-17 21:30:29
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa119630ee/Matsch_P2 at 2017-04-17 21:30:30
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a6699bc9b4/Matsch_P2 at 2017-04-17 21:30:31
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab119630ee/Matsch_P2 at 2017-04-17 21:30:34
+End GEOtop Running!
+Finish GOF 0.097314 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a1699bc9b4/Matsch_P2 at 2017-04-17 21:30:39
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a1699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:39
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a1119630ee/Matsch_P2
+Finish GOF 0.096961 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a7699bc9b4/Matsch_P2 at 2017-04-17 21:30:39
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a7699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:39
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a7119630ee/Matsch_P2
+Finish GOF 0.112533 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a5119630ee/Matsch_P2 at 2017-04-17 21:30:39
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a5119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:39
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a568869808/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a4119630ee/Matsch_P2 at 2017-04-17 21:30:40
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a7119630ee/Matsch_P2 at 2017-04-17 21:30:41
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a2202cb275/Matsch_P2 at 2017-04-17 21:30:41
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a568869808/Matsch_P2 at 2017-04-17 21:30:41
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a1119630ee/Matsch_P2 at 2017-04-17 21:30:42
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a8119630ee/Matsch_P2 at 2017-04-17 21:30:43
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a3202cb275/Matsch_P2 at 2017-04-17 21:30:44
+End GEOtop Running!
+Finish GOF 0.124041 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa119630ee/Matsch_P2 at 2017-04-17 21:30:45
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:45
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa68869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa68869808/Matsch_P2 at 2017-04-17 21:30:47
+Finish GOF 0.105011 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a6699bc9b4/Matsch_P2 at 2017-04-17 21:30:49
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a6699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:49
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a6119630ee/Matsch_P2
+Finish GOF 0.121245 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab119630ee/Matsch_P2 at 2017-04-17 21:30:51
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:51
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab68869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a6119630ee/Matsch_P2 at 2017-04-17 21:30:51
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f119630ee/Matsch_P2 at 2017-04-17 21:30:52
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab68869808/Matsch_P2 at 2017-04-17 21:30:53
+Finish GOF 0.117297 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a4119630ee/Matsch_P2 at 2017-04-17 21:30:55
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a4119630ee/Matsch_P2
+Finish GOF 0.072907 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a2202cb275/Matsch_P2 at 2017-04-17 21:30:55
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a2202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:55
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:55
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a468869808/Matsch_P2
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a235a22c8a/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac68869808/Matsch_P2 at 2017-04-17 21:30:56
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e119630ee/Matsch_P2 at 2017-04-17 21:30:57
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a468869808/Matsch_P2 at 2017-04-17 21:30:57
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a235a22c8a/Matsch_P2 at 2017-04-17 21:30:57
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad68869808/Matsch_P2 at 2017-04-17 21:30:58
+End GEOtop Running!
+Finish GOF 0.085653 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a3202cb275/Matsch_P2 at 2017-04-17 21:30:59
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a3202cb275/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:30:59
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a335a22c8a/Matsch_P2
+Finish GOF 0.07516 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a8119630ee/Matsch_P2 at 2017-04-17 21:31:00
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a8119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:00
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a868869808/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a9119630ee/Matsch_P2 at 2017-04-17 21:31:01
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a335a22c8a/Matsch_P2 at 2017-04-17 21:31:02
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a868869808/Matsch_P2 at 2017-04-17 21:31:02
+Finish GOF 0.123084 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f119630ee/Matsch_P2 at 2017-04-17 21:31:07
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:07
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f68869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f68869808/Matsch_P2 at 2017-04-17 21:31:09
+Finish GOF 0.07804 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac68869808/Matsch_P2 at 2017-04-17 21:31:10
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac68869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:10
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a0119630ee/Matsch_P2 at 2017-04-17 21:31:10
+End GEOtop Running!
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac36d0c9d9/Matsch_P2
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad68869808/Matsch_P2 at 2017-04-17 21:31:12
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad68869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:12
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad36d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac36d0c9d9/Matsch_P2 at 2017-04-17 21:31:12
+Finish GOF 0.12619 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e119630ee/Matsch_P2 at 2017-04-17 21:31:12
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:12
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e68869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad36d0c9d9/Matsch_P2 at 2017-04-17 21:31:14
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e68869808/Matsch_P2 at 2017-04-17 21:31:14
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a568869808/Matsch_P2 at 2017-04-17 21:31:16
+End GEOtop Running!
+Finish GOF 0.07576 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a9119630ee/Matsch_P2 at 2017-04-17 21:31:16
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a9119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:16
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a968869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a968869808/Matsch_P2 at 2017-04-17 21:31:18
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa68869808/Matsch_P2 at 2017-04-17 21:31:19
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a1119630ee/Matsch_P2 at 2017-04-17 21:31:20
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab68869808/Matsch_P2 at 2017-04-17 21:31:25
+End GEOtop Running!
+Finish GOF 0.09237 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a0119630ee/Matsch_P2 at 2017-04-17 21:31:25
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a0119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:25
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a068869808/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a7119630ee/Matsch_P2 at 2017-04-17 21:31:27
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a068869808/Matsch_P2 at 2017-04-17 21:31:27
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a468869808/Matsch_P2 at 2017-04-17 21:31:29
+End GEOtop Running!
+Finish GOF 0.112519 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a568869808/Matsch_P2 at 2017-04-17 21:31:30
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a568869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:30
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a536d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a536d0c9d9/Matsch_P2 at 2017-04-17 21:31:32
+Finish GOF 0.122061 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa68869808/Matsch_P2 at 2017-04-17 21:31:34
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa68869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:34
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa36d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa36d0c9d9/Matsch_P2 at 2017-04-17 21:31:35
+Finish GOF 0.097329 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a1119630ee/Matsch_P2 at 2017-04-17 21:31:36
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a1119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:36
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a168869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a168869808/Matsch_P2 at 2017-04-17 21:31:38
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a6119630ee/Matsch_P2 at 2017-04-17 21:31:39
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac36d0c9d9/Matsch_P2 at 2017-04-17 21:31:39
+End GEOtop Running!
+Finish GOF 0.121313 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab68869808/Matsch_P2 at 2017-04-17 21:31:39
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab68869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:39
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab36d0c9d9/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a868869808/Matsch_P2 at 2017-04-17 21:31:39
+End GEOtop Running!
+Finish GOF 0.096957 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a7119630ee/Matsch_P2 at 2017-04-17 21:31:41
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a7119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:41
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a768869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab36d0c9d9/Matsch_P2 at 2017-04-17 21:31:41
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a768869808/Matsch_P2 at 2017-04-17 21:31:43
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad36d0c9d9/Matsch_P2 at 2017-04-17 21:31:45
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f68869808/Matsch_P2 at 2017-04-17 21:31:45
+End GEOtop Running!
+Finish GOF 0.121273 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a468869808/Matsch_P2 at 2017-04-17 21:31:47
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a468869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:47
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a436d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a436d0c9d9/Matsch_P2 at 2017-04-17 21:31:49
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e68869808/Matsch_P2 at 2017-04-17 21:31:50
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a968869808/Matsch_P2 at 2017-04-17 21:31:54
+End GEOtop Running!
+Finish GOF 0.075196 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a868869808/Matsch_P2 at 2017-04-17 21:31:55
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a868869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:55
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a836d0c9d9/Matsch_P2
+Finish GOF 0.094737 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a6119630ee/Matsch_P2 at 2017-04-17 21:31:56
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a6119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:56
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a668869808/Matsch_P2
+Finish GOF 0.083608 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac36d0c9d9/Matsch_P2 at 2017-04-17 21:31:56
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac36d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:31:56
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac37d32c5d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a836d0c9d9/Matsch_P2 at 2017-04-17 21:31:57
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a668869808/Matsch_P2 at 2017-04-17 21:31:58
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac37d32c5d/Matsch_P2 at 2017-04-17 21:31:59
+Finish GOF 0.082436 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad36d0c9d9/Matsch_P2 at 2017-04-17 21:32:00
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad36d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:00
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad37d32c5d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad37d32c5d/Matsch_P2 at 2017-04-17 21:32:02
+Finish GOF 0.123072 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f68869808/Matsch_P2 at 2017-04-17 21:32:02
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f68869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:02
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f36d0c9d9/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a536d0c9d9/Matsch_P2 at 2017-04-17 21:32:04
+End GEOtop Running!
+Finish GOF 0.108186 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e68869808/Matsch_P2 at 2017-04-17 21:32:04
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e68869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:04
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e36d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f36d0c9d9/Matsch_P2 at 2017-04-17 21:32:04
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa36d0c9d9/Matsch_P2 at 2017-04-17 21:32:05
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e36d0c9d9/Matsch_P2 at 2017-04-17 21:32:06
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a068869808/Matsch_P2 at 2017-04-17 21:32:07
+End GEOtop Running!
+Finish GOF 0.075749 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a968869808/Matsch_P2 at 2017-04-17 21:32:13
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a968869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:13
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a936d0c9d9/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab36d0c9d9/Matsch_P2 at 2017-04-17 21:32:13
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a936d0c9d9/Matsch_P2 at 2017-04-17 21:32:15
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a168869808/Matsch_P2 at 2017-04-17 21:32:18
+End GEOtop Running!
+Finish GOF 0.112085 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a536d0c9d9/Matsch_P2 at 2017-04-17 21:32:19
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a536d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:19
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a537d32c5d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a537d32c5d/Matsch_P2 at 2017-04-17 21:32:20
+Finish GOF 0.121411 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa36d0c9d9/Matsch_P2 at 2017-04-17 21:32:22
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa36d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:22
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa37d32c5d/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a436d0c9d9/Matsch_P2 at 2017-04-17 21:32:22
+End GEOtop Running!
+Finish GOF 0.084164 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a068869808/Matsch_P2 at 2017-04-17 21:32:23
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a068869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:23
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a036d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa37d32c5d/Matsch_P2 at 2017-04-17 21:32:24
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a036d0c9d9/Matsch_P2 at 2017-04-17 21:32:25
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a768869808/Matsch_P2 at 2017-04-17 21:32:27
+End GEOtop Running!
+Finish GOF 0.121431 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab36d0c9d9/Matsch_P2 at 2017-04-17 21:32:28
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab36d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:28
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab37d32c5d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab37d32c5d/Matsch_P2 at 2017-04-17 21:32:30
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad37d32c5d/Matsch_P2 at 2017-04-17 21:32:31
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac37d32c5d/Matsch_P2 at 2017-04-17 21:32:31
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a836d0c9d9/Matsch_P2 at 2017-04-17 21:32:35
+End GEOtop Running!
+Finish GOF 0.097325 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a168869808/Matsch_P2 at 2017-04-17 21:32:37
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a168869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:37
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a136d0c9d9/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f36d0c9d9/Matsch_P2 at 2017-04-17 21:32:39
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a136d0c9d9/Matsch_P2 at 2017-04-17 21:32:39
+Finish GOF 0.112523 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a436d0c9d9/Matsch_P2 at 2017-04-17 21:32:41
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a436d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:41
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a437d32c5d/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e36d0c9d9/Matsch_P2 at 2017-04-17 21:32:42
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a437d32c5d/Matsch_P2 at 2017-04-17 21:32:43
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a668869808/Matsch_P2 at 2017-04-17 21:32:43
+End GEOtop Running!
+Finish GOF 0.096959 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a768869808/Matsch_P2 at 2017-04-17 21:32:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a768869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:43
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a736d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a736d0c9d9/Matsch_P2 at 2017-04-17 21:32:45
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac37d32c5d/Matsch_P2 at 2017-04-17 21:32:46
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac37d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:46
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac2bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac2bb39cfe/Matsch_P2 at 2017-04-17 21:32:48
+Finish GOF 0.084286 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad37d32c5d/Matsch_P2 at 2017-04-17 21:32:48
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad37d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:48
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad2bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad2bb39cfe/Matsch_P2 at 2017-04-17 21:32:50
+Finish GOF 0.075751 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a836d0c9d9/Matsch_P2 at 2017-04-17 21:32:51
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a836d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:51
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a837d32c5d/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a936d0c9d9/Matsch_P2 at 2017-04-17 21:32:51
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a837d32c5d/Matsch_P2 at 2017-04-17 21:32:52
+Finish GOF 0.121802 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f36d0c9d9/Matsch_P2 at 2017-04-17 21:32:54
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f36d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:54
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f37d32c5d/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa37d32c5d/Matsch_P2 at 2017-04-17 21:32:54
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a235a22c8a/Matsch_P2 at 2017-04-17 21:32:55
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a537d32c5d/Matsch_P2 at 2017-04-17 21:32:57
+End GEOtop Running!
+Finish GOF 0.091264 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a668869808/Matsch_P2 at 2017-04-17 21:32:57
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a668869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:57
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a636d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f37d32c5d/Matsch_P2 at 2017-04-17 21:32:57
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a335a22c8a/Matsch_P2 at 2017-04-17 21:32:57
+End GEOtop Running!
+Finish GOF 0.122155 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e36d0c9d9/Matsch_P2 at 2017-04-17 21:32:57
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e36d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:32:57
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e37d32c5d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a636d0c9d9/Matsch_P2 at 2017-04-17 21:32:59
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e37d32c5d/Matsch_P2 at 2017-04-17 21:33:00
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab37d32c5d/Matsch_P2 at 2017-04-17 21:33:01
+End GEOtop Running!
+Finish GOF 0.075771 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a936d0c9d9/Matsch_P2 at 2017-04-17 21:33:05
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a936d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:05
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a937d32c5d/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a036d0c9d9/Matsch_P2 at 2017-04-17 21:33:07
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a937d32c5d/Matsch_P2 at 2017-04-17 21:33:07
+Finish GOF 0.120837 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa37d32c5d/Matsch_P2 at 2017-04-17 21:33:09
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa37d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:09
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa2bb39cfe/Matsch_P2
+Finish GOF 0.097174 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a235a22c8a/Matsch_P2 at 2017-04-17 21:33:10
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a235a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:10
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a2699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa2bb39cfe/Matsch_P2 at 2017-04-17 21:33:10
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a2699bc9b4/Matsch_P2 at 2017-04-17 21:33:12
+Finish GOF 0.085628 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a335a22c8a/Matsch_P2 at 2017-04-17 21:33:12
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a335a22c8a/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:12
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a3699bc9b4/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a3699bc9b4/Matsch_P2 at 2017-04-17 21:33:14
+Finish GOF 0.121549 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab37d32c5d/Matsch_P2 at 2017-04-17 21:33:15
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab37d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:15
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab2bb39cfe/Matsch_P2
+Finish GOF 0.112891 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a537d32c5d/Matsch_P2 at 2017-04-17 21:33:16
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a537d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:16
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a52bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab2bb39cfe/Matsch_P2 at 2017-04-17 21:33:17
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac2bb39cfe/Matsch_P2 at 2017-04-17 21:33:17
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a52bb39cfe/Matsch_P2 at 2017-04-17 21:33:17
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a136d0c9d9/Matsch_P2 at 2017-04-17 21:33:18
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a437d32c5d/Matsch_P2 at 2017-04-17 21:33:18
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad2bb39cfe/Matsch_P2 at 2017-04-17 21:33:22
+End GEOtop Running!
+Finish GOF 0.096695 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a036d0c9d9/Matsch_P2 at 2017-04-17 21:33:23
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a036d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:23
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a037d32c5d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a037d32c5d/Matsch_P2 at 2017-04-17 21:33:25
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a736d0c9d9/Matsch_P2 at 2017-04-17 21:33:30
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a837d32c5d/Matsch_P2 at 2017-04-17 21:33:30
+End GEOtop Running!
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac2bb39cfe/Matsch_P2 at 2017-04-17 21:33:30
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac2bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:30
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac40c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac40c70509/Matsch_P2 at 2017-04-17 21:33:32
+Finish GOF 0.112593 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a437d32c5d/Matsch_P2 at 2017-04-17 21:33:34
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a437d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:34
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a42bb39cfe/Matsch_P2
+Finish GOF 0.096647 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a136d0c9d9/Matsch_P2 at 2017-04-17 21:33:35
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a136d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:35
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a137d32c5d/Matsch_P2
+Finish GOF 0.082872 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad2bb39cfe/Matsch_P2 at 2017-04-17 21:33:35
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad2bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:35
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad40c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a42bb39cfe/Matsch_P2 at 2017-04-17 21:33:36
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a137d32c5d/Matsch_P2 at 2017-04-17 21:33:37
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad40c70509/Matsch_P2 at 2017-04-17 21:33:37
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f37d32c5d/Matsch_P2 at 2017-04-17 21:33:37
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e37d32c5d/Matsch_P2 at 2017-04-17 21:33:41
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa2bb39cfe/Matsch_P2 at 2017-04-17 21:33:42
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a937d32c5d/Matsch_P2 at 2017-04-17 21:33:44
+End GEOtop Running!
+Finish GOF 0.075649 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a837d32c5d/Matsch_P2 at 2017-04-17 21:33:45
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a837d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:45
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a82bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a82bb39cfe/Matsch_P2 at 2017-04-17 21:33:47
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a636d0c9d9/Matsch_P2 at 2017-04-17 21:33:47
+End GEOtop Running!
+Finish GOF 0.097498 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a736d0c9d9/Matsch_P2 at 2017-04-17 21:33:48
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a736d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:48
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a737d32c5d/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a52bb39cfe/Matsch_P2 at 2017-04-17 21:33:50
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a737d32c5d/Matsch_P2 at 2017-04-17 21:33:51
+Finish GOF 0.123587 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f37d32c5d/Matsch_P2 at 2017-04-17 21:33:51
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f37d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:51
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f2bb39cfe/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab2bb39cfe/Matsch_P2 at 2017-04-17 21:33:52
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f2bb39cfe/Matsch_P2 at 2017-04-17 21:33:53
+Finish GOF 0.123145 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e37d32c5d/Matsch_P2 at 2017-04-17 21:33:56
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e37d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:33:56
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e2bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e2bb39cfe/Matsch_P2 at 2017-04-17 21:33:58
+Finish GOF 0.075827 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a937d32c5d/Matsch_P2 at 2017-04-17 21:34:00
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a937d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:00
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a92bb39cfe/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac40c70509/Matsch_P2 at 2017-04-17 21:34:02
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a92bb39cfe/Matsch_P2 at 2017-04-17 21:34:02
+Finish GOF 0.124232 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa2bb39cfe/Matsch_P2 at 2017-04-17 21:34:02
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa2bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:02
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa40c70509/Matsch_P2
+Finish GOF 0.096554 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a636d0c9d9/Matsch_P2 at 2017-04-17 21:34:03
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a636d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:03
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a637d32c5d/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a037d32c5d/Matsch_P2 at 2017-04-17 21:34:04
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa40c70509/Matsch_P2 at 2017-04-17 21:34:04
+Finish GOF 0.112135 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a52bb39cfe/Matsch_P2 at 2017-04-17 21:34:05
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a52bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:05
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a540c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a637d32c5d/Matsch_P2 at 2017-04-17 21:34:05
+Finish GOF 0.121119 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab2bb39cfe/Matsch_P2 at 2017-04-17 21:34:07
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab2bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:07
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab40c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a540c70509/Matsch_P2 at 2017-04-17 21:34:07
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a42bb39cfe/Matsch_P2 at 2017-04-17 21:34:08
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad40c70509/Matsch_P2 at 2017-04-17 21:34:08
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab40c70509/Matsch_P2 at 2017-04-17 21:34:10
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac40c70509/Matsch_P2 at 2017-04-17 21:34:16
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac40c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:16
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ac10d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a137d32c5d/Matsch_P2 at 2017-04-17 21:34:18
+End GEOtop Running!
+Finish GOF 0.097149 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a037d32c5d/Matsch_P2 at 2017-04-17 21:34:18
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a037d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:18
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a02bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac10d0d53b/Matsch_P2 at 2017-04-17 21:34:18
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a02bb39cfe/Matsch_P2 at 2017-04-17 21:34:20
+Finish GOF 0.112265 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a42bb39cfe/Matsch_P2 at 2017-04-17 21:34:23
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a42bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:23
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a440c70509/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a82bb39cfe/Matsch_P2 at 2017-04-17 21:34:24
+End GEOtop Running!
+Finish GOF 0.083097 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad40c70509/Matsch_P2 at 2017-04-17 21:34:24
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad40c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:24
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ad10d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a440c70509/Matsch_P2 at 2017-04-17 21:34:25
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad10d0d53b/Matsch_P2 at 2017-04-17 21:34:26
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f2bb39cfe/Matsch_P2 at 2017-04-17 21:34:28
+End GEOtop Running!
+Finish GOF 0.096161 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a137d32c5d/Matsch_P2 at 2017-04-17 21:34:34
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a137d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:34
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a12bb39cfe/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa40c70509/Matsch_P2 at 2017-04-17 21:34:36
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a12bb39cfe/Matsch_P2 at 2017-04-17 21:34:37
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e2bb39cfe/Matsch_P2 at 2017-04-17 21:34:37
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a540c70509/Matsch_P2 at 2017-04-17 21:34:38
+End GEOtop Running!
+Finish GOF 0.07582 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a82bb39cfe/Matsch_P2 at 2017-04-17 21:34:38
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a82bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:38
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a840c70509/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a92bb39cfe/Matsch_P2 at 2017-04-17 21:34:39
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a737d32c5d/Matsch_P2 at 2017-04-17 21:34:40
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a840c70509/Matsch_P2 at 2017-04-17 21:34:40
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab40c70509/Matsch_P2 at 2017-04-17 21:34:43
+End GEOtop Running!
+Finish GOF 0.123356 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f2bb39cfe/Matsch_P2 at 2017-04-17 21:34:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f2bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:43
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f40c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f40c70509/Matsch_P2 at 2017-04-17 21:34:45
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ac10d0d53b/Matsch_P2 at 2017-04-17 21:34:47
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a637d32c5d/Matsch_P2 at 2017-04-17 21:34:50
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ad10d0d53b/Matsch_P2 at 2017-04-17 21:34:54
+End GEOtop Running!
+Finish GOF 0.121335 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa40c70509/Matsch_P2 at 2017-04-17 21:34:54
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa40c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:54
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39aa10d0d53b/Matsch_P2
+Finish GOF 0.075688 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a92bb39cfe/Matsch_P2 at 2017-04-17 21:34:54
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a92bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:54
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a940c70509/Matsch_P2
+Finish GOF 0.113121 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a540c70509/Matsch_P2 at 2017-04-17 21:34:54
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a540c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:54
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a510d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a440c70509/Matsch_P2 at 2017-04-17 21:34:55
+End GEOtop Running!
+Finish GOF 0.123099 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e2bb39cfe/Matsch_P2 at 2017-04-17 21:34:56
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e2bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:56
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e40c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa10d0d53b/Matsch_P2 at 2017-04-17 21:34:56
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a940c70509/Matsch_P2 at 2017-04-17 21:34:56
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a510d0d53b/Matsch_P2 at 2017-04-17 21:34:56
+Finish GOF 0.121118 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab40c70509/Matsch_P2 at 2017-04-17 21:34:57
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab40c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:34:57
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39ab10d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e40c70509/Matsch_P2 at 2017-04-17 21:34:58
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab10d0d53b/Matsch_P2 at 2017-04-17 21:34:59
+Finish GOF 0.097333 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a737d32c5d/Matsch_P2 at 2017-04-17 21:35:03
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a737d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:03
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a72bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a72bb39cfe/Matsch_P2 at 2017-04-17 21:35:04
+Finish GOF 0.096875 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a637d32c5d/Matsch_P2 at 2017-04-17 21:35:05
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a637d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:05
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a62bb39cfe/Matsch_P2
+Finish GOF 0.08326 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ac10d0d53b/Matsch_P2 at 2017-04-17 21:35:05
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ac10d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a02bb39cfe/Matsch_P2 at 2017-04-17 21:35:06
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a62bb39cfe/Matsch_P2 at 2017-04-17 21:35:07
+Finish GOF 0.080828 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ad10d0d53b/Matsch_P2 at 2017-04-17 21:35:08
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ad10d0d53b/Matsch_P2
+Finish GOF 0.112516 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a440c70509/Matsch_P2 at 2017-04-17 21:35:11
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a440c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:11
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a410d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a3699bc9b4/Matsch_P2 at 2017-04-17 21:35:11
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a2699bc9b4/Matsch_P2 at 2017-04-17 21:35:11
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a410d0d53b/Matsch_P2 at 2017-04-17 21:35:12
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a12bb39cfe/Matsch_P2 at 2017-04-17 21:35:18
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a840c70509/Matsch_P2 at 2017-04-17 21:35:19
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f40c70509/Matsch_P2 at 2017-04-17 21:35:20
+End GEOtop Running!
+Finish GOF 0.097062 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a02bb39cfe/Matsch_P2 at 2017-04-17 21:35:23
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a02bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:23
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a040c70509/Matsch_P2
+Finish GOF 0.085652 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a3699bc9b4/Matsch_P2 at 2017-04-17 21:35:24
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a3699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:24
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a3119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a040c70509/Matsch_P2 at 2017-04-17 21:35:25
+Finish GOF 0.072908 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a2699bc9b4/Matsch_P2 at 2017-04-17 21:35:26
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a2699bc9b4/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:26
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a2119630ee/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a3119630ee/Matsch_P2 at 2017-04-17 21:35:26
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39aa10d0d53b/Matsch_P2 at 2017-04-17 21:35:28
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a510d0d53b/Matsch_P2 at 2017-04-17 21:35:28
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a2119630ee/Matsch_P2 at 2017-04-17 21:35:28
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39ab10d0d53b/Matsch_P2 at 2017-04-17 21:35:30
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a940c70509/Matsch_P2 at 2017-04-17 21:35:32
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e40c70509/Matsch_P2 at 2017-04-17 21:35:33
+End GEOtop Running!
+Finish GOF 0.075847 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a840c70509/Matsch_P2 at 2017-04-17 21:35:33
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a840c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:33
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a810d0d53b/Matsch_P2
+Finish GOF 0.097821 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a12bb39cfe/Matsch_P2 at 2017-04-17 21:35:33
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a12bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:33
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a140c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a810d0d53b/Matsch_P2 at 2017-04-17 21:35:35
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a140c70509/Matsch_P2 at 2017-04-17 21:35:35
+Finish GOF 0.123813 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f40c70509/Matsch_P2 at 2017-04-17 21:35:37
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f40c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:37
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399f10d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f10d0d53b/Matsch_P2 at 2017-04-17 21:35:39
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a410d0d53b/Matsch_P2 at 2017-04-17 21:35:42
+End GEOtop Running!
+Finish GOF 0.121324 :/tmp/geotopOptim_test2np/Matsch_P2/xx39aa10d0d53b/Matsch_P2 at 2017-04-17 21:35:43
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39aa10d0d53b/Matsch_P2
+Finish GOF 0.105796 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a510d0d53b/Matsch_P2 at 2017-04-17 21:35:44
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a510d0d53b/Matsch_P2
+Finish GOF 0.11881 :/tmp/geotopOptim_test2np/Matsch_P2/xx39ab10d0d53b/Matsch_P2 at 2017-04-17 21:35:45
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39ab10d0d53b/Matsch_P2
+Finish GOF 0.076113 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a940c70509/Matsch_P2 at 2017-04-17 21:35:47
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a940c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:47
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a910d0d53b/Matsch_P2
+Finish GOF 0.123068 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e40c70509/Matsch_P2 at 2017-04-17 21:35:47
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e40c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:35:47
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx399e10d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a72bb39cfe/Matsch_P2 at 2017-04-17 21:35:48
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a910d0d53b/Matsch_P2 at 2017-04-17 21:35:49
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e10d0d53b/Matsch_P2 at 2017-04-17 21:35:49
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a62bb39cfe/Matsch_P2 at 2017-04-17 21:35:51
+End GEOtop Running!
+Finish GOF 0.11254 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a410d0d53b/Matsch_P2 at 2017-04-17 21:35:57
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a410d0d53b/Matsch_P2
+Finish GOF 0.09608 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a72bb39cfe/Matsch_P2 at 2017-04-17 21:36:02
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a72bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:36:02
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a740c70509/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a040c70509/Matsch_P2 at 2017-04-17 21:36:02
+End GEOtop Running!
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a740c70509/Matsch_P2 at 2017-04-17 21:36:03
+Finish GOF 0.096932 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a62bb39cfe/Matsch_P2 at 2017-04-17 21:36:06
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a62bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:36:06
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a640c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a640c70509/Matsch_P2 at 2017-04-17 21:36:08
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a810d0d53b/Matsch_P2 at 2017-04-17 21:36:10
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a140c70509/Matsch_P2 at 2017-04-17 21:36:12
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399f10d0d53b/Matsch_P2 at 2017-04-17 21:36:13
+End GEOtop Running!
+Finish GOF 0.097315 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a040c70509/Matsch_P2 at 2017-04-17 21:36:16
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a040c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:36:16
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a010d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a010d0d53b/Matsch_P2 at 2017-04-17 21:36:17
+Finish GOF 0.075777 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a810d0d53b/Matsch_P2 at 2017-04-17 21:36:23
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a810d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx399e10d0d53b/Matsch_P2 at 2017-04-17 21:36:24
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a910d0d53b/Matsch_P2 at 2017-04-17 21:36:24
+End GEOtop Running!
+Finish GOF 0.098019 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a140c70509/Matsch_P2 at 2017-04-17 21:36:25
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a140c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:36:25
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a110d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a110d0d53b/Matsch_P2 at 2017-04-17 21:36:27
+Finish GOF 0.134293 :/tmp/geotopOptim_test2np/Matsch_P2/xx399f10d0d53b/Matsch_P2 at 2017-04-17 21:36:29
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399f10d0d53b/Matsch_P2
+Finish GOF 0.123039 :/tmp/geotopOptim_test2np/Matsch_P2/xx399e10d0d53b/Matsch_P2 at 2017-04-17 21:36:39
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx399e10d0d53b/Matsch_P2
+Finish GOF 0.073569 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a910d0d53b/Matsch_P2 at 2017-04-17 21:36:39
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a910d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a740c70509/Matsch_P2 at 2017-04-17 21:36:46
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a640c70509/Matsch_P2 at 2017-04-17 21:36:51
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a010d0d53b/Matsch_P2 at 2017-04-17 21:36:54
+End GEOtop Running!
+Finish GOF 0.096452 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a740c70509/Matsch_P2 at 2017-04-17 21:36:59
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a740c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:36:59
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a710d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a710d0d53b/Matsch_P2 at 2017-04-17 21:37:01
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a110d0d53b/Matsch_P2 at 2017-04-17 21:37:04
+End GEOtop Running!
+Finish GOF 0.096962 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a640c70509/Matsch_P2 at 2017-04-17 21:37:06
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a640c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:37:06
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a610d0d53b/Matsch_P2
+Finish GOF 0.09737 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a010d0d53b/Matsch_P2 at 2017-04-17 21:37:08
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a010d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a610d0d53b/Matsch_P2 at 2017-04-17 21:37:08
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a3119630ee/Matsch_P2 at 2017-04-17 21:37:16
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a2119630ee/Matsch_P2 at 2017-04-17 21:37:18
+End GEOtop Running!
+Finish GOF 0.089841 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a110d0d53b/Matsch_P2 at 2017-04-17 21:37:19
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a110d0d53b/Matsch_P2
+Finish GOF 0.085566 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a3119630ee/Matsch_P2 at 2017-04-17 21:37:30
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a3119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:37:30
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a368869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a368869808/Matsch_P2 at 2017-04-17 21:37:32
+Finish GOF 0.088433 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a2119630ee/Matsch_P2 at 2017-04-17 21:37:33
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a2119630ee/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:37:33
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a268869808/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a268869808/Matsch_P2 at 2017-04-17 21:37:35
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a710d0d53b/Matsch_P2 at 2017-04-17 21:37:44
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a610d0d53b/Matsch_P2 at 2017-04-17 21:37:51
+End GEOtop Running!
+Finish GOF 0.103994 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a710d0d53b/Matsch_P2 at 2017-04-17 21:37:58
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a710d0d53b/Matsch_P2
+Finish GOF 0.096974 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a610d0d53b/Matsch_P2 at 2017-04-17 21:38:06
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a610d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a368869808/Matsch_P2 at 2017-04-17 21:39:21
+End GEOtop Running!
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a268869808/Matsch_P2 at 2017-04-17 21:39:25
+End GEOtop Running!
+Finish GOF 0.085653 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a368869808/Matsch_P2 at 2017-04-17 21:39:36
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a368869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:39:36
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a336d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a336d0c9d9/Matsch_P2 at 2017-04-17 21:39:38
+Finish GOF 0.074195 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a268869808/Matsch_P2 at 2017-04-17 21:39:39
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a268869808/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:39:39
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a236d0c9d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a236d0c9d9/Matsch_P2 at 2017-04-17 21:39:40
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a236d0c9d9/Matsch_P2 at 2017-04-17 21:40:40
+End GEOtop Running!
+Finish GOF 0.085777 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a236d0c9d9/Matsch_P2 at 2017-04-17 21:40:53
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a236d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:40:53
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a237d32c5d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a237d32c5d/Matsch_P2 at 2017-04-17 21:40:55
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a336d0c9d9/Matsch_P2 at 2017-04-17 21:41:27
+End GEOtop Running!
+Finish GOF 0.085405 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a336d0c9d9/Matsch_P2 at 2017-04-17 21:41:41
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a336d0c9d9/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:41:41
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a337d32c5d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a337d32c5d/Matsch_P2 at 2017-04-17 21:41:43
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a237d32c5d/Matsch_P2 at 2017-04-17 21:42:43
+End GEOtop Running!
+Finish GOF 0.086263 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a237d32c5d/Matsch_P2 at 2017-04-17 21:42:57
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a237d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:42:57
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a22bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a22bb39cfe/Matsch_P2 at 2017-04-17 21:42:59
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a337d32c5d/Matsch_P2 at 2017-04-17 21:43:34
+End GEOtop Running!
+Finish GOF 0.084358 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a337d32c5d/Matsch_P2 at 2017-04-17 21:43:47
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a337d32c5d/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:43:47
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a32bb39cfe/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a32bb39cfe/Matsch_P2 at 2017-04-17 21:43:49
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a22bb39cfe/Matsch_P2 at 2017-04-17 21:44:40
+End GEOtop Running!
+Finish GOF 0.08273 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a22bb39cfe/Matsch_P2 at 2017-04-17 21:44:54
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a22bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:44:54
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a240c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a240c70509/Matsch_P2 at 2017-04-17 21:44:56
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a32bb39cfe/Matsch_P2 at 2017-04-17 21:45:39
+End GEOtop Running!
+Finish GOF 0.084972 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a32bb39cfe/Matsch_P2 at 2017-04-17 21:45:55
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a32bb39cfe/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:45:55
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a340c70509/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a340c70509/Matsch_P2 at 2017-04-17 21:45:57
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a240c70509/Matsch_P2 at 2017-04-17 21:46:04
+End GEOtop Running!
+Finish GOF 0.085653 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a240c70509/Matsch_P2 at 2017-04-17 21:46:18
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a240c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:46:18
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a210d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a210d0d53b/Matsch_P2 at 2017-04-17 21:46:19
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a340c70509/Matsch_P2 at 2017-04-17 21:47:43
+End GEOtop Running!
+Finish GOF 0.087975 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a340c70509/Matsch_P2 at 2017-04-17 21:47:57
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a340c70509/Matsch_P2
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-17 21:47:57
+RUNDIR: /tmp/geotopOptim_test2np/Matsch_P2/xx39a310d0d53b/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a310d0d53b/Matsch_P2 at 2017-04-17 21:47:59
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a210d0d53b/Matsch_P2 at 2017-04-17 21:48:08
+End GEOtop Running!
+Finish GOF 0.085558 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a210d0d53b/Matsch_P2 at 2017-04-17 21:48:22
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a210d0d53b/Matsch_P2
+FINISH rundir:/tmp/geotopOptim_test2np/Matsch_P2/xx39a310d0d53b/Matsch_P2 at 2017-04-17 21:49:59
+End GEOtop Running!
+Finish GOF 0.080299 :/tmp/geotopOptim_test2np/Matsch_P2/xx39a310d0d53b/Matsch_P2 at 2017-04-17 21:50:13
+Deleting /tmp/geotopOptim_test2np/Matsch_P2/xx39a310d0d53b/Matsch_P2

@@ -1,0 +1,288 @@
+
+R version 3.2.3 (2015-12-10) -- "Wooden Christmas-Tree"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> #!/usr/bin/env Rscript
+> # file psol_example_script_vsmle.R
+> #
+> # This script is an examples of a GEOtop PSO Calibration via geotopOptim2
+> #
+> # author: Emanuele Cordano on 16-10-2016 and Giacomo Bertoldi on 7-03-2016
+> 
+> #This program is free software: you can redistribute it and/or modify
+> #it under the terms of the GNU General Public License as published by
+> #the Free Software Foundation, either version 3 of the License, or
+> #(at your option) any later version.
+> #
+> #This program is distributed in the hope that it will be useful,
+> #but WITHOUT ANY WARRANTY; without even the implied warranty of
+> #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+> #GNU General Public License for more details.
+> #
+> #You should have received a copy of the GNU General Public License
+> #along with this program.  If not, see <http://www.gnu.org/licenses/>.
+> 
+> ###############################################################################
+> #### export MONALISA_TEMPDIR=/home/ecor/temp/monalisa
+> 
+> rm(list=ls()) # clean all variables
+> options(warn=1) # write the warnings
+> 
+> library(zoo)
+
+Attaching package: ‘zoo’
+
+The following objects are masked from ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+> library(geotopOptim2)
+Loading required package: geotopbricks
+Loading required package: raster
+Loading required package: sp
+Loading required package: stringr
+Warning: replacing previous import by ‘stringr::str_split’ when loading ‘geotopbricks’
+Warning: replacing previous import by ‘stringr::str_trim’ when loading ‘geotopbricks’
+Loading required package: hydroPSO
+(C) 2011-2013 M. Zambrano-Bigiarini and R. Rojas (GPL >=2 license)
+Type 'citation('hydroPSO')' to see how to cite this package
+Loading required package: hydroGOF
+Note: the specification for S3 class “zoo” in package ‘spacetime’ seems equivalent to one from package ‘geotopbricks’: not turning on duplicate class definitions for this class.
+Loading required package: soilwater
+Warning: replacing previous import by ‘zoo::index<-’ when loading ‘geotopOptim2’
+> 
+> ## Set a seed for the random generation
+> set.seed(7999)
+> ## This 'if' loop was introduced if hydroPSO has been worked on a MPI/parallel way 
+> ## to optimize VSC performances.
+> ## In these lines 'control' argument for 'lhoat' or 'hydroPSO' ('geotoplhoat' or 'geotopPSO') is set. See documentation: help(lhoat) or help(hydropso)  
+> 
+> ## this script uses MPI (you need to have intstalled the following package 
+> ## install_git("https://gitlab.inf.unibz.it/Samuel.Senoner/hydroPSO")
+> 
+> # use with MPI; HydroPso package should be updated for using with MPI
+> USE_RMPI <- TRUE
+> 
+> if (USE_RMPI==TRUE) {
++ 	library("parallel")
++ 	
++ 	library(Rmpi)
++ 	require(snow)
++ 	
++ 	if (mpi.comm.rank(0) > 0) {
++ 		sink(file="/dev/null")
++ 		#runMPIslave()
++ 		slaveLoop(makeMPImaster())
++ 		mpi.quit()
++ 		
++ 		
++ 	}
++ 	
++ 	parallel <- "parallel"
++ 	# npart particles number maxit number of iterations the number of simulations is (npart x maxit) 
++ 	# under MPI is reccommenred  a multiple of (# of cores - 1)
++ 	mynpart <- mpi.universe.size()-1  
++ 	mymaxit <- 20
++ 	# control is the list of all the control arguments in hydropso. See hydropso documentation
++ 	control <- list(maxit=mymaxit,npart=mynpart,parallel=parallel,REPORT=10,K=25,normalise=TRUE)
++ 	
++ } else {
++ 	
++ # you define here some parameters
++ # npart: number of particles ; used only for optimizazion, not for sensitivity
++ # N: number of realizazion to divide each parameter range: 
++ # used for sensitivity only; total number of simulations should be N * (#parameters +1 )
++ # REPORT: frequency of report messages printed on screen
++ 
++ 	parallel <- "none"
++ 	npart <- 4
++ 	control <- list(maxit=4,npart=npart)
++ 	
++ }
+Loading required package: snow
+
+Attaching package: ‘snow’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-18 23:51:15
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc534bd40f6d/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc534bd40f6d/Matsch_P2 at 2017-04-18 23:51:1FIFIFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx7e5b2497625f/Matsch_P2 at 2017-04-18 23:54:52
+End GEOtop Running!
+Finish GOF 0.249294 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx7e5b2497625f/Matsch_P2 at 2017-04-18 23:55:08
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xx7e5b2497625f/MatsPPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-18 23:55:40
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc53fba8736/Matsch_P2GGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc53fba8736/Matsch_P2 at 2017-04-18 23:55:FIFINFINISH FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx428b77f900f1/Matsch_P2 at 2017-04-18 23:58:47
+End GEOtop Running!
+Finish GOF 0.117663 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx428b77f900f1/Matsch_P2 at 2017-04-18 23:59:01
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xx428b77fPPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-18 23:59:34
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5351f6d574/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5351f6d574/Matsch_P2 at 2017-04-18 23:59:36FFINISFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx79a3993c03d/Matsch_P2 at 2017-04-19 00:05:29
+End GEOtop Running!
+Finish GOF 0.105355 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx79a3993c03d/Matsch_P2 at 2017-04-19 00:05:43
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xx79a3993c03d/MatPrPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:06:16
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5353f5641a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5353f5641a/Matsch_P2 at 2017-04-19 00:06FFFIFINFIFINISH rundir:/tmFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx5ff856b354d2/Matsch_P2 at 2017-04-19 00:09:27
+End GEOtop Running!
+Finish GOF 0.076897 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx5ff856b354d2/Matsch_P2 at 2017-04-19 00:09:41
+Deleting /tmp/geotopOtim2_tempdir/MatPPrepPPPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:10:14
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5377e54e1/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5377e54e1/Matsch_P2 at 2017-04-19 00:1FFINIFFFINISFINISH rundir:/tmp/gFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx53e02e935c8f/Matsch_P2 at 2017-04-19 00:12:59Finish GOF 0.136138 :/tmp/geotopOtim2_tempdir/Matsch_P2/xxc3324836532/Matsch_P2 at 2017-04-19 00:13:23
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xxc3324836532/Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:13:56
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc532a6699a8/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc532a6699a8/Matsch_P2 at 2017-04-19 00:13:5FFFIFINISH rundir:/tmp/geotopFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx6b613e85890a/Matsch_P2 at 2017-04-19 00:18:16
+End GEOtop Running!
+Finish GOF 0.069815 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx6b613e85890a/Matsch_P2 at 2017-04-19 00:18:30
+Deleting /tmp/geotopOtim2_tempdir/MatPrPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:19:03
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5323dd1cd5/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5323dd1cd5/Matsch_P2 at 2017-04-19 00:19:FFINISH rundir:/tmp/geotopOtim2_tempdir/FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx42947f85d3ce/Matsch_P2 at 2017-04-19 00:22:27
+End GEOtop Running!
+Finish GOF 0.084467 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx42947f85d3ce/Matsch_P2 at 2017-04-19 00:22:40
+Deleting /tmp/geotopOtiPrepPrPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:23:13
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc537a36987f/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc537a36987f/Matsch_P2 at 2017-04-19 00:FINISH runFFINISH rundir:/tmp/geotopOtim2_tempdir/MatFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx5ffc4c266c0e/Matsch_P2 at 2017-04-19 00:27:26
+End GEOtop Running!
+Finish GOF 0.05637 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx5ffc4c266c0e/Matsch_P2 at 2017-04-19 00:27:40
+Deleting /tmpPrepariPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:28:12
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc535aa7b89c/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc535aa7b89c/Matsch_P2 at 2017-04-19 00FINIFINISH rFINISH rundir:/tmp/geotopOtim2_tempdir/MaFFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx6b653cede595/Matsch_P2 at 2017-04-19 00:31:44
+End GEOtop Running!
+Finish GOF 0.066016 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx6b653cede595/Matsch_P2 at 2017-04-19 00:31:58
+DelePreparinPrepariPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:32:30
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc536c42e552/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc536c42e552/Matsch_P2 at 2017-FINISH rFINISH rundirFINFINISH rundir:/tmp/geotopOtim2_tempdFINISH rundFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx5ffc22b8f68e/Matsch_P2 at 2017-04-19 00:36:45
+End GEOtop Running!
+Finish GOF 0.060801 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx5ffc22b8f68e/Matsch_P2 at 2017-04-19 00:3PrepariPreparinPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:37:30
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5333bc9446/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5333bc9446/Matsch_P2 at 2017-FINISH rundir:/FINIFFINISH rundir:/tmp/geotopOtim2_tempdir/FINFINIFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx6b636dbb9829/Matsch_P2 at 2017-04-19 00:42:08
+End GEOtop Running!
+Finish GOF 0.06747 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx6b636dbb9829/Matsch_P2 at 2017-04-19 00:42:21
+DPrepariPreparinPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:42:54
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc537143af6/MatGEOtop GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc537143af6/Matsch_P2 at 2017-04FINISH rundirFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx4292532cb0e9/Matsch_P2 at 2017-04-19 00:47:16
+End GEOtop Running!
+Finish GOF 0.065318 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx4292532cb0e9/Matsch_P2 at 2017-04-19 00:47:29
+DelePrepariPrePreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:48:02
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc53216242d9/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc53216242d9/Matsch_P2 at 2017-04-19FINISH runFINISFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc3d69f48380/Matsch_P2 at 2017-04-19 00:51:02
+End GEOtop Running!
+Finish GOF 0.053165 :/tmp/geotopOtim2_tempdir/Matsch_P2/xxc3d69f48380/Matsch_P2 at 2017-04-19 00:51:15
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xxc3d69fPreparinPrePreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 00:51:48
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5324e7a955/Matsch_GEOGEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5324e7a955/Matsch_P2 at 2017-04-1FINFINISH rundiFINIFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc463025faf3/Matsch_P2 aFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_Piter:20  Gbest: 5.156E-02  Gbest_rate:  0.00%  Iter_best_fit: 5.156E-02  nSwarm_Radius: 1.77E-01  |g-mean(p)|/mean(p):  3.80%
+                           
+[ Writing output files... ]
+                           
+                                    |                                           
+================================================================================
+[                          Creating the R output ...                           ]
+================================================================================
+Preparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 01:23:29
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2 at 2017-04-19 01:23:31
+FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2 at 2017-04-19 01:23:56
+End GEOtop Running!
+Finish GOF 0.05156 :/tmp/geotopOtim2_tempdir/Matsch_P2 at 2017-04-19 01:24:10
+> 
+> 
+> #dirPSO <- paste(savepath,paste(itsim,"PSO.out",sep="_"),sep="/")
+> ######dir.create(dirPSO)
+> 
+> # copies the final temporary simulation to the folder where you save the final data
+> file.copy(from=runpath,to=dirsim,recursive=TRUE)
+[1] TRUE
+> #######file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
+> save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
+> 
+> 
+> 
+> 
+> if (USE_RMPI==TRUE) mpi.finalize()
+[1] 1
+> 
+> proc.time()
+    user   system  elapsed 
+5633.828   13.328 5652.943 
+R: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc53664949a/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc53664949a/Matsch_P2 at 2017-04-19 FINISH rundir:/tmpFFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx7a847e41FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx47582ae1e9a8/Matsch_P2 at 2017-04-19 01:09:30
+End GEOtop Running!
+Finish GOF 0.054815 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx47582ae1e9a8/Matsch_P2 at 2017-04-PreparPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 01:10:15
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc533ca3c4c8/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc533ca3c4c8/Matsch_P2 at 2017-04-19 01:FINFINISH rundiFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc4812a70221/MatscFINISH rundir:FINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx7e66579753fb/Matsch_P2 at 2017-04-19 01:13:58
+End GEOtop Running!
+Finish GOF 0.054761 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx7e66579753fb/MaPreparPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 01:14:43
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5358634471/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5358634471/Matsch_P2 at 2017-04-19 0FIFIFFINFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5358634471/Matsch_P2 at 2017-04-19 01:16:54
+FINIFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xx42943c1a8bd4/Matsch_P2 at 2017-04-19 01:17:25
+End GEOtop Running!
+Finish Finish GOF 0.060861 :/tmp/geotopOtim2_tempdir/Matsch_P2PrPreparPreparing a GEOtop Simulation!!
+wpath:/home/lv70864/ecordano/Simulations/MonaLisa/run/Matsch_P2 at 2017-04-19 01:18:20
+RUNDIR: /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5351a117ed/Matsch_P2
+GEOtop is running!!
+rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5351a117ed/Matsch_P2 at 2017-04-19 0FIFINISHFINISH rundir:/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5351a117ed/Matsch_P2 at 2017-04-19 01:22:44
+End GEOtop Running!
+Finish GOF 0.056357 :/tmp/geotopOtim2_tempdir/Matsch_P2/xxc5351a117ed/Matsch_P2 at 2017-04-19 01:22:57
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xxc5351a117ed/Matsch_P2
+2/xx7e5b5c405efe/Matsch_P2 at 2017-04-19 01:21:47
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xx7e5b5c405efe/Matsch_P2
+P2 at 2017-04-19 01:20:14
+End GEOtop Running!
+Finish GOF 0.05435 :/tmp/geotopOtim2_tempdir/Matsch_P2/xx79b7d32a4ae/Matsch_P2 at 2017-04-19 01:20:27
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xx79b7d32a4ae/Matsch_P2
+7
+Deleting /tmp/geotopOtim2_tempdir/Matsch_P2/xx6b6733cd2a17/Matsch_P2
+2/xx6b5c220e6454/Matsch_P2
