@@ -1,4 +1,4 @@
-#$ -N Kaltern_geotopoptim2_MonaLisa_array
+#$ -N Matsch_P2_PSO_geotopoptim2_MonaLisa_array
 #$ -V
 #$ -pe mpich 128 # number of cores: 
 #$ -M emanuele.cordano@gmail.com,giacomo.bertoldi@eurac.edu,samuel.senoner@eurac.edu
