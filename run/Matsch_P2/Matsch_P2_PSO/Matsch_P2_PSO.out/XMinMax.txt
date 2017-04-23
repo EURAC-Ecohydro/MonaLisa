@@ -1,0 +1,22 @@
+lower  upper
+SOIL__N   1.15000e+00   2.00000e+00
+SOIL__LOG10_Alpha  -3.30103e+00  -2.09691e+00
+SOIL__ThetaSat   4.00000e-01   7.00000e-01
+SOIL__ThetaRes   4.00000e-02   8.00000e-02
+SOIL__LOG10_NormalHydrConductivity  -4.30103e+00   0.00000e+00
+SCALAR__SoilRoughness   1.00000e+01   5.00000e+02
+SCALAR__LSAI   0.00000e+00   1.00000e+00
+SCALAR__CanopyFraction   0.00000e+00   1.00000e+00
+SCALAR__DecayCoeffCanopy   0.00000e+00   7.50000e+01
+SCALAR__RootDepth   5.00000e+01   1.00000e+03
+SCALAR__MinStomatalRes   1.00000e+01   1.00000e+02
+SCALAR__VegReflectVis   5.00000e-02   2.00000e-01
+SCALAR__VegReflNIR   5.00000e-02   4.00000e-01
+SCALAR__VegTransVis   5.00000e-03   1.50000e-01
+SCALAR__VegTransNIR   5.00000e-02   6.00000e-01
+SCALAR__CanDensSurface   1.00000e-01   8.00000e+00
+SCALAR__SoilAlbVisDry   5.00000e-02   3.00000e-01
+SCALAR__SoilAlbNIRDry   5.00000e-02   4.00000e-01
+SCALAR__SoilAlbVisWet   5.00000e-02   4.00000e-01
+SCALAR__SoilAlbNIRWet   5.00000e-02   5.00000e-01
+SCALAR__SoilEmissiv   8.00000e-01   1.00000e+00

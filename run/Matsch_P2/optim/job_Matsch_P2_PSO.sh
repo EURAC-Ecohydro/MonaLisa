@@ -1,9 +1,9 @@
-#$ -N Matsch_P2_PSO_geotopoptim2_MonaLisa_array
+#$ -N Matsch_P2_PSO2_geotopoptim2_MonaLisa_array
 #$ -V
 #$ -pe mpich 128 # number of cores: 
 #$ -M emanuele.cordano@gmail.com,giacomo.bertoldi@eurac.edu,samuel.senoner@eurac.edu
 #$ -m beas  # all job events sent via email
-#$ -l h_rt=4:00:00
+#$ -l h_rt=24:00:00
 #$ -o $HOME/Simulations/MonaLisaSims/
 #$ -e $HOME/Simulations/MonaLisaSims/
 
