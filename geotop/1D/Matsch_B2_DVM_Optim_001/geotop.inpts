@@ -185,6 +185,9 @@ HorizonMeteoStationFile	=	"horizon"
 RiverNetwork			=	"net60"
 SoilMapFile				=	"soiltype"
 SoilParFile				=	"soil/soil"
+
+HeaderHorizonAngle          = "AngleFromNorthClockwise"
+HeaderHorizonHeight = "HorizonHeight"
  
 ! Output files 
 
