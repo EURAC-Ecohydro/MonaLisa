@@ -76,7 +76,8 @@ if (USE_RMPI==TRUE) {
 
 ## This 'if' loop was introduced to set the GEOtop binary file which be used in GEOtop 
 
-USE_SE27XX <- TRUE
+#USE_SE27XX <- TRUE
+USE_SE27XX <- FALSE
 
 ## define the name of GEOtop executable file 
 if (USE_SE27XX==TRUE) {
@@ -87,7 +88,7 @@ if (USE_SE27XX==TRUE) {
 	
 } else {
 	
-	bin  <-  'geotop_dev'
+	bin  <-  'geotop'
 	
 }  
 
@@ -205,6 +206,6 @@ pso <- geotopPSO(par=x,run.geotop=TRUE,bin=bin,
 file.copy(from=runpath,to=dirsim,recursive=TRUE)
 #######file.copy(from="PSO.out",to=dirPSO,recursive=TRUE)
 save(pso,file=paste(savepath,itsim,"pso.rda",sep="/"))
-
+plot_results(drty.out=dirPSO,do.png = TRUE,MinMax = "min")
 
 if (USE_RMPI==TRUE) mpi.finalize()
