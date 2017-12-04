@@ -163,7 +163,7 @@ names(uscale) <- var
 ### Preparing diagram
 ### you create the directory with all the pso optimization output in a subfolder of GEOTOPOPTIM2_SAVE_DIR with the specific suimulation name
 dirsim <- paste(savepath,itsim,sep="/")
-dir.create(dirsim)
+#dir.create(dirsim)
 # you add this path to the pso control list
 control[["drty.out"]] <- paste(savepath,itsim,paste(itsim,"LH_OAT",sep="_"),sep="/")
 
